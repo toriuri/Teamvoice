@@ -166,11 +166,14 @@
     &.join-finish {
       background-image: url(../image/member/join@2x.png);
     }
-    &.login-box {
+    &.login-box, &.mypage-box {
       background-image: url(../image/member/login@2x.png);
     }
     &.find-box {
       background-image: url(../image/member/id-pw-find@2x.png);
+    }
+    &.withdraw-box {
+      background-image: url(../image/member/withdraw@2x.png);
     }
   }
 }
@@ -241,6 +244,15 @@
   }
 }
 
+.mypage-box, .withdraw-box {
+  p {
+    margin-bottom: 26px;
+  }
+  .btn-area {
+    margin-top: 30px;
+    padding: 0;
+  }
+}
 /***** Membership 모바일 대응 *****/
 
 .membership-article {

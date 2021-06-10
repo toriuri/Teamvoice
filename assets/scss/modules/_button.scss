@@ -156,6 +156,22 @@
       color: $silver !important;
     }
   }
+  
+  &--line {
+    background-color: #fff;
+    border-color: $color-sub-red;
+    color: $color-sub-red;
+    
+    &:hover,
+    &:focus {
+      background: $color-sub-red;
+      color: #fff;
+    }
+    &[disabled] {
+      //background: #000;
+      opacity: 0.6;
+    }
+  }
 }
 
 .btn-r {
