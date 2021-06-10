@@ -1,0 +1,271 @@
+// -----------------------------------------------------------------------------
+// membership
+// -----------------------------------------------------------------------------
+
+.membership-article {
+  //border: 1px solid #f00;
+  .container {
+    padding: 100px 0 120px;
+  }
+  
+  .membership-step {
+    //border: 1px solid #f00;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+    
+    &:before {
+      content: '';
+      display: block;
+      width: 100%; height: 1px;
+      background: #E1E2E6;
+      position: absolute;
+      left: 0; top: 18px;
+    }
+    
+    li {
+      flex: 1 1 270px;
+      width: 33.3333%;
+      text-align: center;
+      color: #111;
+      
+      strong {
+        position: relative;
+        margin: 0 auto 15px;
+        display: block;
+        width: 36px; height: 36px;
+        background: #E1E2E6;
+        
+        font-family: $en;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 36px;
+        color: #fff;
+        @include border-radius(50%);
+        @include box-sizing();
+        
+        &:before {
+          content:'';
+          display: block;
+          width: 52px; height: 52px;
+          border-width: 8px;
+          border-style: solid;
+          border-color: transparent;
+          @include border-radius(50%);
+          @include box-sizing();
+    
+          position: absolute;
+          left: 50%; top: 50%;
+          @include translate(-50%, -50%);
+        }
+        
+        &.on {
+          background: $color-primary;
+          &:before {
+            border-color: rgba(85,88,175,0.15);
+          }
+        }
+  
+        &.pass {
+          background: $color-primary;
+        }
+      }
+    }
+  }
+  
+  .iframe-box {
+    height: 400px;
+    background: #F3F4F9;
+    border: 1px solid #E1E2E6;
+    @include border-radius(4px);
+  }
+  
+  .agree-chk {
+    padding-top: 20px;
+    font-size: 20px;
+  }
+  
+  .join-form {
+    fieldset {
+      padding-bottom: 60px;
+    }
+    .input-list {
+      border-top: 2px solid #111;
+      padding: 20px 0 0;
+      li{
+        //border: 1px solid #f0f;
+        position: relative;
+        margin-bottom: 20px;
+        padding-left: 160px;
+        height: 56px;
+        
+        &.email-box {
+          padding-right: 200px;
+          .btn--mid {
+            position: absolute;
+            right: 0; top: 0;
+            width: 190px; height: 56px;
+          }
+          .entry-time {
+            position: absolute;
+            right: 220px; top: 50%;
+            @include translate(0, -50%);
+          }
+        }
+        
+        label {
+          position: absolute;
+          left: 0; top: 50%;
+          @include translate(0, -50%);
+          
+          width: 160px;
+          color: #111;
+          span {
+            color: $color-sub-red;
+          }
+        }
+         .input-wrap {
+           width: 100px;
+           height: 56px;
+           float: left;
+           position: relative;
+           //border: 1px solid #f00;
+         }
+        
+        .tv-input + p {
+          margin-top: 10px;
+          color: #888;
+          i {
+            font-size: 24px;
+            position: relative;
+            top: 3px;
+          }
+        }
+      }
+    }
+  }
+  
+  .content-box {
+    //border: 1px solid #f00;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 180px;
+    background: no-repeat center top / 150px;
+    h2 {
+      font-weight: 700;
+      font-size: 40px;
+      color: #111;
+      margin-bottom: 10px;
+      & + p {
+        font-size: 20px;
+        color: #555;
+      }
+    }
+    &.join-finish {
+      background-image: url(../image/member/join@2x.png);
+    }
+    &.login-box {
+      background-image: url(../image/member/login@2x.png);
+    }
+    &.find-box {
+      background-image: url(../image/member/id-pw-find@2x.png);
+    }
+  }
+}
+
+.login-box, .find-box {
+  .input-list li {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  label {
+    display: block;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+    padding-bottom: 5px;
+    &:nth-child(2) {
+      border: 1px solid #f00;
+    }
+  }
+  .btn-area {
+    padding: 50px 0 0;
+  }
+  
+  .login-box-bottom-link {
+    overflow: hidden;
+    margin-top: 18px;
+    li {
+      //border: 1px solid #f00;
+      float: left;
+      width: 50%;
+      a {
+        display: inline-block;
+      }
+      @include box-sizing();
+      &:nth-child(1) {
+        text-align: left;
+      }
+      &:nth-child(2) {
+        text-align: right;
+        a {
+          position: relative;
+          &:last-child {
+            padding-left: 20px;
+            &:before {
+              content: '';
+              display: block;
+              width: 1px; height: 18px;
+              background: #E1E2E6;
+              position: absolute;
+              left: 8px; top: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.find-box {
+  p {
+    padding-bottom: 20px;
+    strong {
+      color: $color-sub-red;
+    }
+  }
+}
+
+/***** Membership 모바일 대응 *****/
+
+.membership-article {
+  @include mq($until: x-large) {
+    //border: 1px solid #f00;
+    
+  }
+  
+  @include mq($until: large) {
+    //border: 1px solid #00f;
+    
+  }
+  
+  @include mq($until: medium) {
+    //border: 1px solid #0ff;
+    
+  }
+  
+  @include mq($until: small) {
+    //border: 1px solid #0f0;
+    
+  }
+  
+  @include mq($until: x-small) {
+    //border: 1px solid #959;
+    
+  }
+}
