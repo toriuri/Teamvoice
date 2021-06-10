@@ -1,0 +1,75 @@
+// -----------------------------------------------------------------------------
+// Article
+// -----------------------------------------------------------------------------
+
+%blockquote {
+  color: $gray-dark;
+  font-family: $serif;
+
+  a {
+    font-size: 1.4rem;
+  }
+}
+
+.article {
+  &-header {
+    margin-bottom: 7.5rem;
+    margin-left: $offset-sm;
+    margin-right: $offset-sm;
+    text-align: center;
+  }
+  &-h {
+    @include h2;
+  }
+  &-sub {
+    margin: 3rem 0 2rem;
+    color: $gray-dark;
+    font-family: $sans;
+    font-size: 1.8rem;
+  }
+  &-date {
+    font-size: 1.4rem;
+  }
+  &-contents {
+    max-width: $w-wrap;
+    margin: 0 auto;
+
+    p {
+      margin: 3.5rem 0;
+    }
+  }
+  @include mq(large) {
+    padding-top: 14rem;
+    padding-bottom: 9rem;
+    font-size: 1.8rem;
+
+    &-header {
+      margin-bottom: 11rem;
+    }
+    &-sub {
+      font-size: 2rem;
+    }
+    &-contents {
+      p {
+        margin: 6rem 0;
+
+        & + p {
+          margin-top: -2rem;
+        }
+      }
+    }
+  }
+  @include mq($until: medium) {
+    &-header {
+      br {
+        display: none;
+      }
+    }
+    &-sub {
+      padding: 0 4rem;
+    }
+    &-contents {
+      padding: 0 $offset-sm;
+    }
+  }
+}

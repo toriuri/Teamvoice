@@ -1,0 +1,72 @@
+// -----------------------------------------------------------------------------
+// Layout components
+// -----------------------------------------------------------------------------
+
+// wrapper
+#wrapper {
+  position: relative;
+  -webkit-user-drag: none;
+  touch-action: pan-y;
+  overflow: hidden;
+}
+
+.main {
+  // for skipnav
+  outline: none;
+
+  &-wrapper {
+    //margin-top: $header-height-sm;
+    //padding-bottom: $main-wrapper-bottom-sm;
+  }
+
+  @include mq(medium) {
+    //min-height: calc(100vh - 200px);
+
+    &-wrapper {
+      //margin-top: $header-height-lg;
+      //padding-bottom: $main-wrapper-bottom-lg;
+    }
+  }
+}
+
+// breakpoint
+#bp {
+  $bp-names: '';
+  $index: 1;
+  position: relative;
+  display: none;
+  speak: none;
+  z-index: $index;
+
+  @each $name, $point in $mq-breakpoints {
+    $index: $index + 1;
+    $bp-names: $bp-names + $name + ',';
+
+    @include mq($name)  {
+      z-index: $index;
+    }
+  }
+
+  content: str-slice($bp-names, 0, str-length($bp-names) - 1);
+}
+
+// skip navigation
+#skipnav {
+  position: absolute;
+  left: 0; top: -100px;
+  display: block;
+  width: 100%;
+  color: $white;
+  background: #040A23;
+  font-size: 1.6em;
+  padding: 25px 0;
+  font-weight: 600;
+  text-align: center;
+  
+  &:focus {
+    position: fixed;
+    left: 0; top: 0;
+    z-index: 29999;
+
+  }
+}

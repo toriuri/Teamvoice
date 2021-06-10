@@ -1,0 +1,324 @@
+// -----------------------------------------------------------------------------
+// mixins
+// -----------------------------------------------------------------------------
+
+@mixin clearfix {
+  zoom: 1;
+
+  &:before {
+    content: '';
+    display: block;
+  }
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin full-pos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin break-word {
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+
+@mixin ellipsis($lines: false) {
+  @if ($lines) {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    word-wrap: normal;
+  } @else {
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+  }
+}
+
+@mixin v-mid($child:'&-cell') {
+  white-space: nowrap;
+
+  #{$child} {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    @content;
+  }
+
+  &:after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+@mixin flex-mid() {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+
+  align-items: center;
+}
+
+@mixin bar-list($margin, $inline-space: 1px, $bar-height: 10px, $bar-width: 1px, $bar-color: $silver-light) {
+  position: relative;
+  display: inline-block;
+  margin-left: $margin - $inline-space;
+  padding-left: $margin + $bar-width;
+
+  &:before {
+    content: "";
+    position: absolute;
+    height: $bar-height;
+    left: 0;
+    top: 50%;
+    margin-top: $bar-height / -2;
+    border-left: $bar-width solid $bar-color;
+  }
+
+  &:first-child {
+    margin-left: 0;
+    padding-left: 0;
+
+    &:before {
+      display: none;
+    }
+  }
+}
+
+@mixin triangle($size, $color, $direction) {
+  $width: nth($size, 1);
+  $height: nth($size, length($size));
+  $foreground-color: nth($color, 1);
+  $background-color: transparent;
+  height: 0;
+  width: 0;
+
+  @if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left) {
+    $width: $width / 2;
+    $height: if(length($size) > 1, $height, $height/2);
+
+    @if $direction == up {
+      border-bottom: $height solid $foreground-color;
+      border-left: $width solid $background-color;
+      border-right: $width solid $background-color;
+
+    } @else if $direction == right {
+      border-bottom: $width solid $background-color;
+      border-left: $height solid $foreground-color;
+      border-top: $width solid $background-color;
+
+    } @else if $direction == down {
+      border-left: $width solid $background-color;
+      border-right: $width solid $background-color;
+      border-top: $height solid $foreground-color;
+
+    } @else if $direction == left {
+      border-bottom: $width solid $background-color;
+      border-right: $height solid $foreground-color;
+      border-top: $width solid $background-color;
+    }
+  }
+}
+
+@mixin gradient($direction, $color-stops...) {
+  /*@if is-direction($direction) == false {
+    $color-stops: $direction, $color-stops;
+    $direction: 180deg;
+  }*/
+
+  background: nth(nth($color-stops, 1), 1);
+  background: -moz-linear-gradient(legacy-direction($direction), $color-stops);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient(unquote($direction), $color-stops);
+
+  $start-color: nth($color-stops, 1);
+  $end-color: nth($color-stops, 2);
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$start-color}', endColorstr='#{$end-color}',GradientType=1 ); // IE6-9 fallback on horizontal gradient
+}
+
+// Mixin to customize scrollbars
+// @include scrollbars(selector, .5em, foreground, background);
+@mixin scrollbars($selector, $size, $foreground-color, $background-color) {
+  // For -webkit-
+  ::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // For -ms-
+  @if $selector == null {
+    body {
+      scrollbar-face-color: $foreground-color;
+      scrollbar-arrow-color: $foreground-color;
+      scrollbar-track-color: $background-color;
+    }
+  } @else {
+    #{$selector} {
+      scrollbar-face-color: $foreground-color;
+      scrollbar-arrow-color: $foreground-color;
+      scrollbar-track-color: $background-color;
+    }
+  }
+}
+
+@mixin thumb-hover {
+  &:hover,
+  &:focus {
+    .thumb {
+      span.thumb-bg,
+      img {
+        @include transform(scale(1.05));
+      }
+    }
+  }
+  .thumb {
+    span.thumb-bg,
+    img {
+      @include transition(transform $dur);
+    }
+  }
+}
+
+@mixin a-link {
+  display: inline-block;
+  position: relative;
+  color: $color-primary;
+  font-family: $sans;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+    height: 1px;
+    background-color: $color-primary;
+    transition: width $dur/2 $ease;
+  }
+
+  &--gray {
+    color: inherit;
+
+    &:before {
+      background-color: $gray;
+    }
+  }
+}
+
+@mixin player($dir: false) {
+  @if $dir == false {
+    $dir: 'before';
+  }
+  @include icon('play', $dir) {
+    width: 48px;
+    height: 48px;
+    @include box-sizing;
+    border: 2px solid $white;
+    border-radius: 50%;
+    color: $white;
+    text-align: center;
+    line-height: 44px;
+    font-size: 1.4rem;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// add mixins - juli
+// -----------------------------------------------------------------------------
+
+@mixin border-radius($radius){
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-s($x, $y, $offset, $color, $inset: false) {
+  $ie-color: ie-hex-str($color);
+
+  @if $inset {
+    -webkit-box-shadow: inset $x $y $offset $color;
+    box-shadow: inset $x $y $offset $color;
+  } @else {
+    -webkit-box-shadow: $x $y $offset $color;
+    box-shadow: $x $y $offset $color;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=#{$x}, OffY=#{$y}, Color='#{$ie-color}');
+  }
+}
+
+@mixin text-shadow($x, $y, $offset, $color, $inset: false) {
+  $ie-color: ie-hex-str($color);
+
+  @if $inset {
+    -webkit-text-shadow: inset $x $y $offset $color;
+    text-shadow: inset $x $y $offset $color;
+  } @else {
+    -webkit-text-shadow: $x $y $offset $color;
+    text-shadow: $x $y $offset $color;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=#{$x}, OffY=#{$y}, Color='#{$ie-color}');
+  }
+}
+
+// Browser Prefixes
+@mixin transform ($transforms){
+  -webkit-transform: $transforms;
+  -moz-transform: $transforms;
+  transform: $transforms;
+}
+
+// Rotate
+@mixin rotate ($deg){
+  @include transform(rotate(#{$deg}deg));
+}
+
+// Scale
+@mixin scale($scale){
+  @include transform(scale($scale));
+}
+
+// Translate
+@mixin translate ($x, $y){
+  @include transform(translate($x, $y));
+}
+
+// Skew
+@mixin skew ($x, $y){
+  @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+// Transform Origin
+@mixin transform-origin ($origin){
+  -webkit-transform-origin: $origin;
+  -moz-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  transform-origin: $origin;
+}

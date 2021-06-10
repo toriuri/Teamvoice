@@ -1,0 +1,109 @@
+// -----------------------------------------------------------------------------
+// Cell Line Service
+// -----------------------------------------------------------------------------
+
+.cell-line-article {
+  //border: 1px solid #f00;
+  
+  .title-wrap{
+    //border: 1px solid #ff0;
+    margin-top: 120px;
+    position: absolute;
+    left: 25px;
+    z-index: 10000;
+    & + .container {
+      //border: 1px solid #f00;
+      p {
+        padding-top: 35px;
+      }
+    }
+  }
+  .local-menu-wrap{
+    //border: 1px solid #f00;
+    padding-left: 10px;
+    padding-top: 25px;
+    .local-menu-list {
+      li {
+        a {
+          display: block;
+          text-align: left;
+          color: #ccc;
+          font-size: 13px;
+          padding: 5px 0;
+          &:hover, &:focus, &:active, &.is-current {
+            color: #fff;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+    padding-left: 400px;
+  
+    .section-title {
+      & + p {
+        //border: 1px solid #f00;
+        font-size: 0.85em;
+      }
+    }
+
+    .content {
+      padding-top: 70px;
+      
+      figure {
+        figcaption {
+          //border: 1px solid #f00;
+          text-align: center;
+          font-size: 0.85em;
+          padding: 10px 0;
+        }
+      }
+      
+      .order-step {
+        overflow: hidden;
+        max-width: 600px;
+        margin-bottom: 30px;
+        li {
+          border: 1px solid #aaa;
+          background: rgba(0,0,0,0.4);
+          padding: 20px;
+          margin-bottom: 20px;
+          @include box-sizing;
+          @include border-radius(4px);
+          strong {
+            width: 60px;
+            float: left;
+            line-height: 1.3;
+            font-size: 0.9em;
+          }
+          p {
+            margin-left: 60px;
+            padding-left: 20px;
+            font-size: 1.2em;
+            line-height: 1.0;
+            border-left: 1px solid #aaa;
+          }
+        }
+      }
+      .sub-h4 {
+        font-size: 1.2em;
+        font-weight: 600;
+      }
+      .notice {
+        li {
+          font-size: 0.85em;
+          text-indent: -10px;
+          padding-left: 20px;
+          &:before {
+            content: '-';
+            display: inline-block;
+            width: 10px;
+            color: #ccc;
+          }
+        }
+      }
+    }
+  }
+}

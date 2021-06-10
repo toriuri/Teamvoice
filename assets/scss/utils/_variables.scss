@@ -1,0 +1,127 @@
+// -----------------------------------------------------------------------------
+// variables
+// -----------------------------------------------------------------------------
+
+// breakpoints
+$mq-breakpoints: (
+     x-small:  360px,
+       small:  560px,
+      medium:  720px,
+       large:  960px,
+     x-large: 1200px,
+    xx-large: 1600px
+);
+
+//z-index
+$z-gnb: 1000;
+
+// grid
+// -----------------------------------------------------------------------------
+$grid-columns: 12;
+$gutter-sm: 10px;
+$gutter-md: 20px;
+$gutter-lg: 20px;
+
+
+// layout
+// -----------------------------------------------------------------------------
+$w-small: 360px;
+$w-default: 1440px;
+$w-wrap: 1180px;
+
+$offset-sm: 20px;
+$offset-md: 50px;
+$offset-lg: 100px;
+
+$header-height-sm: 60px; // 모바일 header 높이
+$header-height-lg: 100px; // 데스크탑 header 높이
+$header-height-compact: 45px; // 데스크탑 header 최소화 시 높이
+
+$main-wrapper-bottom-sm: 7.5rem;
+$main-wrapper-bottom-lg: 12rem;
+
+$input-padding-tb: 10px;
+$input-padding-lr: 15px;
+
+
+// fonts
+// -----------------------------------------------------------------------------
+$base-font-size: 18px;
+$line-height: 1.6;
+$font-list: (
+  // [filename]: ([font-family]: [weight])
+	NotoSansKR-Thin: (NotoSans, 100),
+	NotoSansKR-Light: (NotoSans, 300),
+  NotoSansKR-Regular: (NotoSans, 400),
+  NotoSansKR-Medium: (NotoSans, 500),
+  NotoSansKR-Bold: (NotoSans, 700),
+	
+	Poppins-Regular: (Poppins, 400),
+	Poppins-Medium: (Poppins, 500),
+	Poppins-SemiBold: (Poppins, 600),
+	Poppins-Bold: (Poppins, 700),
+);
+
+$font-default: 'NotoSans', 'Poppins', 'Arial', 'Malgun Gothic', '맑은 고딕', '돋움', dotum, sans-serif;
+$serif: 'NotoSerif', serif;
+$sans: 'NotoSans', sans-serif;
+$en: 'Poppins', sans-serif;
+$en-serif: 'Time New Roman', serif;
+
+// color guide
+// -----------------------------------------------------------------------------
+$white: #fff;
+$black: #000;
+
+$gray0: #F5F5F5;
+$gray1: #EEEEEE;
+$gray2: #E0E0E0;
+$gray3: #bdbdbd;
+$gray4: #9E9E9E;
+$gray5: #757575;
+$gray6: #616161;
+$gray7: #424242;
+$gray8: #333333;
+$gray9: #191919;
+
+$fog:           $gray0;
+$ash:           $gray1;
+$silver-light:  $gray2;
+$silver:        $gray3;
+$silver-dark:   $gray4;
+$gray-light:    $gray5;
+$gray:          $gray6;
+$gray-dark:     $gray7;
+$dark:          $gray8;
+$ink:           $gray9;
+
+// 메인 컬러
+$color-primary: #5558AF;
+$color-primary-light: #A6A8D5;
+
+// 서브 컬러 - Blue line
+$color-sub: #1976d2;
+$color-sub-light: #27c2f1;
+$color-sub-pale: #6fc6ee;
+$color-sub-deep: #101951;
+$color-sub-dark: #0a1132;
+
+// 서브 컬러 - Another line
+$color-sub-ash: #d0d4dc;
+$color-sub-red : #FF0068;
+$color-sub-gold: #ba8548;
+
+// 리스트 공통
+$list-bg-color: $gray0;
+$list-border-color: $gray2;
+$list-border-dark-color: $gray7;
+$list-padding-tb: 0.8em;
+$list-padding-lr: 1.2em;
+
+$element-margin-lr: 0.5rem;
+
+
+// 애니메이션
+// -----------------------------------------------------------------------------
+$dur: .4s;
+$ease: cubic-bezier(0.645, 0.045, 0.355, 1.000);

@@ -1,0 +1,239 @@
+// -----------------------------------------------------------------------------
+// Button
+// -----------------------------------------------------------------------------
+
+.btn {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  padding: 12px 26px;
+  border: 2px solid $dark;
+  background-color: transparent;
+  color: $ink;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.7;
+  letter-spacing: 0;
+  vertical-align: middle;
+  transition: all $dur/2 ease-out;
+  @include box-sizing();
+  @include border-radius(4px);
+
+  & + & {
+    margin-left: $element-margin-lr;
+  }
+
+  &[disabled] {
+    border-color: $silver-light !important;
+    background-color: transparent !important;
+    color: $silver !important;
+    cursor: not-allowed;
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $dark;
+    color: $white;
+    text-decoration: none;
+  }
+
+  &:active:enabled {
+    transform: scale(0.97);
+  }
+
+  // size variation
+  &--lg {
+    min-width: 180px;
+    padding: 13px;
+  }
+
+  &--sm {
+    min-width: 80px;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
+  }
+
+  // color variation
+  &--em {
+    border-color: $color-sub;
+    background-color: $color-sub;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      border-color: $color-primary-light;
+      background-color: $color-primary-light;
+      color: $white;
+    }
+
+    &[disabled] {
+      border-color: transparent !important;
+      background-color: $silver-light !important;
+      color: $silver !important;
+      cursor: not-allowed;
+    }
+  }
+  &--ghost {
+    border-color: $white;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+      color: $ink;
+    }
+
+    &[disabled] {
+      border-color: $gray-dark !important;
+      color: $gray-light !important;
+      cursor: not-allowed;
+    }
+  }
+  &--invert {
+    background-color: $white;
+    border-color: $white;
+
+    &:hover,
+    &:focus {
+      border-color: $color-primary-light;
+      background-color: $color-primary-light;
+      color: $ink;
+    }
+
+    &[disabled] {
+      border-color: transparent !important;
+      background-color: $gray6 !important;
+      cursor: not-allowed;
+
+      span {
+        color: rgba($ink, 0.38) !important;
+      }
+    }
+  }
+  &--gray {
+    border-color: $gray-light;
+    background-color: $gray-light;
+    color: $white;
+
+    &:focus,
+    &:hover {
+      background-color: $gray;
+      border-color: $gray;
+    }
+    &[disabled] {
+      background-color: $silver-light !important;
+      color: $silver !important;
+    }
+  }
+}
+
+.btn-r {
+  display: inline-block;
+  background-color: #333333;
+  text-align: center;
+  color: $white;
+  height: 36px;
+  width: 36px;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  @include radius(50%);
+  @include transition(background-color $dur/2);
+
+  & + & {
+    margin-left: $element-margin-lr/2;
+  }
+
+  &[disabled] {
+    border-color: transparent !important;
+    background-color: $silver-light !important;
+    color: $silver !important;
+    cursor: not-allowed;
+  }
+
+  &:hover,
+  &:focus {
+    // background-color: $color-primary-light;
+  }
+
+  &--sm {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+.btn-rb {
+  height: 35px;
+  width: 35px;
+  border: 2px solid;
+  border-color: $white;
+  color: $white;
+  background-color: $ink;
+
+  @include radius(50%);
+  @include transition(background-color $dur/2);
+
+  &:hover, &:focus {
+    border-color: $color-primary-light;
+    color: $color-primary-light;
+  }
+
+  &[disabled] {
+    border-color: rgba($white, 0.2) !important;
+    color: rgba($white, 0.2) !important;
+    background-color: rgba($ink, 0.2) !important;
+    cursor: not-allowed;
+  }
+
+  &-l {
+    height: 48px;
+    width: 48px;
+    font-size: 20px;
+  }
+
+  &-xl {
+    height: 64px;
+    width: 64px;
+    font-size: 22px;
+  }
+}
+
+.btn-i {
+  color: $white;
+
+  &:hover, &:focus {
+    border-color: $color-primary-light;
+    color: $color-primary-light;
+  }
+
+  &[disabled] {
+    color: rgba($white, 0.2) !important;
+    cursor: not-allowed;
+  }
+
+  &-l {
+    font-size: 48px;
+  }
+
+  &-xl {
+    font-size: 64px;
+  }
+}
+
+.func {
+  text-align: center;
+  margin-top: 5rem;
+}

@@ -1,0 +1,200 @@
+// -----------------------------------------------------------------------------
+// Sidenav
+// -----------------------------------------------------------------------------
+
+.btn-side-menu {
+  //border: 1px solid #f00;
+  position: fixed;
+  right: 50px ; top: 35px;
+  z-index: 1001;
+  width: 30px; height: 30px;
+  a {
+    display: block;
+    width: 100%; height: 100%;
+    .m-menu {
+      //border: 1px solid #f00;
+      position: relative;
+      top: 50%; left: 50%;
+      width: 30px; height: 24px;
+      @include translate(-50%, -50%);
+      span {
+        position: absolute;
+        left: 0;
+        width: 100%; height: 2px;
+        background: #111;
+        transition: all 0.3s;
+        
+        &:nth-child(1){top: 0;}
+        &:nth-child(2){top: 11px;}
+        &:nth-child(3){top: 22px;}
+      }
+    }
+  }
+}
+
+/* 햄버거 메뉴를 x로 변경 */
+.nav-opened {
+  .side-nav {
+    display: block; right: 0;
+  }
+
+  .btn-side-menu {
+    position: fixed;
+    right: 50px ; top: 35px;
+    z-index: 10001;
+    a {
+      .m-menu {
+        //border: 1px solid #ff0;
+        span {
+          &:nth-child(1) {
+            transform: rotate(45deg);
+            top: 11px;
+          }
+          &:nth-child(2) {
+            transform: translate(-50px, 0);
+            opacity: 0;
+          }
+          &:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 11px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* side-nav */
+body {
+  &:after {
+    content:'';
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 100;
+    width: 0; height: 100vh;
+    background: #fff;
+  }
+
+  &.nav-opened {
+    .header-bar .gnb-list {
+      display: none;
+    }
+    overflow-y: hidden;
+    &:after {
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      left: 0; top: 0;
+    }
+  }
+}
+
+.side-nav {
+  position: fixed;
+  top: 0; right: -200%;
+  z-index: 9999;
+  width: 100%; height: 100vh;
+  transition: right 0.5s;
+
+  .inner {
+    //border: 1px solid #f00;
+    position: relative;
+    width: 100%; height: 100%;
+    margin: 0 auto;
+    @include box-sizing;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+}
+
+/***** SNB 반응 대응 *****/
+@include mq($until: x-large) {
+  //border: 1px solid #f00;
+  
+}
+
+@include mq($until: large) {
+
+}
+
+@include mq($until: medium) {
+  //border: 1px solid #0ff;
+  
+}
+
+@include mq($until: small) {
+  //border: 1px solid #0f0;
+  
+}
+
+@include mq($until: x-small) {
+  //border: 1px solid #959;
+  
+}
+
+@media (max-height: 420px) and (orientation: landscape) {
+  .side-nav {
+    //border: 1px solid #f00;
+    .inner {
+      height: auto;
+      overflow-y: hidden;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px){
+  #header {
+    .header-bar {
+      height: 70px;
+      background: rgba(0,0,0, 0.5);
+      @include box-s(0, 1px, 1px, rgba(0,0,0, 0.2));
+      .logo {
+        width: 180px;
+        top: -6px;
+      }
+    }
+    
+    .btn-side-menu {
+      right: 10px; top: 5px;
+      .m-menu {
+        width: 38px;
+        height: 28px;
+        //background: #f00;
+        span {
+          &:nth-child(1){top: 0;}
+          &:nth-child(2){top: 14px;}
+          &:nth-child(3){top: 28px;}
+        }
+      }
+    }
+  }
+  
+  body.home {
+    #header .header-bar {
+      background: none;
+      box-shadow: none;
+    }
+  }
+  
+  .nav-opened {
+    .m-menu {
+      span {
+        &:nth-child(1) {
+          transform: rotate(45deg);
+          top: 14px !important;
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+          top: 14px !important;
+        }
+      }
+    }
+  }
+  
+  .main {
+    padding: 110px 20px;
+  }
+  
+}
+
+

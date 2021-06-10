@@ -1,0 +1,251 @@
+// -----------------------------------------------------------------------------
+// Analysis Service
+// -----------------------------------------------------------------------------
+
+/***** Analysis Service *****/
+
+.analysis-article {
+  //border: 1px solid #f00;
+
+  .title-wrap{
+    //border: 1px solid #ff0;
+    margin-top: 120px;
+    position: absolute;
+    left: 25px;
+    z-index: 10000;
+    & + .container {
+      //border: 1px solid #f00;
+      p {
+        padding-top: 35px;
+      }
+    }
+  }
+  .local-menu-wrap{
+    //border: 1px solid #f00;
+    padding-left: 10px;
+    padding-top: 25px;
+    .local-menu-list {
+      li {
+        a {
+          display: block;
+          text-align: left;
+          color: #ccc;
+          font-size: 13px;
+          padding: 5px 0;
+          &:hover, &:focus, &:active, &.is-current {
+            color: #fff;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  
+  .container {
+    padding-left: 400px;
+    
+    .section-title {
+      & + p {
+        //border: 1px solid #f00;
+        font-size: 0.85em;
+      }
+    }
+  }
+  
+  .content {
+    padding-top: 70px;
+  
+    .service-list {
+      li {
+        //font-size: 0.85em;
+        text-indent: -10px;
+        padding-left: 20px;
+        margin-bottom: 10px;
+        &:before {
+          content: '-';
+          display: inline-block;
+          width: 10px;
+          color: #ccc;
+        }
+      }
+    }
+    
+    p {
+      margin-bottom: 20px;
+      &.caution {
+        padding-top: 50px;
+      }
+    }
+    
+    figure {
+      margin-bottom: 50px;
+      figcaption {
+        //border: 1px solid #f00;
+        text-align: center;
+        font-size: 0.85em;
+        padding: 10px 0;
+      }
+    }
+    .row {
+      figure {
+        margin-bottom: 0 !important;
+        //border: 1px solid #f00;
+      }
+    }
+    
+    .service-box {
+      position: relative;
+      border: 1px solid #aaa;
+      background: rgba(0,0,0,0.4);
+      padding: 25px 20px;
+      @include border-radius(4px);
+      
+      h4 {
+        font-size: 1.35em;
+        margin-bottom: 15px;
+        //text-align: center;
+      }
+      
+      ul {
+        li {
+          text-indent: -10px;
+          padding-left: 20px;
+          p {
+            display: inline-block;
+            font-size: 0.85em;
+            line-height: 1.35;
+            margin-bottom: 7px;
+            text-indent: 0;
+            color: #aaa;
+  
+          }
+          &:before {
+            content: '-';
+            display: inline-block;
+            width: 10px;
+            color: #ccc;
+          }
+        }
+      }
+      
+    }
+    
+    .gallery-list1, .gallery-list2 {
+      li a {
+        display: block;
+        cursor: pointer;
+        &:hover, &:focus, &:active {
+          color: #fc3;
+          
+        }
+      }
+    }
+    
+    .gallery-list1 {
+      overflow: hidden;
+      margin: 20px -8px 70px;
+      li {
+        float: left;
+        width: 25%;
+        padding: 8px;
+        //border: 1px solid #f00;
+        @include box-sizing();
+        figure {
+          margin-bottom: 0;
+        }
+      }
+    }
+    
+    .gallery-list2 {
+      overflow: hidden;
+      margin: 20px -8px 0;
+      li {
+        float: left;
+        padding: 8px;
+        @include box-sizing();
+        figure {
+          //border: 1px solid #f00;
+          margin-bottom: 0;
+          text-align: center;
+          img {
+            width: auto !important;
+            max-width: 100%;
+            height: 148px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+/***** About YiPSCELL 모바일 대응 *****/
+
+.analysis-article {
+  @include mq($until: x-large) {
+    //border: 1px solid #f00;
+    
+  }
+  
+  @include mq($until: large) {
+    //border: 1px solid #00f;
+    
+  }
+  
+  @include mq($until: medium) {
+    //border: 1px solid #0ff;
+    
+    
+  }
+  
+  @include mq($until: small) {
+    //border: 1px solid #0f0;
+    .content {
+      .service-box {
+        h4 {
+          text-align: center;
+        }
+      }
+      .gallery-list1 {
+        //border: 1px solid #f00;
+        margin: 10px -5px 70px;
+        li {
+          width: 50% !important;
+          padding: 5px;
+          @include box-sizing;
+        }
+      }
+  
+      .gallery-list2 {
+        //border: 1px solid #ff0;
+        margin: 10px -5px 0;
+        li {
+          padding: 5px;
+          text-align: center;
+  
+          figure {
+            img {
+              width: auto !important;
+              max-width: 100%;
+              height: 150px !important;
+            }
+          }
+          &:last-child {
+            figure {
+              img {
+                width: 100% !important;
+                height: auto!important;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    
+  }
+  
+  @include mq($until: x-small) {
+    //border: 1px solid #959;
+    
+  }
+}

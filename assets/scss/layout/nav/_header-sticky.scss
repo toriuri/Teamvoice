@@ -1,0 +1,29 @@
+$headerStickyHeight: 100px;
+
+#header {
+  .header-bar,
+  .btn-side-menu {
+    @include transition(transform 0.5s);
+    @include transform(translateY(0));
+  }
+}
+
+.scroll-down {
+  #header {
+    .header-bar.is-sticky,
+    .btn-side-menu.is-sticky{
+      @include transform(translateY(-$headerStickyHeight));
+    }
+  }
+}
+
+.nav-opened {
+  #header {
+    .header-bar,
+    .btn-side-menu {
+      @include transition(transform 0.5s !important) ;
+      @include transform(translateY(0) !important)  ;
+    }
+  }
+}
+  

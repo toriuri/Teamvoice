@@ -1,0 +1,151 @@
+// -----------------------------------------------------------------------------
+// Typography
+// -----------------------------------------------------------------------------
+
+%H {
+  color: $white;
+  font-family: $sans;
+  letter-spacing: -0.015em;
+}
+%H-SUB {
+  margin-bottom: 0.5em;
+  letter-spacing: -0.005em;
+}
+
+@mixin h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: $line-height - 0.1;
+  @extend %H;
+
+  @include mq(medium) {
+    font-size: 4.6rem;
+  }
+  @include mq(large) {
+    font-size: 5.4rem;
+  }
+}
+
+@mixin h2 {
+  font-size: 2.8rem;
+  font-weight: 100;
+  line-height: $line-height;
+  strong{
+    font-weight: 400;
+  }
+  @extend %H;
+
+  @include mq(medium) {
+    font-size: 3.8rem;
+  }
+  @include mq(large) {
+    font-size: 4.6rem;
+  }
+}
+
+@mixin h3 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  line-height: $line-height;
+  @extend %H;
+
+  @include mq(medium) {
+    font-size: 2.8rem;
+  }
+  @include mq(large) {
+    font-size: 2.8rem;
+  }
+}
+
+@mixin h4 {
+  font-size: 1.8rem;
+  line-height: $line-height + 0.1;
+  @extend %H;
+
+  @include mq(medium) {
+    font-size: 2.2rem;
+  }
+  @include mq(large) {
+    font-size: 2.4rem;
+  }
+}
+
+@mixin h5 {
+  font-size: 1.8rem;
+  line-height: $line-height + 0.1;
+  @extend %H;
+  font-family: $font-default;
+
+  @include mq(large) {
+    font-size: 2rem;
+  }
+}
+
+@mixin h6 {
+  font-size: 1.6rem;
+  line-height: $line-height + 0.3;
+  @extend %H;
+  font-family: $font-default;
+
+  @include mq(large) {
+    font-size: 1.8rem;
+  }
+}
+
+@mixin sub-h1 {
+  font-size: 2rem;
+  font-family: $sans;
+  color: $white;
+  line-height: $line-height + 0.2;
+  letter-spacing: -0.050em;
+
+  @include mq(large) {
+    font-size: 3.5rem;
+  }
+}
+
+@mixin sub-h2 {
+  font-size: 2rem;
+  font-family: $sans;
+  color: $white;
+  line-height: $line-height - 0.2;
+  letter-spacing: -0.050em;
+
+  @include mq(large) {
+    font-size: 2.4rem;
+  }
+}
+
+@mixin sub-h3 {
+  font-size: 1.6rem;
+  font-family: $sans;
+  line-height: $line-height - 0.3;
+  color: $white;
+  @extend %H-SUB;
+}
+
+@mixin sub-h4 {
+  font-size: 1.8rem;
+  font-family: $en;
+  line-height: $line-height - 0.1;
+  color: $white;
+  @extend %H-SUB;
+}
+
+@mixin h-small {
+  font-family: $sans;
+  font-size: 1.4rem;
+}
+
+.h1 { @include h1; }
+.h2 { @include h2; }
+.h3 { @include h3; }
+.h4 { @include h4; }
+.h5 { @include h5; }
+.h6 { @include h6; }
+
+// sub fonts
+.sub-h1 { @include sub-h1; }
+.sub-h2 { @include sub-h2; }
+.sub-h3 { @include sub-h3; }
+.sub-h4 { @include sub-h4; }
