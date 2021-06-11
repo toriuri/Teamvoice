@@ -64,6 +64,7 @@
   }
 }
 
+
 /* side-nav */
 body {
   &:after {
@@ -117,7 +118,9 @@ body {
   position: absolute;
   top: 50%; left: 0;
   width: 100%;
+  
   @include translate(0, -50%);
+  @include box-sizing();
   
   .gnb-list-box {
     //border: 1px solid #00f;
@@ -164,89 +167,138 @@ body {
 }
 
 
-/***** SNB 반응 대응 *****/
-@include mq($until: x-large) {
-  //border: 1px solid #f00;
+/***** SNB 반응형 대응 *****/
+#side-nav {
   
-}
-
-@include mq($until: large) {
-
-}
-
-@include mq($until: medium) {
-  //border: 1px solid #0ff;
-  
-}
-
-@include mq($until: small) {
-  //border: 1px solid #0f0;
-  
-}
-
-@include mq($until: x-small) {
-  //border: 1px solid #959;
-  
-}
-
-/*
-@media (max-height: 420px) and (orientation: landscape) {
-  .side-nav {
+  @include mq($until: xx-large) {
     //border: 1px solid #f00;
-    .inner {
-      height: auto;
-      overflow-y: hidden;
+    
+    .gnb-wrap {
+      padding: 0 40px;
     }
   }
-}
-
-@media screen and (max-width: 1024px){
-  #header {
+  
+  @include mq($until: x-large) {
+    //border: 1px solid #f00;
+    
+  }
+  
+  @include mq($until: large) {
+    //border: 1px solid #00f;
+    .membership {
+      display: block;
+    }
+    
+    .gnb-wrap {
+      top: 120px;
+      @include translate(0, 0);
+      padding: 15px;
+      
+      .gnb-list-box {
+        //border: 1px solid #00f;
+        > li {
+          h2 {
+            font-size: 40px;
+            margin-right: 0;
+            float: inherit;
+            text-align: center;
+          }
+      
+          ul {
+            float: inherit;
+            margin-top: 15px;
+            li {
+              display: block;
+              margin-right: 0;
+              text-align: center;
+            }
+          }
+      
+        }
+      }
+    }
+  }
+  
+  @include mq($until: medium) {
+    //border: 1px solid #0ff;
+  
     .header-bar {
-      height: 70px;
-      background: rgba(0,0,0, 0.5);
-      @include box-s(0, 1px, 1px, rgba(0,0,0, 0.2));
+      height: 60px;
+    
       .logo {
-        width: 180px;
-        top: -6px;
+        left: 20px; top: 20px;
+        width: 102px;
+      }
+      
+      .membership {
+        right: 70px; top: 15px;
+        li {
+          margin-left: 20px;
+        }
       }
     }
     
-    .btn-side-menu {
-      right: 10px; top: 5px;
-      .m-menu {
-        width: 38px;
-        height: 28px;
-        //background: #f00;
-        span {
-          &:nth-child(1){top: 0;}
-          &:nth-child(2){top: 14px;}
-          &:nth-child(3){top: 28px;}
+    .gnb-wrap {
+      top: 60px;
+    }
+  }
+  
+  @include mq($until: small) {
+    //border: 1px solid #0f0;
+    
+    .logo {
+      display: none;
+    }
+    
+    .gnb-wrap {
+      padding: 15px;
+    
+      .gnb-list-box {
+        //border: 1px solid #00f;
+        > li {
+          padding: 20px 0;
+          h2 {font-size: 25px;}
+        
+          ul {
+            margin-top: 15px;
+            li {
+              a {font-size: 14px;}
+            }
+          }
+        
         }
       }
     }
   }
   
-  body.home {
-    #header .header-bar {
-      background: none;
-      box-shadow: none;
-    }
+  @include mq($until: x-small) {
+    //border: 1px solid #959;
+    
   }
   
-  .nav-opened {
-    .m-menu {
-      span {
-        &:nth-child(1) {
-          transform: rotate(45deg);
-          top: 14px !important;
-        }
-        &:nth-child(3) {
-          transform: rotate(-45deg);
-          top: 14px !important;
+  
+  @media (max-height: 420px) and (orientation: landscape) {
+    //border: 1px solid #959;
+  
+    .header-bar {
+      height: 60px;
+    
+      .logo {
+        left: 20px; top: 20px;
+        width: 102px;
+      }
+    
+      .membership {
+        right: 70px; top: 15px;
+        li {
+          margin-left: 20px;
         }
       }
     }
+  
+    .gnb-wrap {
+      top: 60px;
+    }
   }
+  
 }
-*/

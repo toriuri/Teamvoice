@@ -14,7 +14,7 @@
       //border: 1px solid #f00;
       height: 100vh;
       //display: table;
-      padding-top: 130px;
+      padding-top: 150px;
       @include box-sizing();
       
       .content {
@@ -60,9 +60,11 @@
   #section1 {
     background: url(../image/main/bg-main-intro.jpg) no-repeat center -100px / cover #F9FAFC;
     .container {
-      height: calc(100vh - 130px);
+      height: calc(100vh - 100px);
       display: table;
+      padding-top: 0;
       .content {
+        //border: 1px solid #f00;
         display: table-cell;
         vertical-align: middle;
       }
@@ -85,6 +87,7 @@
         margin-bottom: 0;
       }
     }
+    
     .notice {
       position: absolute;
       left: 0; bottom: 0;
@@ -541,11 +544,21 @@
 /***** Main 모바일 대응 *****/
 body.home {
   
+  @include mq($until: xx-large) {
+    //border: 1px solid #f00;
+    .container,
+    .footer-wrap {
+      padding: 0 40px;
+    }
+  ;
+  }
+  
   @include mq($until: x-large) {
-
+    //border: 1px solid #00f;
   }
   
   @include mq($until: large) {
+    //border: 2px solid #0f0;
 
   }
   
