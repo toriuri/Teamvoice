@@ -1,5 +1,5 @@
 /*!
- * fullPage 3.0.9
+ * fullPage 3.1.1
  * https://github.com/alvarotrigo/fullPage.js
  *
  * @license GPLv3 for open source use only
@@ -62,11 +62,6 @@ html.fp-enabled,
     z-index: 4;
     top: 50%;
     cursor: pointer;
-    width: 44px; height: 80px;
-    box-sizing: border-box;
-    margin-top: -40px;
-    background: no-repeat center center / 40px auto;
-    /*
     width: 0;
     height: 0;
     border-style: solid;
@@ -74,30 +69,18 @@ html.fp-enabled,
     -webkit-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
-     */
 }
 .fp-controlArrow.fp-prev {
     left: 15px;
-    background-image: url(../image/common/slide-prev.png);
-    /*
     width: 0;
     border-width: 38.5px 34px 38.5px 0;
-    border-color: transparent #616161 transparent transparent;
-     */
+    border-color: transparent #fff transparent transparent;
 }
 .fp-controlArrow.fp-next {
     right: 15px;
-    background-image: url(../image/common/slide-next.png);
-    /*
     border-width: 38.5px 0 38.5px 34px;
-    border-color: transparent transparent transparent #616161;
-     */
+    border-color: transparent transparent transparent #fff;
 }
-.fp-controlArrow.fp-prev:hover,
-.fp-controlArrow.fp-next:hover {
-    /*background-color: rgba(0,0,0,0.2);*/
-}
-
 .fp-scrollable {
     overflow: hidden;
     position: relative;
@@ -134,8 +117,8 @@ html.fp-enabled,
     -webkit-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
-    left: 20px !important;
-    right: 20px;
+    left: 0 !important;
+    right: 0;
     margin: 0 auto !important;
 }
 .fp-slidesNav.fp-bottom {
@@ -153,9 +136,9 @@ html.fp-enabled,
 .fp-slidesNav ul li {
     display: block;
     width: 14px;
-    height: 14px;
-    margin: 6px;
-    position: relative;
+    height: 13px;
+    margin: 10px 7px;
+    position:relative;
 }
 .fp-slidesNav ul li {
     display: inline-block;
@@ -170,40 +153,69 @@ html.fp-enabled,
     cursor: pointer;
     text-decoration: none;
 }
-#fp-nav ul li a.active span,
-.fp-slidesNav ul li a.active span,
-#fp-nav ul li:hover a.active span,
-.fp-slidesNav ul li:hover a.active span{
-    height: 12px;
-    width: 12px;
-    margin: -6px 0 0 -6px;
-    border-radius: 100%;
-    background: #006f45;
- }
+
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
     border-radius: 50%;
     position: absolute;
-    z-index: 1;
-    height: 4px;
-    width: 4px;
-    border: 0;
-    background: #333;
     left: 50%;
     top: 50%;
-    margin: -2px 0 0 -2px;
+    margin: -6px 0 0 -6px;
+    
+    z-index: 1;
+    height: 12px;
+    width: 12px;
+    border: 2px solid #5558AF;
+    background: none;
+    opacity: 0.4;
+    
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    
     -webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
     -o-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
 }
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span{
+    /*
+    height: 12px;
+    width: 12px;
+    margin: -6px 0 0 -6px;
+    border-radius: 100%;
+     */
+    background: #5558AF;
+    opacity: 1.0;
+}
+
 #fp-nav ul li:hover a span,
 .fp-slidesNav ul li:hover a span{
-    width: 10px;
-    height: 10px;
-    margin: -5px 0px 0px -5px;
-    //background: #333;
+    /*
+    width: 12px;
+    height: 12px;
+    margin: -6px 0px 0px -6px;
+    */
 }
+
+/* white slide navi */
+#fp-nav ul.white li a span,
+.fp-slidesNav ul.white li a span {
+    border: 2px solid #fff;
+}
+
+#fp-nav ul.white li a.active span,
+.fp-slidesNav ul.white li a.active span,
+#fp-nav ul.white li:hover a.active span,
+.fp-slidesNav ul.white li:hover a.active span{
+    background: #fff;
+    opacity: 1.0;
+}
+
 #fp-nav ul li .fp-tooltip {
     position: absolute;
     top: -2px;
