@@ -1,0 +1,79 @@
+// -----------------------------------------------------------------------------
+// membership
+// -----------------------------------------------------------------------------
+
+.policy-article {
+  //border: 1px solid #f00;
+  .container {
+    padding: 100px 0 120px;
+  }
+  
+  .iframe-box {
+    height: 600px;
+    background: #F3F4F9;
+    border: 1px solid #E1E2E6;
+    @include border-radius(4px);
+  }
+}
+
+.terms-text {
+  min-height: 300px;
+  
+  h2, h3{
+    font-size: 18px;
+    color: #111;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    margin-bottom: 30px;
+  }
+  
+  ul {
+    margin: 0 20px 30px;
+    li {
+      list-style-type: disc;
+      margin-bottom: 10px;
+      margin-left: 20px;
+      list-style-position: outside;
+      line-height: 1.6em;
+    }
+  }
+
+  .box {
+    border: 1px solid #e1e1e1;
+    padding: 20px;
+    background: #f8f8f8;
+    margin: 0 0 20px;
+    @include border-radius(4px);
+  }
+}
+
+/***** Membership 모바일 대응 *****/
+
+.membership-article {
+  @include mq($until: x-large) {
+    //border: 1px solid #f00;
+    
+  }
+  
+  @include mq($until: large) {
+    //border: 1px solid #00f;
+    
+  }
+  
+  @include mq($until: medium) {
+    //border: 1px solid #0ff;
+    
+  }
+  
+  @include mq($until: small) {
+    //border: 1px solid #0f0;
+    
+  }
+  
+  @include mq($until: x-small) {
+    //border: 1px solid #959;
+    
+  }
+}
