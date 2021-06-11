@@ -19,11 +19,20 @@
 	padding-top: 100px;
 	background: no-repeat center bottom;
 	
-	&.mypage {
-		background-image: url(../image/mypage/subtop-visual-mypage.jpg);
+	&.product {
+		background-image: url(../image/product/subtop-visual-product.jpg);
 	}
+	
+	&.guide {
+		background-image: url(../image/guide/subtop-visual-guide.jpg);
+	}
+	
 	&.customer {
 		background-image: url(../image/customer/subtop-visual-customer.jpg);
+	}
+	
+	&.mypage {
+		background-image: url(../image/mypage/subtop-visual-mypage.jpg);
 	}
 	
 	& + section > .container {
