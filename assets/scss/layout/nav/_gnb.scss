@@ -2,190 +2,143 @@
 // GNB
 // -----------------------------------------------------------------------------
 
+/* 헤더 GNB */
 #header {
   //border: 1px solid #f00;
   position: relative;
-  
-  .header-bar {
-    position: fixed;
-    left: 0; top: 0;
-    z-index: 998;
-    width: 100%; height: 100px;
-    background: #fff;
-    border-bottom: 1px solid #E1E2E6;
-    transition: top 0.2s ease-in-out;
-    
-    .logo {
-      position: absolute;
-      left: 50px; top: 28px;
-      a {display: block;}
-    }
-  
-    .gnb-list {
-      position: absolute;
-      left: 50%; top: 36px;
-      @include translate(-50%, 0);
-      
-      > li {
-        position: relative;
-        display: inline-block;
-        margin: 0 60px;
-        
-        > a {
-          position: relative;
-          display: inline-block;
-          font-weight: 500;
-          font-size: 18px;
-          color: #111;
-          &:hover, &:focus, &:active {
-            color: $color-primary;
-            &:after {
-              content: '';
-              display: block;
-              width: 30px; height: 3px;
-              background: $color-primary;
-              
-              position: absolute;
-              left: 50%; bottom: -6px;
-              @include translate(-50%, 0);
-            }
-          }
-        }
-      
-        > ul {
-          display: none;
-          background: $color-primary;
-          padding: 40px;
-          @include box-sizing();
-          
-          position: absolute;
-          top: 64px; left: 50%;
-          @include translate(-50%, 0);
-  
-          z-index: 990;
-          li {
-            margin-bottom: 15px;
-            &:last-child {
-              margin-bottom: 0;
-            }
-            
-            a {
-              display: block;
-              color: $color-primary-light;
-              text-align: center;
-              font-size: 18px;
-              
-              &:hover, &:focus, &:active, &.is-current {
-                color: #fff;
-              }
-            }
-          }
-        }
-        
-        &:nth-child(1) {
-          ul {
-            width: 290px;
-            //display: block;
-          }
-        }
-        &:nth-child(2) {
-          ul {
-            width: 220px;
-          }
-        }
-        &:nth-child(3) {
-          ul {
-            width: 184px;
-          }
-        }
-        
-      }
-    }
-    
-    .membership {
-      position: absolute;
-      right: 120px; top: 36px;
-      li {
-        position: relative;
-        display: inline-block;
-        margin-left: 40px;
-        padding-left: 28px;
-        a {
-          display: inline-block;
-          font-size: 16px;
-          color: #888;
-          
-          &:hover, &:focus, &:active {
-            color: $color-primary;
-            i {
-              color: $color-primary;
-            }
-          }
-          i {
-            font-size: 24px;
-            color: #111;
-            //border: 1px solid #f00;
-            position: absolute;
-            left: 0; top: 50%;
-            @include translate(0, -50%);
-          }
-        }
-      }
-      
-    }
-  }
 }
 
-.gnb-wrap {
-  //border: 1px solid #ff0;
-  position: absolute;
-  top: 50%; left: 0;
-  width: 100%;
-  @include translate(0, -50%);
+.header-bar {
+  position: fixed;
+  left: 0; top: 0;
+  z-index: 99;
+  width: 100%; height: 100px;
+  background: #fff;
+  border-bottom: 1px solid #E1E2E6;
+  transition: top 0.2s ease-in-out;
   
-  .gnb-list-box {
-    //border: 1px solid #00f;
-    width: 100%; max-width: 1400px;
-    margin: 0 auto;
+  .logo {
+    position: absolute;
+    left: 50px; top: 28px;
+    a {display: block;}
+  }
+  
+  .gnb-list {
+    position: absolute;
+    left: 50%; top: 36px;
+    @include translate(-50%, 0);
     
     > li {
       position: relative;
-      overflow: hidden;
-      width: 100%;
-      padding: 26px 0;
-      border-bottom: 1px solid #E1E2E6;
-      &:last-child {
-        border-bottom: none;
-      }
+      display: inline-block;
+      margin: 0 60px;
       
-      h2 {
-        font-size: 60px;
-        font-weight: 600;
-        margin-right: 100px;
-        float: left;
+      > a {
+        position: relative;
+        display: inline-block;
+        font-weight: 500;
+        font-size: 18px;
         color: #111;
+        
+        &:hover, &:focus, &:active {
+          color: $color-primary;
+          &:after {
+            content: '';
+            display: block;
+            width: 30px; height: 3px;
+            background: $color-primary;
+            
+            position: absolute;
+            left: 50%; bottom: -6px;
+            @include translate(-50%, 0);
+          }
+        }
       }
       
-      ul {
-        float: left;
-        margin-top: 35px;
+      > ul {
+        display: none;
+        background: $color-primary;
+        padding: 40px;
+        @include box-sizing();
+        @include box-s(0, 5px, 10px, rgba(0,0,0,0.16));
+        
+        position: absolute;
+        top: 65px; left: 50%;
+        @include translate(-50%, 0);
+        
+        z-index: 990;
         li {
-          display: inline-block;
-          margin-right: 43px;
+          margin-bottom: 15px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          
           a {
             display: block;
-            font-size: 22px;
-            color: #555;
+            color: $color-primary-light;
+            text-align: center;
+            font-size: 18px;
+            
             &:hover, &:focus, &:active, &.is-current {
-              color: $color-primary;
+              color: #fff;
             }
           }
         }
       }
       
+      &:nth-child(1) {
+        ul {
+          width: 290px;
+          //display: block;
+        }
+      }
+      &:nth-child(2) {
+        ul {
+          width: 220px;
+        }
+      }
+      &:nth-child(3) {
+        ul {
+          width: 184px;
+        }
+      }
+      
     }
   }
+  
+  .membership {
+    position: absolute;
+    right: 120px; top: 36px;
+    li {
+      position: relative;
+      display: inline-block;
+      margin-left: 40px;
+      padding-left: 28px;
+      a {
+        display: inline-block;
+        font-size: 16px;
+        color: #888;
+        
+        &:hover, &:focus, &:active {
+          color: $color-primary;
+          i {
+            color: $color-primary;
+          }
+        }
+        i {
+          font-size: 24px;
+          color: #111;
+          //border: 1px solid #f00;
+          position: absolute;
+          left: 0; top: 50%;
+          @include translate(0, -50%);
+        }
+      }
+    }
+    
+  }
 }
+
 
 /***** gnb list 반응형 대응 *****/
 .gnb-wrap {
@@ -293,19 +246,7 @@
      // @include translate(0, -50%);
     }
   
-    .lang {
-      margin: 0; width: 100px;
-      position: absolute;
-      left: 20px; top: 50%;
-      @include translate(0, -50%);
-      ul li {
-        display: block;
-        margin: 0 0 7px;
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
+   
     
     .gnb-list {
       //border: 1px solid #f00;

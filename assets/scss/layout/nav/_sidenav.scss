@@ -76,11 +76,9 @@ body {
   }
 
   &.nav-opened {
-    .header-bar .gnb-list {
-      display: none;
-    }
     overflow-y: hidden;
     &:after {
+      //border: 1px solid #00f;
       width: 100%;
       height: 100vh;
       position: fixed;
@@ -94,7 +92,7 @@ body {
   top: 0; right: -200%;
   z-index: 9999;
   width: 100%; height: 100vh;
-  transition: right 0.5s;
+  transition: right 0.7s;
 
   .inner {
     //border: 1px solid #f00;
@@ -104,8 +102,67 @@ body {
     @include box-sizing;
     overflow-y: auto;
     z-index: 1000;
+    
+    .header-bar {
+      //border: 1px solid #f00;
+      position: absolute;
+      left: 0; top: 0;
+    }
   }
 }
+
+/* 햄버거 메뉴 오픈 */
+.gnb-wrap {
+  //border: 1px solid #f00;
+  position: absolute;
+  top: 50%; left: 0;
+  width: 100%;
+  @include translate(0, -50%);
+  
+  .gnb-list-box {
+    //border: 1px solid #00f;
+    width: 100%; max-width: 1400px;
+    margin: 0 auto;
+    
+    > li {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding: 26px 0;
+      border-bottom: 1px solid #E1E2E6;
+      &:last-child {
+        border-bottom: none;
+      }
+      
+      h2 {
+        font-size: 60px;
+        font-weight: 600;
+        margin-right: 100px;
+        float: left;
+        color: #111;
+      }
+      
+      ul {
+        float: left;
+        margin-top: 35px;
+        li {
+          display: inline-block;
+          margin-right: 43px;
+          a {
+            display: block;
+            font-size: 22px;
+            color: #555;
+            &:hover, &:focus, &:active, &.is-current {
+              color: $color-primary;
+            }
+          }
+        }
+      }
+      
+    }
+  }
+}
+
 
 /***** SNB 반응 대응 *****/
 @include mq($until: x-large) {
