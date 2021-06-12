@@ -44,21 +44,6 @@
       > a {
         position: relative;
         display: inline-block;
-        font-weight: 500;
-        font-size: 18px;
-        color: #111;
-        
-        &:hover, &:focus, &:active {
-          color: $color-primary;
-          &:after {
-            content: '';
-            display: block;
-            width: 30px; height: 3px;
-            background: $color-primary;
-            
-            position: absolute;
-            left: 50%; bottom: -6px;
-            @include translate(-50%, 0);
         padding: 0 60px;
         height: 80px;
         
@@ -125,6 +110,27 @@
         ul {
           width: 220px;
         }
+
+        &.is-active{
+          >a{
+            color: $color-primary;
+            &:after {
+              content: '';
+              display: block;
+              width: 30px; height: 3px;
+              background: $color-primary;
+              
+              position: absolute;
+              left: 50%; bottom: -6px;
+              @include translate(-50%, 0);
+            }
+          }
+
+          >ul{
+            display: block;
+          }
+        }
+        
       }
       &:nth-child(3) {
         ul {
