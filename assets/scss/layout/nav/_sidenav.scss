@@ -185,9 +185,8 @@ body {
   
   @include mq($until: large) {
     //border: 1px solid #00f;
-    .membership {
-      display: block;
-    }
+    
+    .membership {display: block;}
     
     .gnb-wrap {
       top: 120px;
@@ -232,23 +231,17 @@ body {
       
       .membership {
         right: 70px; top: 15px;
-        li {
-          margin-left: 20px;
-        }
+        li {margin-left: 20px;}
       }
     }
     
-    .gnb-wrap {
-      top: 60px;
-    }
+    .gnb-wrap {top: 60px;}
   }
   
   @include mq($until: small) {
     //border: 1px solid #0f0;
     
-    .logo {
-      display: none;
-    }
+    .logo {display: none;}
     
     .gnb-wrap {
       padding: 15px;
@@ -290,9 +283,7 @@ body {
     
       .membership {
         right: 70px; top: 15px;
-        li {
-          margin-left: 20px;
-        }
+        li {margin-left: 20px;}
       }
     }
   
