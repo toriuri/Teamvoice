@@ -111,11 +111,14 @@
       }
       
       .main-notice {
+        //border: 1px solid #f00;
         display: block;
         font-size: 18px;
         color: #111;
         margin-top: 3px;
-        
+        width: 60%;
+        @include ellipsis(1);
+  
         &:hover, &:focus, &:active {
           color: $color-primary;
         }
@@ -546,20 +549,36 @@ body.home {
   
   @include mq($until: xx-large) {
     //border: 1px solid #f00;
+    
     .container,
     .footer-wrap {
       padding: 0 40px;
     }
-  ;
+    
+    #section1 {
+      .notice {
+        h2 {
+          left: 40px;
+          & + .main-notice {
+            left: 190px;
+          }
+        }
+        .btn-more {
+          right: 40px;
+        }
+      }
+    }
+  
   }
   
   @include mq($until: x-large) {
     //border: 1px solid #00f;
+    
   }
   
   @include mq($until: large) {
     //border: 2px solid #0f0;
-
+    
   }
   
   @media (max-height: 420px) and (orientation: landscape) {
