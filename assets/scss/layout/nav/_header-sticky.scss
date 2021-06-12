@@ -1,4 +1,4 @@
-$headerStickyHeight: 100px;
+$headerStickyHeight: 0px;
 
 #header {
   .header-bar,
@@ -8,12 +8,15 @@ $headerStickyHeight: 100px;
   }
 }
 
-.scroll-down {
+.scroll-down,
+.gnb-active {
   #header {
-    .header-bar.is-sticky,
-    .btn-side-menu.is-sticky{
+    .header-bar.is-sticky{
+      border-bottom: 1px solid #E1E2E6;
+      background-color: #fff; 
       @include transform(translateY(-$headerStickyHeight));
     }
+    
   }
 }
 

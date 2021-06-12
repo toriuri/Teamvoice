@@ -9,6 +9,8 @@ $(document).ready(function(){
     $gnbDepth1_on,
     $gnbSubMenus=$('.gnb-list >li > a').next('ul'),
     $gnbDepth2,
+    $submenu,
+    gnbTimer,
     scrollTimer,
     LnbGap=100, //LNB is-current 지정되는 갭
     file_name=['about-yipscell','rnd','cell-line-service','analysis-service','news-room.html'],
@@ -38,15 +40,6 @@ $(document).ready(function(){
    $gnbDepth1_on.addClass('on');
    $gnbDepth2=$gnbDepth1_on.find('ul a');
     
-   //GNB에서 넘겨준 위치로 스크롤 애니
-   if (page_id) {
-      $(window).scrollTop(0);
-      // clearTimeout(scrollTimer);
-      // scrollTimer = setTimeout(function() {
-        scrollingTo(page_id);
-      // }, 100);
-      
-   }
  
 
   
@@ -78,27 +71,39 @@ $(document).ready(function(){
     //e.preventDefault();
   });
 
-  // gnb sub slideUp / Down
-  $(".gnb-list >li > a").click(function(e){
-    let submenu = $(this).next("ul");
-    if (winW < 560) {
-      if(submenu.is(":visible")){
-        submenu.stop().slideUp();
-      }else{
-        submenu.stop().slideDown();
+  // gnb sub 
+  $gnbDepth1.on( {
+    'mouseover'  : function(){
+      $gnbDepth1.removeClass('is-active');
+      $(this).addClass('is-active');
+      if(!$body.hasClass('scroll-down')){
+        $body.addClass('gnb-active');
       }
     }
+    
+    });
+
+  $(".gnb-list").on({
+    // 'mouseover' : function(){
+    //   if(!$body.hasClass(scroll-down)){
+    //     $body.addClass('gnb-active');
+    //   }
+    // },
+    'mouseout' : function(){
+    $gnbDepth1.removeClass('is-active');
+    $body.removeClass('gnb-active');
+    $(".gnb-list>li>a").blur();
+   
+  }
+});
+
+$(".gnb-list>li>a").on({
+  'click' : function(){
+    return false;
+  }
+}) 
+    
   
-    if (winH < 420) {
-      console.log("aaaa");
-      if(submenu.is(":visible")){
-        submenu.stop().slideUp();
-      }else{
-        submenu.stop().slideDown();
-      }
-    }
-  //  e.preventDefault();
-  });
 
   $gnbSubMenus.find('a').on('click', function(e){
      let targetURL=$(this).attr('href');
@@ -263,36 +268,40 @@ $(document).ready(function(){
   ScrollTrigger.addEventListener("refreshInit", () => gsap.set(el, {y: 0}));
 }
 
+addSticky(".header-bar");
+stickyHeader.init();
+
+
 });// $(document).ready(function()
 
 let  stickyHeader= (function(){
-  let prevScrollTop = 0;
+  let prevScrollTop = 0,
+  currentScrollTop;
 
   function init(){
     headerbarHeight=$(".header-bar").outerHeight();
     $body = $('body');
 
       $(window).on('scroll', function(){
-        let currentScrollTop = $(this).scrollTop();
+        currentScrollTop = $(this).scrollTop();
          
-        //  if(Math.abs(prevScrollTop-currentScrollTop)<=delta) return;
-          if(prevScrollTop < currentScrollTop && headerbarHeight < currentScrollTop){
-              $body.removeClass('scroll-up scroll-down').addClass('scroll-down');
+          if( headerbarHeight < currentScrollTop){
+              $body.addClass('scroll-down');
               // console.log('down');
           }else {
-            
-            if(currentScrollTop +$(window).height()< $(document).height()){
-              $body.removeClass('scroll-up scroll-down').addClass('scroll-up');
-              // console.log('up');
+              $body.removeClass('scroll-down gnb-active') ;      
           }
-        }
 
           prevScrollTop = currentScrollTop;
       });
   }
 
   return {init: init}
+
+  
 })();
+
+
 
 function addSticky(e){
   $(e).addClass("is-sticky");
