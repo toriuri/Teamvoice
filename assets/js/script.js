@@ -10,9 +10,12 @@ $(document).ready(function(){
     $gnbSubMenus=$('.gnb-list >li > a').next('ul'),
     $gnbDepth2=$gnbDepth1.find('li>a'),
     $gnbDepth2_on,
+    $btnFamily=$('.btn-family-site'),
+    $iconFamily=$btnFamily.find('i'),
+    $listFamily=$('.family-site-box').find('.list-box'),
+    flagFamily=false,
     gnbTimer,
     scrollTimer,
-    LnbGap=100, //LNB is-current 지정되는 갭
     d1_name=['product','guide','customer'],
     winW=$win.width();
     winH=$win.height();
@@ -97,33 +100,24 @@ $(document).ready(function(){
   }
 });
 
-$(".gnb-list>li>a").on({
+//패밀리사이트
+$listFamily.css('display','none');
+
+$btnFamily.on({
   'click' : function(){
-    return false;
+    $iconFamily.removeClass('xi-angle-down-min xi-angle-up-min');
+    if(flagFamily){
+      flagFamily=false;
+      $iconFamily.addClass('xi-angle-down-min');
+    } else{
+      flagFamily=true;
+      $iconFamily.addClass('xi-angle-up-min');
+    }
+     $listFamily.stop().toggle();
+     return false;
   }
-}) 
-    
-  
-
-  $gnbSubMenus.find('a').on('click', function(e){
-     let targetURL=$(this).attr('href');
-     if ( targetURL.includes(page_file)) {
-       $("body").removeClass('nav-opened');
-       $('html,body').stop().animate(
-        {scrollTop: $(targetURL.substring(targetURL.lastIndexOf('#'))).offset().top}, 
-        900, 'swing');
-      }
-  });
-
+})
  
-  $win.scroll(function() {
-    selectedLnb();
-  });
-  
-  $(window).resize(function(){
-    winW=$win.width();
-    selectedLnb();
-  });
 
   
   // Background Star Ani
