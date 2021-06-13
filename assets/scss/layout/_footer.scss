@@ -1,0 +1,308 @@
+// -----------------------------------------------------------------------------
+// footer
+// -----------------------------------------------------------------------------
+
+.footer {
+  //border: 1px solid #ff0;
+  background: $black;
+  padding: 60px 0;
+  
+  .footer-wrap {
+    //border: 1px solid #ff0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    font-size: 14px;
+    
+    .box-left, .box-right {
+      //border: 1px solid #f00;
+      position: relative;
+      flex: 1 1 300px;
+      
+    }
+    .box-right {
+      text-align: right;
+    }
+    
+    .terms-list {
+      overflow: hidden;
+      margin: 10px 0 25px;
+      li {
+        position: relative;
+        display: inline-block;
+        float: left;
+        margin: 0 20px;
+        &:before {
+          content: '';
+          display: inline-block;
+          width: 3px; height: 3px;
+          background: #3F3F3F;
+          @include border-radius(50%);
+          
+          position: absolute;
+          left: -20px; top: 50%;
+          @include translate(0, -50%);
+        }
+        &:first-child {
+          margin-left: 0;
+          &:before {
+            display: none;
+          }
+        }
+        &:last-child {
+          i {
+            font-size: 20px;
+            color: #444;
+            position: relative;
+            top: 3px;
+          }
+        }
+        a {
+          display: inline-block;
+          color: #999;
+          strong {
+            color: $color-primary;
+          }
+          &:hover, &:focus, &:active {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+    
+    .contact-list {
+      overflow: hidden;
+      font-family: $en;
+      dt {
+        float: left;
+        color: #555;
+        margin-right: 7px;
+      }
+      dd {
+        float: left;
+        margin-right: 40px;
+        &:last-child {
+          margin-right: 0;
+        }
+        a {
+          display: inline-block;
+          color: #777;
+          &:hover, &:focus, &:active {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+    
+    .family-site-box {
+      //border: 1px solid #ff0;
+      margin-bottom: 16px;
+      
+      .btn-family-site {
+        position: relative;
+        display: inline-block;
+        width: 220px;
+        padding: 9px 20px;
+        background: #2F3040;
+        color: #999;
+        font-size: 16px;
+        text-align: left;
+        @include box-sizing();
+        @include border-radius(25px);
+        i {
+          color: $color-primary;
+          font-size: 24px;
+          font-weight: bold;
+          position: absolute;
+          right: 20px; top: 50%;
+          @include translate(0, -50%);
+        }
+      }
+      
+      .list-box {
+        display: none;
+        text-align: left;
+        width: 220px;
+        padding: 20px 30px 35px;
+        background: $color-primary;
+        color: #fff;
+        @include box-sizing();
+        @include border-radius(20px 20px 0 0);
+        
+        position: absolute;
+        right: 0; bottom: 65px;
+        
+        ul {
+          li {
+            a {
+              display: block;
+              padding: 3px 0;
+              color: #fff;
+              opacity: 0.6;
+              &:hover, &:focus, &:active {
+                opacity: 1.0;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    p.copyright {
+      //border: 1px solid #f00;
+      font-family: $en;
+      font-size: 14px;
+      color: #444;
+    }
+  }
+}
+
+/***** footer 반응형 대응 *****/
+
+@include mq($until: xx-large) {
+  .footer {
+    //border: 1px solid #f00;
+    .footer-wrap {
+      padding: 0 40px;
+    }
+    
+  }
+}
+
+@include mq($until: x-large) {
+  .footer {
+    //border: 1px solid #ff0;
+    
+  }
+}
+
+@include mq($until: large) {
+  .footer {
+    //border: 1px solid #ff0;
+    padding: 40px 0;
+  
+    .footer-wrap {
+      //border: 1px solid #ff0;
+      display: block;
+      
+      .box-left, .box-right {
+        text-align: center;
+      }
+
+      .terms-list {
+        margin: 0 0 25px;
+        text-align: center;
+        li {
+          float: inherit;
+          margin: 0 20px;
+        }
+      }
+      
+      .contact-list {
+        text-align: center;
+        margin-bottom: 20px;
+        dt {
+          float: inherit;
+          display: inline-block;
+        }
+        dd {
+          float: inherit;
+          display: inline-block;
+          margin-right: 40px;
+        }
+      }
+      
+      .family-site-box {
+        //border: 1px solid #ff0;
+        margin-bottom: 20px;
+        
+        .list-box {
+          right: 50%;
+          @include translate(50%, 0);
+        }
+      }
+      
+    }
+  }
+}
+
+@include mq($until: medium) {
+  .footer {
+    //border: 1px solid #f0f;
+    
+  }
+}
+
+@include mq($until: small) {
+  .footer {
+    //border: 1px solid #ff0;
+    padding: 20px 0 25px;
+    
+    .footer-wrap {
+      //border: 1px solid #ff0;
+      padding: 0;
+      font-size: 12px;
+      
+      .terms-list {
+        margin: 0 0 12px;
+        //border: 1px solid #f00;
+        li {
+          margin: 0 15px;
+          &:before {
+            left: -15px;
+          }
+          &:first-child {
+            margin-left: 15px;
+          }
+        }
+      }
+      
+      .contact-list {
+        font-size: 10px;
+        margin-bottom: 10px;
+        dd {
+          margin-right: 20px;
+        }
+      }
+      
+      .family-site-box {
+        //border: 1px solid #ff0;
+        margin-bottom: 20px;
+        
+        .btn-family-site {
+          width: 160px;
+          padding: 5px 20px 4px;
+          font-size: 12px;
+          i {
+            font-size: 14px;
+          }
+        }
+        
+        .list-box {
+          width: 160px;
+          padding: 14px 20px 22px;
+          font-size: 12px;
+          bottom: 54px;
+        }
+      }
+      
+      p.copyright {
+        //border: 1px solid #f00;
+        font-size: 10px;
+      }
+    }
+    
+  }
+}
+
+@include mq($until: x-small) {
+  .fooer {
+    //border: 1px solid #959;
+    
+  }
+}
+
