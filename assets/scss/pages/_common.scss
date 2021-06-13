@@ -10,6 +10,7 @@
 	position: relative;
 	width: 100%; max-width: 1400px;
 	margin: 0 auto;
+	@include box-sizing();
 }
 
 .subtop-visual {
@@ -125,12 +126,31 @@
 	.main {
 		//border: 1px solid #f00;
 		
+		.section {
+			.container {
+				padding: 0 40px;
+			}
+		}
+		
 	}
 }
 
 @include mq($until: x-large) {
 	.main {
-		//border: 1px solid #ff0;
+		//border: 1px solid #f0f;
+		
+		.title-wrap {
+			//border: 1px solid #f00;
+			margin: 90px 40px 60px;
+			
+			.title-h1 {
+				font-size: 48px;
+				& + p {
+					font-size: 18px;
+					margin-top: 20px;
+				}
+			}
+		}
 		
 	}
 }
@@ -162,6 +182,13 @@
 @include mq($until: small) {
 	.main {
 		//border: 1px solid #0f0;
+		
+		.section {
+			.container {
+				padding: 0 15px;
+			}
+		}
+		
 		.subtop-visual {
 			//border: 1px solid #f00;
 			height: 110px;
@@ -187,7 +214,24 @@
 			h1 {
 				font-size: 25px;
 			}
+		}
+		
+		.title-wrap {
+			//border: 1px solid #f00;
+			margin: 50px 0 60px;
+			padding: 0 15px;
 			
+			.title-h1 {
+				font-size: 25px;
+				color: #111;
+				& + p {
+					font-size: 14px;
+					margin-top: 10px;
+					span {
+						display: block;
+					}
+				}
+			}
 		}
 	}
 }
