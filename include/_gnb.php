@@ -5,9 +5,73 @@
 	<div class="header-bar">
 		<h1 class="logo">
 			<a href="../index.php">
-				<img src="../assets/image/common/logo.png" alt="YiPSCELL">
+				<img src="../assets/image/common/kti-logo@2x.png" alt="Teamsvoice">
 			</a>
 		</h1>
+		
+		<ul class="gnb-list">
+			<li>
+				<a href="#">상품소개</a>
+				<ul>
+					<li>
+						<a href="../product/teams-cloud.php">팀즈 클라우드 보이스 커넥트</a>
+					</li>
+					<li>
+						<a href="../product/teams-device.php">팀즈 단말기</a>
+					</li>
+					<li>
+						<a href="../product/live-teams.php">라이브 팀즈</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">개통안내</a>
+				<ul>
+					<li>
+						<a href="../guide/application-guide.php">청약서 개통 안내</a>
+					</li>
+					<li>
+						<a href="../guide/application-calc.php">청약서 금액 계산기</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">고객지원</a>
+				<ul>
+					<li>
+						<a href="../customer/notice.php">공지사항</a>
+					</li>
+					<li>
+						<a href="../customer/faq.php">자주하는 질문</a>
+					</li>
+					<li>
+						<a href="../customer/inquiry.php">1:1 문의</a>
+					</li>
+					<li>
+						<a href="../customer/reference.php">자료실</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		
+		<ul class="membership">
+			<li>
+				<a href="../member/join-step1.php"><i class="xi-user-o"></i> 회원가입</a>
+			</li>
+			<li>
+				<a href="../member/login.php"><i class="xi-lock-o"></i> 로그인</a>
+			</li>
+		</ul>
+		
+		<ul class="membership" style="display: none">
+			<li>
+				<a href="../mypage/myinfo-step1.php"><i class="xi-user-o"></i> 마이페이지</a>
+			</li>
+			<li>
+				<a href="#"><i class="xi-lock-o"></i> 로그아웃</a>
+			</li>
+		</ul>
+	
 	</div>
 	
 	<div class="btn-side-menu">
@@ -24,156 +88,84 @@
 </header>
 
 <div class="side-nav" id="side-nav">
-	
 	<div class="inner">
-		<nav class="gnb-wrap" id='gnb-wrap'>
-			
+		
+		<div class="header-bar">
 			<h1 class="logo">
 				<a href="../index.php">
-					<img src="../assets/image/common/logo-index.png" alt="YiPSCELL">
+					<img src="../assets/image/common/kti-logo@2x.png" alt="Teamsvoice">
 				</a>
 			</h1>
 			
-			<!-- 다국어 옵션 -->
-			<div class="lang">
-				<ul>
-					<li>
-						<a href="../index.php" class="lang-en">English</a>
-					</li>
-					<li>
-						<a href="../kr/" class="lang-kr is-current">Korean</a>
-					</li>
-					<li>
-						<a href="../cn/" class="lang-cn">Chinese</a>
-					</li>
-				</ul>
-			</div>
+			<ul class="membership" style="display: none">
+				<li>
+					<a href="../member/join-step1.php"><i class="xi-user-o"></i> 회원가입</a>
+				</li>
+				<li>
+					<a href="../member/login.php"><i class="xi-lock-o"></i> 로그인</a>
+				</li>
+			</ul>
 			
-			<ul class="gnb-list">
+			<ul class="membership">
 				<li>
-					<a href="#">About YiPSCELL</a>
+					<a href="../mypage/myinfo-step1.php"><i class="xi-user-o"></i> 마이페이지</a>
+				</li>
+				<li>
+					<a href="#"><i class="xi-lock-o"></i> 로그아웃</a>
+				</li>
+			</ul>
+		</div>
+		
+		<nav class="gnb-wrap" id='gnb-wrap'>
+			<ul class="gnb-list-box">
+				<li>
+					<h2>상품소개</h2>
 					<ul>
 						<li>
-							<a href="../about-yipscell/about-yipscell.php#section1">Ceo Message</a>
+							<a href="../product/teams-cloud.php">팀즈 클라우드 보이스 커넥트</a>
 						</li>
 						<li>
-							<a href="../about-yipscell/about-yipscell.php#section2">History</a>
+							<a href="../product/teams-device.php">팀즈 단말기</a>
 						</li>
 						<li>
-							<a href="../about-yipscell/about-yipscell.php#section3">Brand Story</a>
-						</li>
-						<li>
-							<a href="../about-yipscell/about-yipscell.php#section4">Recruit</a>
-						</li>
-						<li>
-							<a href="../about-yipscell/about-yipscell.php#section5">Contact Us</a>
-						</li>
-						<li>
-							<a href="../about-yipscell/about-yipscell.php#section6">Partners</a>
+							<a href="../product/live-teams.php">라이브 팀즈</a>
 						</li>
 					</ul>
 				</li>
+				
 				<li>
-					<a href="#">R &amp; D</a>
+					<h2>개통안내</h2>
 					<ul>
 						<li>
-							<a href="../rnd/rnd.php#section1">Introducing Our Lab</a>
+							<a href="../guide/application-guide.php">청약서 개통 안내</a>
 						</li>
 						<li>
-							<a href="../rnd/rnd.php#section2">MIUChon&trade;</a>
-						</li>
-						<li>
-							<a href="../rnd/rnd.php#section3">MIUKin&trade;</a>
-						</li>
-						<li>
-							<a href="../rnd/rnd.php#section4">MIURon&trade;</a>
-						</li>
-						<li>
-							<a href="../rnd/rnd.php#section5">MIUHeart&trade;</a>
-						</li>
-						<li>
-							<a href="../rnd/rnd.php#section6">MIUBon&trade;</a>
-						</li>
-						<li>
-							<a href="../rnd/rnd.php#section7">Exosome&trade;</a>
-						</li>
-						<li>
-							<a href="../rnd/rnd.php#section8">Thesis</a>
+							<a href="../guide/application-calc.php">청약서 금액 계산기</a>
 						</li>
 					</ul>
 				</li>
+				
 				<li>
-					<a href="#">Cell Line Service</a>
+					<h2>고객지원</h2>
 					<ul>
 						<li>
-							<a href="../cell-line-service/cell-line-service.php#section1">Cell Line Information</a>
+							<a href="../customer/notice.php">공지사항</a>
 						</li>
 						<li>
-							<a href="../cell-line-service/cell-line-service.php#section2">Cell Line Order Guide</a>
+							<a href="../customer/faq.php">자주하는 질문</a>
 						</li>
 						<li>
-							<a href="../cell-line-service/cell-line-service.php#section3">Online Purchase Order Application </a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Analysis Service</a>
-					<ul>
-						<li>
-							<a href="../analysis-service/analysis-service.php#section1">iPSC Cell Line Production <br>iPSC Quality Control</a>
+							<a href="../customer/inquiry.php">1:1 문의</a>
 						</li>
 						<li>
-							<a href="../analysis-service/analysis-service.php#section2">iPSC Disease Model</a>
-						</li>
-						<li>
-							<a href="../analysis-service/analysis-service.php#section3">Online Service Application</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">News Room</a>
-					<ul>
-						<li>
-							<a href="../news-room/news-room.php#section1">News</a>
-						</li>
-						<li>
-							<a href="../news-room/news-room.php#section2">Notice</a>
+							<a href="../customer/reference.php">자료실</a>
 						</li>
 					</ul>
 				</li>
 			</ul>
-		
 		</nav>
-	</div>
 	
-	<div class="gnb-bg-content">
-		
-		<div class="site-bg">
-			<div class="bg"></div>
-			<div class="bg star"></div>
-			<div class="comet"></div>
-			<div class="comet2"></div>
-		</div>
-		
-		<div class="moon">
-			<img src="../assets/image/common/moon.png" alt="moon">
-		</div>
-		
-		<div class="sailing-ship">
-			<img src="../assets/image/common/sailing-ship.png" alt="sailing-ship">
-		</div>
-		
-		<div class="boy-center">
-			<img src="../assets/image/common/boy-center@2x.gif" alt="boy">
-		</div>
-		
-		<div class="rocket" style="display: none;">
-			this is rocket
-		</div>
 	</div>
-	
-	<footer class="footer">
-		<p class="copyright">&copy; 2021. <strong>YiPSCELL Inc.</strong> All Rights Reserved.</p>
-	</footer>
-
 </div>
+
+<main id="main" class="main">
