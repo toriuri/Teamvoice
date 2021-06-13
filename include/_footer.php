@@ -1,39 +1,56 @@
+				<footer class="footer">
+					<div class="footer-wrap">
+						
+						<div class="box-left">
+							<ul class="terms-list">
+								<li><a href="../policy/privacy.php"><strong>개인정보처리방침</strong></a></li>
+								<li><a href="../policy/service.php">이용약관</a></li>
+								<li><a href="http://www.kti.co.kr/" target="_blank">넷케이티아이 <i class="xi-external-link"></i></a></li>
+							</ul>
+							
+							<dl class="contact-list">
+								<dt>E-mail.</dt>
+								<dd><a href="mailto:teamsvoice@kti.co.kr">teamsvoice@kti.co.kr</a></dd>
+								<dt>Tel.</dt>
+								<dd><a href="tel:031-786-9990">031-786-9990</a></dd>
+							</dl>
+						</div>
+						
+						<div class="box-right">
+							<div class="family-site-box">
+								
+								<div class="list-box">
+									<ul>
+										<li>
+											<a href="https://www.naver.com/">네이버</a>
+										</li>
+										<li>
+											<a href="https://www.daum.net/">다음</a>
+										</li>
+										<li>
+											<a href="https://www.google.com/">구글</a>
+										</li>
+									</ul>
+								</div>
+								
+								<a href="#list-box" class="btn-family-site">유관기관 바로가기 <i class="xi-angle-down-min"></i></a>
+							
+							</div>
+							
+							<p class="copyright">Copyright &copy; netKTI Co., Ltd. All Rights Reserved</p>
+						</div>
+					
+					</div>
+				</footer>
+			
+			</main>
 		
-			<footer class="footer">
-				<p class="copyright">&copy; 2021. <strong>YiPSCELL Inc.</strong> All Rights Reserved.</p>
-			</footer>
-			
-			<div class="bg-content">
-				<div class="site-bg">
-					<div class="bg"></div>
-					<div class="bg star"></div>
-					<div class="comet"></div>
-					<div class="comet2"></div>
-				</div>
-				
-				<div class="moon">
-					<img src="../assets/image/common/moon.png" alt="moon">
-				</div>
-				
-				<div class="sailing-ship">
-					<img src="../assets/image/common/sailing-ship.png" alt="sailing-ship">
-				</div>
-				
-				<div class="boy-side">
-					<img src="../assets/image/common/boy-side@2x.gif" alt="boy">
-				</div>
-				
-				<div class="rocket" style="display: none;">
-					this is rocket
-				</div>
-			
-			</div>
-			
 		</div>
 		
-		<script src="../assets/js/script.js"></script>
 		<script src="../assets/js/gsap/gsap.min.js"></script>
 		<script src="../assets/js/gsap/ScrollTrigger.min.js"></script>
-		<script src="../assets/js/swiper/swiper.js"></script>
-		<script src="../assets/js/lightbox2-2.11.3/lightbox-plus-jquery.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+		<script src="../assets/js/script.js"></script>
+		<script src="../assets/js/page/main.js"></script>
+	
+	</body>
+</html>
