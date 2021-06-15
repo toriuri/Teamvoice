@@ -118,17 +118,7 @@ $btnFamily.on({
   }
 })
  
-
   
-  // Background Star Ani
-  let bgAni = gsap.timeline({repeat: -1});
-  bgAni
-    .from(".site-bg .star", {opacity: 0, duration: 2})
-    .from(".site-bg .star", {opacity: 1, duration: 2})
-  
-
- 
-
   /*********************
    * 함수선언
    *********************/

@@ -168,6 +168,11 @@
   }
 }
 
+.side-nav {
+  .header-bar {
+    border-bottom: 1px solid #E1E2E6 !important;
+  }
+}
 
 /***** gnb list 반응형 대응 *****/
 #header {
@@ -182,11 +187,21 @@
   @include mq($until: x-large) {
     .header-bar {
       //border: 1px solid #f00;
+      height: 60px;
+      
+      .logo {
+        left: 20px; top: 20px;
+        width: 102px;
+      }
       
       .gnb-list, .membership {
         display: none;
       }
-      
+    }
+    
+    .btn-side-menu {
+      //border: 1px solid #f00;
+      right: 20px; top: 15px;
     }
   }
   
@@ -200,17 +215,7 @@
   @include mq($until: medium) {
     .header-bar {
       //border: 1px solid #0ff;
-      height: 60px;
-  
-      .logo {
-        left: 20px; top: 20px;
-        width: 102px;
-      }
-    }
-    
-    .btn-side-menu {
-      //border: 1px solid #f00;
-      right: 20px; top: 15px;
+      
     }
   }
   
