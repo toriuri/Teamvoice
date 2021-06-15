@@ -230,13 +230,13 @@
 							</div>
 							
 							<div class="notice">
-								<div class="container">
+								<div class="notice-wrap">
 									<h2>Notice!</h2>
-									<a href="./customer/notice.php" class="main-notice">
+									<a href="./customer/notice.html" class="main-notice">
 										<span class="date">2021.05.26</span>
 										팀즈 클라우드 보이스 커넥트 홈페이지가 오픈되었습니다.팀즈 클라우드 보이스 커넥트 홈페이지가 오픈되었습니다.
 									</a>
-									<a href="./customer/notice.php" class="btn-more"><i class="xi-plus"></i></a>
+									<a href="./customer/notice.html" class="btn-more"><i class="xi-plus"></i></a>
 								</div>
 							</div>
 						</section>
@@ -279,40 +279,40 @@
 										개통 서비스
 									</h1>
 									<p>
-										넷케이티아이의 호스팅 클라우드(MS-Azure)와 SBC를 통해<br>
-										손쉽게 개통 서비스와 매니지드 서비스를 이용하실 수 있습니다.
+										<span>넷케이티아이의 호스팅 클라우드(MS-Azure)와 SBC를 통해 </span>
+										<span>손쉽게 개통 서비스와 매니지드 서비스를 이용하실 수 있습니다.</span>
 									</p>
 									
 									<ul>
 										<li>
 											<h2><span>준비 &middot; 계획</span></h2>
 											<p>
-												<span>요구사항 분석</span>
-												<span>고객사 현황 분석</span>
+												요구사항 분석<br>
+												고객사 현황 분석
 											</p>
 											<i class="xi-angle-right-min"></i>
 										</li>
 										<li>
 											<h2><span>구축</span></h2>
 											<p>
-												<span>고객사 테넌트 온보딩</span>
-												<span>통신사 연동</span>
+												고객사 테넌트 온보딩<br>
+												통신사 연동
 											</p>
 											<i class="xi-angle-right-min"></i>
 										</li>
 										<li>
 											<h2><span>테스트</span></h2>
 											<p>
-												<span>베타 테스트</span>
-												<span>사용자 인수 시험</span>
+												베타 테스트<br>
+												사용자 인수 시험
 											</p>
 											<i class="xi-angle-right-min"></i>
 										</li>
 										<li>
 											<h2><span>절체</span></h2>
 											<p>
-												<span>사용자 마이그레이션</span>
-												<span>안정화</span>
+												사용자 마이그레이션<br>
+												안정화
 											</p>
 										</li>
 									</ul>
@@ -328,8 +328,8 @@
 										매니지드 서비스
 									</h1>
 									<p>
-										넷케이티아이의 전문 인력이 관리하는<br>
-										매니지드 서비스를 통해 더욱 안정적인 사용이 가능합니다.
+										<span>넷케이티아이의 전문 인력이 관리하는 </span>
+										<span>매니지드 서비스를 통해 더욱 안정적인 사용이 가능합니다.</span>
 									</p>
 									
 									<ul>
@@ -374,8 +374,8 @@
 										넷케이티아이
 									</h1>
 									<p>
-										넷케이티아이는 전국규모의 IP통화(IPT) 사업 분야를 전문으로 하는<br>
-										MS Teams 클라우드 통화서비스 호스팅 제공 기업입니다.
+										<span>넷케이티아이는 전국규모의 IP통화(IPT) 사업 분야를 전문으로 하는</span>
+										<span>MS Teams 클라우드 통화서비스 호스팅 제공 기업입니다.</span>
 									</p>
 									
 									<ul>
@@ -424,8 +424,8 @@
 											자주하는 질문
 										</h1>
 										<p>
-											팀즈 클라우드 보이스 커넥트에 대해 궁금한 점이 있으신가요?<br>
-											자주 문의하시는 질문을 확인해보세요.
+											<span>팀즈 클라우드 보이스 커넥트에 대해 궁금한 점이 있으신가요?</span>
+											<span>자주 문의하시는 질문을 확인해보세요.</span>
 										</p>
 									</div>
 									
@@ -433,7 +433,7 @@
 									<div class="swiper-container faq-container">
 										<div class="swiper-wrapper">
 											<div class="swiper-slide">
-												<a href="./customer/faq.php">
+												<a href="#">
 													<strong>Q.</strong>
 													<h2>팀즈 클라우드 보이스 커넥트 서비스의 구축 기간은 얼마나 걸리나요?</h2>
 													
@@ -441,7 +441,7 @@
 												</a>
 											</div>
 											<div class="swiper-slide">
-												<a href="./customer/faq.php">
+												<a href="#">
 													<strong>Q.</strong>
 													<h2>팀즈 클라우드 보이스 커넥트에 대해 자주 문의하는 질문의 목록이 노출됩니다.</h2>
 													
@@ -449,7 +449,7 @@
 												</a>
 											</div>
 											<div class="swiper-slide">
-												<a href="./customer/faq.php">
+												<a href="#">
 													<strong>Q.</strong>
 													<h2>서비스의 유지보수 비용은 어느정도 드나요?</h2>
 													
@@ -457,7 +457,7 @@
 												</a>
 											</div>
 											<div class="swiper-slide">
-												<a href="./customer/faq.php">
+												<a href="#">
 													<strong>Q.</strong>
 													<h2>팀즈 클라우드 보이스 커넥트 서비스 신청은 어디서 어떻게 하면 되나요?</h2>
 													
@@ -465,7 +465,7 @@
 												</a>
 											</div>
 											<div class="swiper-slide">
-												<a href="./customer/faq.php">
+												<a href="#">
 													<strong>Q.</strong>
 													<h2>팀즈 클라우드 보이스 커넥트 사용 시 어떤 장점이 있나요?</h2>
 													
@@ -473,7 +473,7 @@
 												</a>
 											</div>
 											<div class="swiper-slide">
-												<a href="./customer/faq.php">
+												<a href="#">
 													<strong>Q.</strong>
 													<h2>팀즈 클라우드 보이스 커넥트 사용 시 어떤 장점이 있나요?</h2>
 													
@@ -481,7 +481,7 @@
 												</a>
 											</div>
 											<div class="swiper-slide">
-												<a href="./customer/faq.php">
+												<a href="#">
 													<strong>Q.</strong>
 													<h2>팀즈 클라우드 보이스 커넥트 사용 시 어떤 장점이 있나요?</h2>
 													
@@ -489,7 +489,7 @@
 												</a>
 											</div>
 											<div class="swiper-slide">
-												<a href="./customer/faq.php">
+												<a href="#">
 													<strong>Q.</strong>
 													<h2>팀즈 클라우드 보이스 커넥트 사용 시 어떤 장점이 있나요?</h2>
 													
@@ -497,7 +497,7 @@
 												</a>
 											</div>
 											<div class="swiper-slide">
-												<a href="./customer/faq.php">
+												<a href="#">
 													<strong>Q.</strong>
 													<h2>팀즈 클라우드 보이스 커넥트 사용 시 어떤 장점이 있나요?</h2>
 													
@@ -505,7 +505,7 @@
 												</a>
 											</div>
 											<div class="swiper-slide">
-												<a href="./customer/faq.php">
+												<a href="#">
 													<strong>Q.</strong>
 													<h2>팀즈 클라우드 보이스 커넥트 사용 시 어떤 장점이 있나요?</h2>
 													
@@ -532,27 +532,33 @@
 									</h1>
 									
 									<div class="box-wrap">
+										
 										<div class="box b1">
-											<h2>
-												<a href="tel:031-786-9990">031-786-9990</a>
-											</h2>
-											<dl>
-												<dt>상담 시간</dt>
-												<dd><span>09:00 ~ 18:00</span> (주말 및 공휴일 제외)</dd>
-											</dl>
-											<a href="mailto:teamsvoice@kti.co.kr" class="">teamsvoice@kti.co.kr</a>
+											<div class="box-inner">
+												<h2>
+													<a href="tel:031-786-9990">031-786-9990</a>
+												</h2>
+												<dl>
+													<dt>상담 시간</dt>
+													<dd><span>09:00 ~ 18:00</span> (주말 및 공휴일 제외)</dd>
+												</dl>
+												<a href="mailto:teamsvoice@kti.co.kr" class="">teamsvoice@kti.co.kr</a>
+											</div>
 										</div>
 										
-										<div class="box b2">
-											<h2>
-												<span>1 : 1</span> 문의
-												<i class="xi-angle-right-min"></i>
-											</h2>
-											<p>
-												궁금하신 내용을 남겨주시면<br>
-												빠른 답변 드리겠습니다.
-											</p>
-										</div>
+										<a href="./customer/inquiry.html" class="box b2">
+											<div class="box-inner">
+												<h2>
+													<span>1 : 1</span> 문의
+													<i class="xi-angle-right-min"></i>
+												</h2>
+												<p>
+													<span>궁금하신 내용을 남겨주시면</span>
+													<span>빠른 답변 드리겠습니다.</span>
+												</p>
+											</div>
+										</a>
+									
 									</div>
 								</div>
 							</div>
@@ -562,8 +568,8 @@
 									
 									<div class="box-left">
 										<ul class="terms-list">
-											<li><a href="./policy/privacy.php"><strong>개인정보처리방침</strong></a></li>
-											<li><a href="./policy/service.php">이용약관</a></li>
+											<li><a href="./policy/privacy.html"><strong>개인정보처리방침</strong></a></li>
+											<li><a href="./policy/service.html">이용약관</a></li>
 											<li><a href="http://www.kti.co.kr/" target="_blank">넷케이티아이 <i class="xi-external-link"></i></a></li>
 										</ul>
 										
@@ -621,20 +627,21 @@
 		<script src="./assets/js/swiper-5.3.0/swiper.js"></script>
 		
 		<script>
+			//fullpage
 			var myFullpage = new fullpage('#fullpage', {
 				//anchors: ['firstPage', 'secondPage', '3rdPage'],
 				//sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
 				navigation: true,
 				navigationPosition: 'left',
-				//navigationTooltips: ['First page', 'Second page', 'Third and last page'],
-				responsiveWidth: 900,
+				//responsiveWidth: 900,
 				afterResponsive: function(isResponsive){
 				}
 			});
 			
+			//swiper
 			var swiper = new Swiper(".faq-container", {
 				slidesPerView: "auto",
-				spaceBetween: 40,
+				//spaceBetween: 40,
 				//loop: true,
 				pagination: {
 					el: ".swiper-pagination",
