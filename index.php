@@ -20,7 +20,7 @@
 		<meta property="og:image:height" content="400">
 		<meta property="og:image" content="./assets/image/logo-400x400.jpg">
 		
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
 		<link rel="apple-touch-icon" href="./assets/image/apple-touch-icon.png" />
 		
 		<link rel="stylesheet" href="./assets/css/style.css">
