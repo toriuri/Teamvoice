@@ -16,6 +16,11 @@
   background: #fff;
   border-bottom: 1px solid #E1E2E6;
   transition: top 0.2s ease-in-out;
+
+  @at-root .fp-viewing-0 .header-bar{
+    background: transparent;
+    border-bottom: 0 none;
+  }
   
   .logo {
     position: absolute;
