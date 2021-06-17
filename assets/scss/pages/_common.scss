@@ -189,6 +189,14 @@
 		article {
 			margin-top: 60px;
 			min-height: calc(100vh - 230px);
+			
+			&.main-article {
+				//border: 1px solid #f00;
+				margin-top: 0;
+				.container {
+					padding: 60px 15px;
+				}
+			}
 		}
 		
 		.section {
