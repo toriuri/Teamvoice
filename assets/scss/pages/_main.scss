@@ -892,7 +892,7 @@
     #section1 {
       h1 {
         font-size: 43px;
-        margin: 50px 0 15px;
+        margin: 60px 0 15px;
     
         .outline {
           -webkit-text-stroke: 1px $color-primary;
@@ -919,6 +919,7 @@
         }
     
         .main-notice {
+          overflow: hidden;
           display: block;
           font-size: 14px;
           margin-top: 0;

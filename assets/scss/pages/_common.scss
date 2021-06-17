@@ -6,6 +6,15 @@
 .text-align-center {text-align: center;}
 .text-align-left {text-align: left;}
 
+section {
+	&:nth-child(even) {
+		background: #fff;
+	}
+	&:nth-child(odd) {
+		background: #F3F4F9;
+	}
+}
+
 .container {
 	position: relative;
 	width: 100%; max-width: 1400px;
@@ -107,6 +116,20 @@
 	margin-bottom: 10px;
 }
 
+form {
+	legend {
+		display: block;
+		width: 100%;
+		font-size: 32px;
+		font-weight: 700;
+		color: #111;
+		border-bottom: 2px solid #111;
+		padding-bottom: 5px;
+		//margin-bottom: 20px;
+	}
+}
+
+
 //iframe 비디오 콘텐츠
 .iframe-bind {
   //border: 1px solid #f00;
@@ -183,6 +206,11 @@
 }
 
 @include mq($until: small) {
+	
+	#fp-nav ul, .fp-slideNav ul {
+		display: none !important;
+	}
+	
 	.main {
 		//border: 1px solid #0f0;
 		
@@ -247,6 +275,13 @@
 						display: block;
 					}
 				}
+			}
+		}
+		
+		form {
+			legend {
+				font-size: 16px;
+				border-bottom: 2px solid #111;
 			}
 		}
 		

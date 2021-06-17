@@ -228,7 +228,228 @@
 								<p>필요한 서비스를 입력하시면 예상 금액을 확인해 보실 수 있습니다.</p>
 							</div>
 							
+							<form name="calcForm" action="" method="post" class="calc-form" id="calcForm" >
+								<fieldset>
+									<legend>기본 서비스</legend>
+									
+									<table class="table-list">
+											<caption>기본 서비스 입력</caption>
+											<colgroup>
+												<col class="c1"> <col class="c2">
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">
+														<label for="u-member">서비스 인원</label>
+													</th>
+													<td>
+														<input type="text" id="u-member" class="tv-input" placeholder="서비스 인원을 입력하세요."> 명
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">
+														<label>이용 통신사</label>
+													</th>
+													<td>
+														<ul class="input-list hor">
+															<li>
+																<input type="checkbox" name="u-telecom" id="KT" class="tv-chk">
+																<label for="KT">KT</label>
+															</li>
+															<li>
+																<input type="checkbox" name="u-telecom" id="SKBB" class="tv-chk">
+																<label for="SKBB">SKBB</label>
+															</li>
+															<li>
+																<input type="checkbox" name="u-telecom" id="LGU+" class="tv-chk">
+																<label for="LGU+">LGU+</label>
+															</li>
+														</ul>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+								</fieldset>
+								
+								<fieldset>
+									<legend>부가 서비스</legend>
+									
+									<table class="table-list">
+										<caption>부가 서비스 입력</caption>
+										<colgroup>
+											<col class="c1"> <col width="*" class="c2">
+										</colgroup>
+										<tbody>
+											<tr>
+												<th scope="row">
+													<label>댁내 장비 연동(1E1 기준)</label>
+												</th>
+												<td>
+													<ul class="input-list hor">
+														<li>
+															<input type="radio" name="u-device" id="PBX" class="tv-radio">
+															<label for="PBX">PBX 연동</label>
+														</li>
+														<li>
+															<input type="radio" name="u-device" id="PSTN" class="tv-radio">
+															<label for="PSTN">PSTN 연동</label>
+														</li>
+													</ul>
+													<ul class="input-list hor">
+														<li>
+															<input type="checkbox" name="u-phone" id="SIP" class="tv-chk">
+															<label for="SIP">SIP폰 전화기 연동</label>
+														</li>
+														<li>
+															<input type="checkbox" name="u-phone" id="analog" class="tv-chk">
+															<label for="analog">아날로그 전화기 연동</label>
+														</li>
+													</ul>
+												</td>
+											</tr>
+											
+											<tr>
+												<th scope="row">
+													<label>팀즈 전화기</label>
+												</th>
+												<td>
+													<ul class="input-list ver">
+														<li>
+															<label for="C450HD">C450HD</label>
+															<input type="text" id="C450HD" class="tv-input" placeholder="0"> 개
+														</li>
+														<li>
+															<label for="C470HD">C470HD</label>
+															<input type="text" id="C470HD" class="tv-input" placeholder="0"> 개
+														</li>
+														<li>
+															<label for="CCX600">CCX600</label>
+															<input type="text" id="CCX600" class="tv-input" placeholder="0"> 개
+														</li>
+													</ul>
+												</td>
+											</tr>
+											
+											<tr>
+												<th scope="row">
+													<label>팀즈 전화기</label>
+												</th>
+												<td>
+													<ul class="input-list ver">
+														<li>
+															<label for="V-focus">Voyager focus UC</label>
+															<input type="text" id="V-focus" class="tv-input" placeholder="0"> 개
+														</li>
+														<li>
+															<label for="V-6200">Voyager 6200 UC</label>
+															<input type="text" id="V-6200" class="tv-input" placeholder="0"> 개
+														</li>
+														<li>
+															<label for="E-20-S">Evolve 20 Stereo</label>
+															<input type="text" id="E-20-S" class="tv-input" placeholder="0"> 개
+														</li>
+														<li>
+															<label for="E-30-M">Evolve 30 Mono</label>
+															<input type="text" id="E-30-M" class="tv-input" placeholder="0"> 개
+														</li>
+													</ul>
+												</td>
+											</tr>
+											
+											<tr>
+												<th scope="row">
+													<label>070 개통 서비스</label>
+												</th>
+												<td>
+													<ul class="input-list ver">
+														<li>
+															<label for="i-phone">인터넷전화 개통 회선</label>
+															<input type="text" id="i-phone" class="tv-input" placeholder="0"> 회선
+														</li>
+													</ul>
+												</td>
+											</tr>
+											
+											<tr>
+												<th scope="row">
+													<label>기타</label>
+												</th>
+												<td>
+													<ul class="input-list hor">
+														<li>
+															<input type="checkbox" name="etc" id="AA-CQ" class="tv-chk">
+															<label for="AA-CQ">AA-CQ (IVR 서비스)</label>
+														</li>
+														<li>
+															<input type="checkbox" name="etc" id="AP" class="tv-chk">
+															<label for="AP">무선 AP 점검</label>
+														</li>
+													</ul>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</fieldset>
+							</form>
 				
+						</div>
+					</section>
+					
+					<section class="section total-box">
+						<div class="container">
+							
+							<form name="calcForm" action="" method="post" class="calc-form" id="calcForm" >
+								<fieldset>
+									<legend>예상 금액</legend>
+									
+									<table class="table-list total">
+										<caption>예상 금액 계산표</caption>
+										<colgroup>
+											<col class="c1"> <col class="c2">
+										</colgroup>
+										
+										<tfoot>
+											<tr>
+												<th scope="row">총액</th>
+												<td>
+													<i class="xi-won"></i> 0
+												</td>
+											</tr>
+										</tfoot>
+										
+										<tbody>
+											<tr>
+												<th scope="row">
+													서비스 개통비
+												</th>
+												<td>
+													<i class="xi-won"></i> 0
+												</td>
+											</tr>
+											
+											<tr>
+												<th scope="row">
+													서비스 이용료 (36개월)
+												</th>
+												<td>
+													<i class="xi-won"></i> 0
+												</td>
+											</tr>
+											
+											<tr>
+												<th scope="row">
+													부가 서비스
+												</th>
+												<td>
+													<i class="xi-won"></i> 0
+												</td>
+											</tr>
+										
+										</tbody>
+									</table>
+								</fieldset>
+							</form>
+						
 						</div>
 					</section>
 				

@@ -26,6 +26,8 @@
 @import 'modules/paragraph';
 
 @import 'modules/button';
+@import 'modules/table';
+
 //@import 'modules/article';
 
 // layout
@@ -40,7 +42,7 @@
 @import 'pages/common';
 @import 'pages/main';
 @import 'pages/member';
-//@import 'pages/rnd';
+@import 'pages/guide';
 //@import 'pages/cell-line';
 //@import 'pages/analysis-service';
 @import 'pages/policy';
