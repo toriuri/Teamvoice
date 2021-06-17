@@ -295,7 +295,7 @@ input[type=search]::-webkit-search-cancel-button {
       content: '';
       display: inline-block;
       width: 20px; height: 20px;
-      border: 1px solid #d9d9d9;;;
+      border: 1px solid #bbb;
       background: #fff;
       @include border-radius(50%);
       @include box-sizing;
@@ -316,7 +316,7 @@ input[type=search]::-webkit-search-cancel-button {
   /* radio button on */
   &:checked + label{
     //color: #20beef;
-    &:before{border-color: $color-primary;}
+    &:before{border-color: #bbb;}
     &:after{background: $color-primary;}
   }
   
@@ -399,3 +399,63 @@ iframe[name='google_conversion_frame'] {
   float: left;
 }
 
+
+/***** 공통요소 모바일 대응 *****/
+
+@include mq($until: small) {
+  body {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .entry-time {
+    font-size: 14px;
+  }
+  
+  .tv-input[type=text],
+  .tv-input[type=password],
+  .tv-input[type=tel],
+  .tv-input[type=email],
+  .tv-input[type=date],
+  .tv-input[type=datetime-local] {
+    height: 37px;
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+  
+  .tv-radio[type="radio"] {
+    & + label{
+      &:before{
+        top: 2px;
+      }
+      &:after{
+        top: 7px;
+      }
+    }
+  }
+  
+  .tv-chk[type="checkbox"] {
+    & + label {
+      padding: 0 0 0 30px;
+      
+      &:before {
+        font-size: 20px;
+        line-height: 20px;
+        width: 21px; height: 21px;
+        top: 2px;
+      }
+    }
+    /* checkbox on */
+    &:checked + label {
+      &:before {
+        content: "\e929";
+        color: $white;
+        border-color: $color-primary;
+        background: $color-primary;
+      }
+    }
+    &:checked + label input {
+      border-bottom: 1px solid $color-primary !important;
+    }
+  }
+}

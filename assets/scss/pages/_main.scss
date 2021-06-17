@@ -8,13 +8,13 @@
   .section {
     //border: 1px solid #f00;
     position: relative;
-    width: 100%; height: 100vh;
+    width: 100%; //height: 100vh;
     overflow: auto;
     
     .container {
       //border: 1px solid #f00;
       height: 100vh;
-      padding-top: 150px;
+      padding-top: 100px;
       @include box-sizing();
     }
     
@@ -23,7 +23,7 @@
       font-size: 50px;
       font-weight: 700;
       line-height: 1.0em;
-      margin-bottom: 40px;
+      margin: 50px 0 40px;
       color: #111;
   
       .category {
@@ -37,6 +37,9 @@
         font-size: 20px;
         margin-bottom: 60px;
         color: #555;
+        span {
+          display: block;
+        }
       }
     }
     
@@ -589,22 +592,7 @@
   @include mq($until: xx-large) {
     //border: 1px solid #f00;
     
-    .section {
-      .container {
-        padding: 130px 60px 0;
-      }
-      footer {
-        .footer-wrap {
-          padding: 0 60px;
-          //border: 1px solid #f00;
-        }
-      }
-    }
-    
     #section1 {
-      .container {
-        padding-top: 0;
-      }
       .notice {
         h2 {
           left: 40px;
@@ -624,7 +612,11 @@
     
     .section {
       .container {
-        padding: 100px 40px 0;
+        padding: 60px 40px 0;
+      }
+      h1 {
+        margin-top: 30px;
+        //border: 1px solid #f00;
       }
     }
     
@@ -750,18 +742,25 @@
   
   @include mq($until: large) {
     //border: 1px solid #0f0;
+    .section {
+      h1 {
+        margin-top: 60px;
+      }
+    }
     
     #section1 {
       background: url(../image/main/m-bg-main-intro.jpg) no-repeat center center / cover #F9FAFC;
   
       .container {
-        height: 100vh;
         display: block;
-        padding-top: 130px;
         
         .content {
           display: block;
         }
+      }
+      
+      h1 {
+        margin-top: 100px;
       }
     }
     
@@ -861,14 +860,9 @@
     //border: 1px solid #cd630c;
     
     .section {
-      .container {
-        padding: 85px 15px 0!important;
-      }
-      
       h1 {
-        //border: 1px solid #f00;
         font-size: 25px;
-        margin-bottom: 10px;
+        margin: 30px 0 10px;
     
         .category {
           font-size: 12px;
@@ -877,6 +871,9 @@
         & + p {
           font-size: 14px;
           margin-bottom: 30px;
+          span {
+            display: inline;
+          }
         }
       }
   
@@ -893,13 +890,9 @@
     }
     
     #section1 {
-      .container {
-        display: block;
-      }
-      
       h1 {
         font-size: 43px;
-        margin-bottom: 15px;
+        margin: 50px 0 15px;
     
         .outline {
           -webkit-text-stroke: 1px $color-primary;
