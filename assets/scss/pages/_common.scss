@@ -84,7 +84,7 @@
 
 .title-wrap {
 	//border: 1px solid #f00;
-	margin: 130px 0 80px;
+	padding: 120px 0 80px;
 	text-align: center;
 	
 	.title-h1 {
@@ -138,10 +138,13 @@
 @include mq($until: x-large) {
 	.main {
 		//border: 1px solid #f0f;
-		
+		.subtop-visual {
+			margin: 60px auto 0;
+			
+		}
 		.title-wrap {
 			//border: 1px solid #f00;
-			margin: 90px 40px 60px;
+			//margin: 90px 40px 60px;
 			
 			.title-h1 {
 				font-size: 48px;
@@ -183,16 +186,22 @@
 	.main {
 		//border: 1px solid #0f0;
 		
+		article {
+			margin-top: 60px;
+			min-height: calc(100vh - 230px);
+		}
+		
 		.section {
 			.container {
-				padding: 0 15px;
+				padding: 0 15px 50px;
+				margin: 0 auto;
 			}
 		}
 		
 		.subtop-visual {
 			//border: 1px solid #f00;
 			height: 110px;
-			margin-top: 60px;
+			margin-top: 0;
 			background: no-repeat center top / cover;
 			
 			&.product {
@@ -218,8 +227,7 @@
 		
 		.title-wrap {
 			//border: 1px solid #f00;
-			margin: 50px 0 60px;
-			padding: 0 15px;
+			padding: 36px 15px 25px;
 			
 			.title-h1 {
 				font-size: 25px;
@@ -233,6 +241,7 @@
 				}
 			}
 		}
+		
 	}
 }
 
