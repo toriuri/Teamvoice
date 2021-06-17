@@ -74,11 +74,11 @@
 					<fieldset>
 						<h2 class="section-title">청약정보입력</h2>
 						<ul class="input-list">
-							<li>
+							<li class="block">
 								<label for="company-name">회사명 <span>*</span></label>
 								<input type="text" id="company-name" class="tv-input" value="넷케이티아이">
 							</li>
-							<li>
+							<li class="block">
 								<label for="subscription-info">가입 청약 정보 <span>*</span></label>
 								<input type="text" id="subscription-info" class="tv-input" value="입력한 청약 정보 노출">
 							</li>
@@ -86,9 +86,9 @@
 					</fieldset>
 				</form>
 				
-				<div class="btn-area">
-					<button type="button" class="btn btn--lg btn--line" onclick="location.href='withdraw.php';">탈퇴</button>
-					<button type="submit" class="btn btn--lg btn--em">수정</button>
+				<div class="btn-area multi">
+					<button type="button" class="btn btn--lg btn--line w50" onclick="location.href='withdraw.php';">탈퇴</button>
+					<button type="submit" class="btn btn--lg btn--em w50">수정</button>
 				</div>
 			</div>
 		</section>

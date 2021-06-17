@@ -278,3 +278,33 @@
   text-align: center;
   margin-top: 5rem;
 }
+
+
+/***** btn 반응형 대응 *****/
+@include mq($until: small) {
+  .btn-area {
+    padding: 40px 0 0;
+    &.multi {
+      margin: 0 -3px;
+      //border: 1px solid #f00;
+    }
+  }
+  
+  .btn {
+    height: 41px;
+    font-size: 14px;
+    
+    // size variation
+    &--lg {
+      width: 100%;
+      min-width: 100%;
+      //border: 1px solid #f00;
+    }
+    
+    &.w50 {
+      width: 47% !important;
+      min-width: 138px;
+      margin: 0 3px;
+    }
+  }
+}

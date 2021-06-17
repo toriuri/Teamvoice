@@ -433,7 +433,7 @@
 									<div class="swiper-container faq-container">
 										<div class="swiper-wrapper">
 											<div class="swiper-slide">
-												<a href="#">
+												<a href="./customer/faq.php">
 													<strong>Q.</strong>
 													<h2>팀즈 클라우드 보이스 커넥트 서비스의 구축 기간은 얼마나 걸리나요?</h2>
 													
@@ -441,7 +441,7 @@
 												</a>
 											</div>
 											<div class="swiper-slide">
-												<a href="#">
+												<a href="./customer/faq.php">
 													<strong>Q.</strong>
 													<h2>팀즈 클라우드 보이스 커넥트에 대해 자주 문의하는 질문의 목록이 노출됩니다.</h2>
 													
@@ -449,7 +449,7 @@
 												</a>
 											</div>
 											<div class="swiper-slide">
-												<a href="#">
+												<a href="./customer/faq.php">
 													<strong>Q.</strong>
 													<h2>서비스의 유지보수 비용은 어느정도 드나요?</h2>
 													
@@ -457,7 +457,7 @@
 												</a>
 											</div>
 											<div class="swiper-slide">
-												<a href="#">
+												<a href="./customer/faq.php">
 													<strong>Q.</strong>
 													<h2>팀즈 클라우드 보이스 커넥트 서비스 신청은 어디서 어떻게 하면 되나요?</h2>
 													
@@ -465,7 +465,7 @@
 												</a>
 											</div>
 											<div class="swiper-slide">
-												<a href="#">
+												<a href="./customer/faq.php">
 													<strong>Q.</strong>
 													<h2>팀즈 클라우드 보이스 커넥트 사용 시 어떤 장점이 있나요?</h2>
 													
@@ -473,7 +473,7 @@
 												</a>
 											</div>
 											<div class="swiper-slide">
-												<a href="#">
+												<a href="./customer/faq.php">
 													<strong>Q.</strong>
 													<h2>팀즈 클라우드 보이스 커넥트 사용 시 어떤 장점이 있나요?</h2>
 													
@@ -481,7 +481,7 @@
 												</a>
 											</div>
 											<div class="swiper-slide">
-												<a href="#">
+												<a href="./customer/faq.php">
 													<strong>Q.</strong>
 													<h2>팀즈 클라우드 보이스 커넥트 사용 시 어떤 장점이 있나요?</h2>
 													
@@ -489,7 +489,7 @@
 												</a>
 											</div>
 											<div class="swiper-slide">
-												<a href="#">
+												<a href="./customer/faq.php">
 													<strong>Q.</strong>
 													<h2>팀즈 클라우드 보이스 커넥트 사용 시 어떤 장점이 있나요?</h2>
 													
@@ -497,7 +497,7 @@
 												</a>
 											</div>
 											<div class="swiper-slide">
-												<a href="#">
+												<a href="./customer/faq.php">
 													<strong>Q.</strong>
 													<h2>팀즈 클라우드 보이스 커넥트 사용 시 어떤 장점이 있나요?</h2>
 													
@@ -505,7 +505,7 @@
 												</a>
 											</div>
 											<div class="swiper-slide">
-												<a href="#">
+												<a href="./customer/faq.php">
 													<strong>Q.</strong>
 													<h2>팀즈 클라우드 보이스 커넥트 사용 시 어떤 장점이 있나요?</h2>
 													
@@ -546,7 +546,7 @@
 											</div>
 										</div>
 										
-										<a href="./customer/inquiry.html" class="box b2">
+										<a href="./customer/inquiry.php" class="box b2">
 											<div class="box-inner">
 												<h2>
 													<span>1 : 1</span> 문의
@@ -568,8 +568,8 @@
 									
 									<div class="box-left">
 										<ul class="terms-list">
-											<li><a href="./policy/privacy.html"><strong>개인정보처리방침</strong></a></li>
-											<li><a href="./policy/service.html">이용약관</a></li>
+											<li><a href="./policy/privacy.php"><strong>개인정보처리방침</strong></a></li>
+											<li><a href="./policy/service.php">이용약관</a></li>
 											<li><a href="http://www.kti.co.kr/" target="_blank">넷케이티아이 <i class="xi-external-link"></i></a></li>
 										</ul>
 										
