@@ -113,10 +113,12 @@
   .join-form {
     fieldset {
       padding-bottom: 60px;
+      &:last-child {
+        padding-bottom: 0;
+      }
     }
     .input-list {
-      border-top: 2px solid #111;
-      padding: 20px 0 0;
+      padding-top: 20px;
       li{
         //border: 1px solid #f0f;
         position: relative;
@@ -140,7 +142,6 @@
             }
           }
         }
-
         
         label {
           position: absolute;
@@ -350,11 +351,6 @@
       }
     }
     
-    .section-title {
-      font-size: 16px;
-      margin-bottom: 5px;
-    }
-  
     .agree-chk {
       padding-top: 10px;
       font-size: 16px;
@@ -363,17 +359,11 @@
     .join-form {
       fieldset {
         padding-bottom: 40px;
-        &:last-child {
-          //border: 1px solid #f00;
-          padding-bottom: 0;
-        }
       }
       
       .input-list {
-        border-top: 2px solid #111;
-        padding: 15px 0 0;
+        padding-top: 15px;
         li{
-          //border: 1px solid #f0f;
           margin-bottom: 10px;
           padding-left: 105px;
           height: 37px;

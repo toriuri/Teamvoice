@@ -28,9 +28,7 @@
 				
 				<form name="joinForm" action="" method="post" class="join-form" id="joinForm" >
 					<fieldset>
-						<legend class="blind">개인정보입력</legend>
-						
-						<h2 class="section-title">개인정보입력</h2>
+						<legend>개인정보입력</legend>
 						
 						<ul class="input-list">
 							<li>
@@ -83,7 +81,8 @@
 					</fieldset>
 					
 					<fieldset>
-						<h2 class="section-title">청약정보입력</h2>
+						<legend>청약정보입력</legend>
+						
 						<ul class="input-list">
 							<li class="block">
 								<label for="company-name">회사명 <span>*</span></label>

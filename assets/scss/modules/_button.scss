@@ -109,14 +109,15 @@
   }
   
   &--invert {
-    background-color: $white;
-    border-color: $white;
+    background-color: #F3F4F9;
+    border-color: #bbb;
+    color: #111;
 
     &:hover,
     &:focus {
-      border-color: $color-primary-light;
-      background-color: $color-primary-light;
-      color: $ink;
+      border-color: $color-primary;
+      background-color: $color-primary;
+      color: #fff;
     }
 
     &[disabled] {
