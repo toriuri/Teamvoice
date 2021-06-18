@@ -171,7 +171,7 @@
   #section2 {
     background: url(../image/main/bg-main-product.jpg) no-repeat center top / cover #F9FAFC;
     
-    h1 {
+    h1, h2 {
       color: #fff;
       & + p {
         color: #fff;
@@ -244,6 +244,9 @@
             position: absolute;
             left: 50%; top: 50%;
             @include translate(-50%, -50%);
+          }
+          & + p {
+            font-size: 20px;
           }
         }
         
@@ -564,6 +567,7 @@
             font-size: 50px;
             font-weight: 700;
             line-height: 1.5em;
+            color: #fff;
             & + p {
               opacity: 0.6;
               margin-top: 10px;
