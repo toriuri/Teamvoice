@@ -131,6 +131,26 @@
     }
   }
   
+  &--black {
+    border-color: #111;
+    background-color: #111;
+    color: $white;
+    
+    &:hover,
+    &:focus {
+      border-color: #000;
+      background-color: #000;
+      color: $white;
+    }
+    
+    &[disabled] {
+      border-color: transparent !important;
+      background-color: $silver-light !important;
+      color: $silver !important;
+      cursor: not-allowed;
+    }
+  }
+  
   &--gray {
     border-color: #aaa;
     background-color: #aaa;
