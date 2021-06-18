@@ -5,7 +5,6 @@
 .guide-article {
   
   /***** 청약서 개통 안내 *****/
-  
   .application-download {
     //border: 1px solid #f00;
     .btn-area {
@@ -24,6 +23,7 @@
   .application-guide {
     padding-top: 100px;
     padding-bottom: 120px;
+    
     p {
       font-size: 22px;
       color: #111;
@@ -206,86 +206,46 @@
   
   
   /***** 청약서 금액 계산기 *****/
-  .calc-form {
-    margin-bottom: 100px;
-    fieldset {
-      padding-bottom: 40px;
-      &:last-child {
-        padding-bottom: 0;
+  .calc-box {
+    //border: 1px solid #f00;
+    
+    .calc-form {
+      //border: 1px solid #f00;
+      margin-bottom: 100px;
+      fieldset {
+        padding-bottom: 40px;
+        &:last-child {
+          padding-bottom: 0;
+        }
       }
     }
     
-    .table-list {
+    table {
+      border-bottom: 1px solid #111;
+  
       .c1 {width: 340px;}
       .c2 {width: auto;}
+      
       tbody {
         tr{
           &:first-child{
             th, td{
-              border-top: none;
+              border-top: 0;
               .tv-input {
                 width: 300px;
                 margin-right: 5px;
               }
             }
           }
-          &:last-child {
-            th, td {
-              border-bottom: 1px solid #111;
-            }
-          }
-        }
-      }
-      
-      tbody, tfoot {
-        th, td {
-          padding: 20px 0;
-          font-size: 20px;
-          color: #111;
-          vertical-align: middle;
-        }
-      }
-      tfoot {
-        tr th, tr td {
-          background: $color-primary;
-          color: #fff;
-        }
-      }
-    }
   
-    .table-list.total {
-      .c1 {width: 50%;}
-      .c2 {width: 50%;}
-      tbody {
-        tr{
-          &:last-child {
-            th, td {
-              border-bottom: none;
-            }
+          th, td {
+            padding: 20px 0;
+            font-size: 20px;
+            color: #111;
+            text-align: left;
+            vertical-align: middle;
+            background: none;
           }
-        }
-      }
-    
-      tbody, tfoot {
-        th, td {
-          padding: 20px 50px;
-          font-size: 22px;
-        }
-        td {
-          font-family: $en;
-          text-align: right;
-        }
-      }
-      tfoot {
-        th, td {
-          background: $color-primary;
-          color: #fff;
-          vertical-align: middle;
-          line-height: 1.0;
-        }
-        td {
-          font-size: 32px;
-          font-weight: 700;
         }
       }
     }
@@ -305,29 +265,42 @@
           &:last-child {
             margin-bottom: 0;
           }
-          
+        
+          label {
+            display: inline-block;
+            line-height: 1.0;
+            & + div {
+              //border: 1px solid #f00;
+              display: inline-block;
+              &:before {
+                content: "\e9af";
+                display: inline-block;
+                font-family: $icon;
+                font-size: 20px;
+                color: #111;
+                position: relative;
+                top: 2px;
+              }
+              .tv-input {
+                width: 140px;
+                margin-right: 5px;
+                margin-left: 10px;
+                text-align: right;
+              }
+            }
+          }
+        }
+        
+        &.type1 {
           label {
             //border: 1px solid #f00;
-            display: inline-block;
-            min-width: 185px;
-           //max-width: 200px;
-            padding-right: 10px;
-            line-height: 1.0;
-            &:after {
-              content: "\e9af";
-              display: inline-block;
-              font-family: $icon;
-              font-size: 20px;
-              color: #111;
-              float: right;
-              
-            }
-            & + .tv-input {
-              display: inline-block;
-              width: 140px;
-              margin-right: 5px;
-              text-align: right;
-            }
+            min-width: 80px;
+          }
+        }
+        &.type2 {
+          label {
+            //border: 1px solid #f00;
+            min-width:180px;
           }
         }
       }
@@ -336,15 +309,129 @@
         margin-top: 10px;
       }
     }
-  }
-  
-  .total-box {
-    padding: 100px 0 20px;
-    .container {
     
-    }
   }
   
+  
+  /***** 예상 금액 *****/
+  .total-box-wrap {
+    position: relative;
+    padding: 90px 0 120px;
+    &:before {
+      content: '';
+      display: block;
+      width: 50px; height: 50px;
+      border-width: 40px;
+      border-style: solid;
+      border-color: transparent;
+      border-top-color: #fff;
+      position: absolute;
+      left: 50%; top: 0;
+      @include box-sizing();
+      @include translate(-50%, 0);
+    }
+  
+    .total-box {
+      //border: 1px solid #f00;
+      position: relative;
+    }
+    .btn-table-top {
+      //border: 1px solid #f00;
+      width: 118px; height: 42px;
+      padding: 0 5px;
+      font-size: 18px;
+      i {
+        font-size: 24px;
+        position: relative;
+        top: 3px;
+      }
+      
+      position: absolute;
+      right: 0; top: 7px;
+    }
+    
+    table {
+      border-top: 2px solid #111;
+  
+      .c1 {width: 50%;}
+      .c2 {width: 50%;}
+      
+      tbody, tfoot {
+        th, td {
+          padding: 20px 50px;
+          font-size: 22px;
+          color: #111;
+          background: none;
+        }
+        td {
+          font-family: $en;
+          text-align: right;
+        }
+      }
+      
+      tbody {
+        tr{
+          &:last-child {
+            th, td {
+              border-bottom: none;
+              border-top: none;
+              padding-top: 0;
+              padding-bottom: 12px;
+            }
+          }
+          &:nth-child(3) {
+            th, td {
+              padding-bottom: 0;
+            }
+          }
+        }
+      }
+      
+      tfoot {
+        th, td {
+          background: $color-primary;
+          color: #fff;
+          vertical-align: middle;
+          line-height: 1.0;
+        }
+        td {
+          font-size: 32px;
+          font-weight: 700;
+        }
+      }
+      
+      & +   p {
+        font-size: 22px;
+        color: #555;
+        margin-top: 15px;
+        text-indent: -18px;
+        margin-left: 40px;
+        i {
+          font-size: 32px;
+          color: $color-primary;
+          position: relative;
+          top: 4px;
+        }
+      }
+    }
+    
+    .add-service {
+      //border: 1px solid #f00;
+      overflow: hidden;
+      font-size: 20px;
+      dt {
+        float: left;
+        overflow: hidden;
+        color: #555;
+        text-align: left;
+        padding-left: 40px;
+      }
+      dd {
+        color: $color-primary;
+      }
+    }
+    
+  }
 }
 
 
@@ -383,6 +470,7 @@
   @include mq($until: small) {
     //border: 1px solid #0f0;
   
+    /***** 청약서 개통 안내 *****/
     .application-download {
       .container {
         padding-bottom: 0;
@@ -499,6 +587,8 @@
   
     }
     
+    
+    /***** 청약서 금액 계산기 *****/
     .calc-form {
       fieldset {
         padding-bottom: 20px;

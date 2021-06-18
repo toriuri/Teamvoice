@@ -6,14 +6,20 @@
 .text-align-center {text-align: center;}
 .text-align-left {text-align: left;}
 
-section {
-	&:nth-child(even) {
-		background: #fff;
-	}
-	&:nth-child(odd) {
-		background: #F3F4F9;
+.product-article,
+.guide-article {
+	.section {
+		&:nth-child(odd) {
+			background: #F3F4F9;
+			//border: 1px solid #00f;
+		}
+		
+		&:nth-child(even) {
+			background: #fff;
+		}
 	}
 }
+
 
 .container {
 	position: relative;
