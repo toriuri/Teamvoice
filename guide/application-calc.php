@@ -112,15 +112,21 @@
 									<ul class="input-list ver type1">
 										<li>
 											<label for="C450HD">C450HD</label>
-											<input type="text" id="C450HD" class="tv-input" placeholder="0"> 개
+											<div>
+												<input type="text" id="C450HD" class="tv-input" placeholder="0"> 개
+											</div>
 										</li>
 										<li>
 											<label for="C470HD">C470HD</label>
-											<input type="text" id="C470HD" class="tv-input" placeholder="0"> 개
+											<div>
+												<input type="text" id="C470HD" class="tv-input" placeholder="0"> 개
+											</div>
 										</li>
 										<li>
 											<label for="CCX600">CCX600</label>
-											<input type="text" id="CCX600" class="tv-input" placeholder="0"> 개
+											<div>
+												<input type="text" id="CCX600" class="tv-input" placeholder="0"> 개
+											</div>
 										</li>
 									</ul>
 								</td>
@@ -134,19 +140,27 @@
 									<ul class="input-list ver type2">
 										<li>
 											<label for="V-focus">Voyager focus UC</label>
-											<input type="text" id="V-focus" class="tv-input" placeholder="0"> 개
+											<div>
+												<input type="text" id="V-focus" class="tv-input" placeholder="0"> 개
+											</div>
 										</li>
 										<li>
 											<label for="V-6200">Voyager 6200 UC</label>
-											<input type="text" id="V-6200" class="tv-input" placeholder="0"> 개
+											<div>
+												<input type="text" id="V-6200" class="tv-input" placeholder="0"> 개
+											</div>
 										</li>
 										<li>
 											<label for="E-20-S">Evolve 20 Stereo</label>
-											<input type="text" id="E-20-S" class="tv-input" placeholder="0"> 개
+											<div>
+												<input type="text" id="E-20-S" class="tv-input" placeholder="0"> 개
+											</div>
 										</li>
 										<li>
 											<label for="E-30-M">Evolve 30 Mono</label>
-											<input type="text" id="E-30-M" class="tv-input" placeholder="0"> 개
+											<div>
+												<input type="text" id="E-30-M" class="tv-input" placeholder="0"> 개
+											</div>
 										</li>
 									</ul>
 								</td>
@@ -160,7 +174,9 @@
 									<ul class="input-list ver type2">
 										<li>
 											<label for="i-phone">인터넷전화 개통 회선</label>
-											<input type="text" id="i-phone" class="tv-input" placeholder="0"> 회선
+											<div>
+												<input type="text" id="i-phone" class="tv-input" placeholder="0"> 회선
+											</div>
 										</li>
 									</ul>
 								</td>
@@ -191,72 +207,79 @@
 			</div>
 		</section>
 		
-		<section class="section total-box">
+		<section class="section total-box-wrap">
 			<div class="container">
+				<div class="total-box">
+					
+					<h2 class="section-title">예상 금액</h2>
+					<button type="button" class="btn btn--lgray btn-table-top"><i class="xi-refresh"></i> 초기화</button>
+					
+					<table border="1" cellspacing="0" cellpadding="0" class="table total">
+						<caption>예상 금액 계산표</caption>
+						<colgroup>
+							<col class="c1"> <col class="c2">
+						</colgroup>
+						
+						<tfoot>
+						<tr>
+							<th scope="row">총액</th>
+							<td>
+								<i class="xi-won"></i>
+								1,125,000
+							</td>
+						</tr>
+						</tfoot>
+						
+						<tbody>
+						<tr>
+							<th scope="row">
+								서비스 개통비
+							</th>
+							<td>
+								<i class="xi-won"></i>
+								100,000
+							</td>
+						</tr>
+						
+						<tr>
+							<th scope="row">
+								서비스 이용료 (36개월)
+							</th>
+							<td>
+								<i class="xi-won"></i>
+								1,000,000
+							</td>
+						</tr>
+						
+						<tr>
+							<th scope="row">
+								부가 서비스
+							</th>
+							<td>
+								<i class="xi-won"></i>
+								25,000
+							</td>
+						</tr>
+						
+						<tr>
+							<td colspan="2">
+								<dl class="add-service">
+									<dt>PBX 연동</dt>
+									<dd>상담문의</dd>
+									<dt>070 개통 서비스</dt>
+									<dd>상담문의</dd>
+								</dl>
+							</td>
+						</tr>
+						
+						</tbody>
+					</table>
+					<p><i class="xi-error"></i> 위 금액은 부가 서비스의 상담문의가 필요한 항목이 제외된 예상금액입니다.</p>
 				
-				<h2 class="section-title">예상 금액</h2>
-				
-				<table border="1" cellspacing="0" cellpadding="0" class="table total">
-					<caption>예상 금액 계산표</caption>
-					<colgroup>
-						<col class="c1"> <col class="c2">
-					</colgroup>
-					
-					<tfoot>
-					<tr>
-						<th scope="row">총액</th>
-						<td>
-							<i class="xi-won"></i> 0
-						</td>
-					</tr>
-					</tfoot>
-					
-					<tbody>
-					<tr>
-						<th scope="row">
-							서비스 개통비
-						</th>
-						<td>
-							<i class="xi-won"></i> 0
-						</td>
-					</tr>
-					
-					<tr>
-						<th scope="row">
-							서비스 이용료 (36개월)
-						</th>
-						<td>
-							<i class="xi-won"></i> 0
-						</td>
-					</tr>
-					
-					<tr>
-						<th scope="row">
-							부가 서비스
-						</th>
-						<td>
-							<i class="xi-won"></i> 0
-						</td>
-					</tr>
-					
-					<tr>
-						<td colspan="2">
-							<dl class="add-service">
-								<dt>PBX 연동</dt>
-								<dd>상담문의</dd>
-								<dt>070 개통 서비스</dt>
-								<dd>상담문의</dd>
-							</dl>
-						</td>
-					</tr>
-					
-					</tbody>
-				</table>
-				<p><i class="xi-error"></i> 위 금액은 부가 서비스의 상담문의가 필요한 항목이 제외된 예상금액입니다.</p>
-			
+				</div>
 			</div>
 		</section>
 	
-</article>
+	</article>
 
 <?php include "../include/_footer.php"; ?>
