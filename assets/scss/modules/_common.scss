@@ -288,13 +288,14 @@ input[type=search]::-webkit-search-cancel-button {
     position: relative;
     cursor: pointer;
     display: block;
-    padding: 0 0 0 30px;
+    padding: 0 0 0 35px;
     letter-spacing: 0;
+    @include box-sizing();
     
     &:before{
       content: '';
       display: inline-block;
-      width: 20px; height: 20px;
+      width: 26px; height: 26px;
       border: 1px solid #bbb;
       background: #fff;
       @include border-radius(50%);
@@ -302,15 +303,16 @@ input[type=search]::-webkit-search-cancel-button {
       position: absolute;
       left: 0; top: 5px;
     }
+    
     &:after{
       content: '';
       display: inline-block;
-      width: 10px; height: 10px;
-      background: #bbb;
+      width: 12px; height: 12px;
+      //background: #bbb;
       @include border-radius(50%);
       @include box-sizing;
       position: absolute;
-      left: 5px; top: 10px;
+      left: 7px; top: 12px;
     }
   }
   /* radio button on */
@@ -318,10 +320,6 @@ input[type=search]::-webkit-search-cancel-button {
     //color: #20beef;
     &:before{border-color: #bbb;}
     &:after{background: $color-primary;}
-  }
-  
-  &:checked + label input {
-    border-bottom: 1px solid $color-sub-light !important;
   }
 }
 
@@ -340,12 +338,13 @@ input[type=search]::-webkit-search-cancel-button {
     //overflow: hidden;
     display: block;
     padding: 0 0 0 35px;
+    @include box-sizing();
     
     &:before {
       content: " ";
       font-family: $icon;
       font-size: 24px;
-      line-height: 24px;
+      line-height: 23px;
       display: inline-block;
       width: 24px; height: 24px;
       color: #bbb;
@@ -367,9 +366,6 @@ input[type=search]::-webkit-search-cancel-button {
       border-color: $color-primary;
       background: $color-primary;
     }
-  }
-  &:checked + label input {
-    border-bottom: 1px solid $color-primary !important;
   }
 }
 
@@ -423,26 +419,40 @@ iframe[name='google_conversion_frame'] {
     font-size: 14px;
   }
   
+  /***** radio button *****/
   .tv-radio[type="radio"] {
     & + label{
+      padding: 0 0 0 25px;
+      
       &:before{
+        width: 18px; height: 18px;
         top: 2px;
       }
+      
       &:after{
-        top: 7px;
+        width: 8px; height: 8px;
+        left: 5px; top: 7px;
       }
+    }
+    /* radio button on */
+    &:checked + label{
+      //color: #20beef;
+      &:before{border-color: #bbb;}
+      &:after{background: $color-primary;}
     }
   }
   
+  /***** checkbox *****/
   .tv-chk[type="checkbox"] {
     & + label {
-      padding: 0 0 0 30px;
+      padding: 0 0 0 25px;
       
       &:before {
-        font-size: 20px;
-        line-height: 20px;
-        width: 21px; height: 21px;
+        font-size: 16px;
+        line-height: 15px;
+        width: 17px; height: 17px;
         top: 2px;
+        @include border-radius(2px);
       }
     }
     /* checkbox on */
@@ -453,9 +463,6 @@ iframe[name='google_conversion_frame'] {
         border-color: $color-primary;
         background: $color-primary;
       }
-    }
-    &:checked + label input {
-      border-bottom: 1px solid $color-primary !important;
     }
   }
 }

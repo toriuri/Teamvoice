@@ -51,7 +51,7 @@
 								<label for="birth">생년월일 <span>*</span></label>
 								<input type="text" id="birth" class="tv-input" placeholder="예) 19990101">
 							</li>
-							<li>
+							<li class="gender">
 								<label>성별 <span>*</span></label>
 								<div class="input-wrap">
 									<input type="radio" name="gender" id="man" class="tv-radio">
@@ -69,7 +69,7 @@
 							<li class="block email-box">
 								<label for="email">이메일 <span>*</span></label>
 								<input type="email" id="email" class="tv-input" placeholder="인증받으실 이메일 주소를 입력하세요.">
-								<button type="button" class="btn btn--mid btn--lgray">인증 코드 발송</button>
+								<button type="button" class="btn btn--mid btn--lgray">인증 코드</button>
 							</li>
 							<li class="block email-box">
 								<input type="text" class="tv-input" placeholder="인증 코드를 입력하세요.">
