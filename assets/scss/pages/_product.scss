@@ -128,6 +128,27 @@
       
     }
   }
+  
+  .device-box, .white-box {
+    ul {
+      //border: 1px solid #f00;
+      li {
+        text-indent: -15px;
+        padding-left: 15px;
+        @include box-sizing();
+        
+        &:before {
+          content: '・';
+          display: inline-block;
+          width: 15px;
+          //background: #ff0;
+          color: #555;
+          font-weight: 700;
+          text-indent: 0;
+        }
+      }
+    }
+  }
 }
 
 /***** 팀즈 클라우드 보이스 커넥트 *****/
@@ -400,7 +421,7 @@
     display: flex;
     flex-wrap: wrap;
     
-    div {
+    .item {
       position: relative;
       flex: 1 1 270px;
       max-width: 50%;
@@ -570,42 +591,110 @@
     }
   }
   
-  #live-teams-pro {
-    //border: 1px solid #f00;
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
+  .managed-product {
+    &.live-teams-pro {
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
   
-  figure {
-    //border: 1px solid #f00;
-    margin: 0 auto 40px;
-    text-align: center;
-  }
+    figure {
+      //border: 1px solid #f00;
+      margin: 0 auto 40px;
+      text-align: center;
+    }
   
-  .box.white-box {
-    max-width: 1020px;
-    padding: 30px 40px;
-    margin: 0 auto;
-    @include border-radius(20px);
-    @include box-sizing();
+    .box.white-box {
+      max-width: 1020px;
+      padding: 30px 40px;
+      margin: 0 auto;
+      @include border-radius(20px);
+      @include box-sizing();
     
-    background: #fff;
-    ul{
-      overflow: hidden;
-      li {
-        width: 50%;
-        float: left;
+      background: #fff;
+      ul{
+        overflow: hidden;
+        li {
+          width: 50%;
+          float: left;
+        }
+      }
+      & + p {
+        color: #999;
+        max-width: 1020px;
+        padding: 5px 40px;
+        margin: 0 auto;
+        @include box-sizing();
+      
       }
     }
-    & + p {
-      color: #999;
-      max-width: 1020px;
-      padding: 5px 40px;
-      margin: 0 auto;
-      @include box-sizing();
-  
-    }
   }
+  
+  #solution-section {
+    //border: 1px solid #f00;
+    padding-bottom: 120px;
+    .title-wrap {
+      padding-bottom: 0;
+    }
+    
+    .device-box {
+      //overflow: hidden;
+      width: 100%; max-width: 1400px;
+      margin: 0 auto;
+      display: inline-flex;
+      flex-wrap: wrap;
+    
+      .item {
+        position: relative;
+        display: flex;
+        flex: 1 1 270px;
+        @include box-sizing();
+        
+        &:nth-child(1) {
+          max-width: 800px;
+        }
+        
+        &:nth-child(2) {
+          max-width: 600px;
+          padding-left: 40px;
+        }
+      }
+  
+      &.box1 {
+        .item {
+          &:nth-child(2) {
+            ul {
+              margin-top: 60px;
+            }
+          }
+        }
+      }
+      
+      &.box2 {
+        flex-direction: row-reverse;
+        .item {
+          &:nth-child(2) {
+            padding-left: 0;
+            ul {
+              margin-top: 100px;
+            }
+          }
+        }
+      }
+  
+      &.box3 {
+        .item {
+          &:nth-child(2) {
+            ul {
+              margin-top: 40px;
+            }
+          }
+        }
+      }
+      
+    }
+    
+  }
+
 }
 
 

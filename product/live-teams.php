@@ -68,7 +68,7 @@
 				<!--//number counting 샘플-->
 			</div>
 		</section>
-		
+	
 		<section class="section">
 			
 			<div class="container">
@@ -142,7 +142,7 @@
 			
 			</div>
 			
-			<div class="container" id="live-teams-premium">
+			<div class="container managed-product" id="live-teams-premium">
 				<h1 class="section-tlt1">
 					라이브팀즈 매니지드 상품
 				</h1>
@@ -157,21 +157,21 @@
 				</ul>
 				
 				<figure>
-					<img src="../assets/image/product/live-teams-premiun.png" alt="">
+					<img src="../assets/image/product/live-teams-premium.png" alt="">
 				</figure>
 				
 				<div class="box white-box">
 					<ul>
-						<li>· 고객사 교환기 연동이 필요한 경우</li>
-						<li>· 고객사 교환기와 내선통화 및 연동 지원</li>
-						<li>· 전화, SBC, 고객 네트워크 트러블슈팅</li>
-						<li>· 라이브팀즈의 프로 서비스 기본제공</li>
+						<li>고객사 교환기 연동이 필요한 경우</li>
+						<li>고객사 교환기와 내선통화 및 연동 지원</li>
+						<li>전화, SBC, 고객 네트워크 트러블슈팅</li>
+						<li>라이브팀즈의 프로 서비스 기본제공</li>
 					</ul>
 				</div>
 			
 			</div>
 			
-			<div class="container" id="live-teams-pro">
+			<div class="container managed-product live-teams-pro" id="live-teams-pro">
 				
 				<ul class="btn-tab-box">
 					<li>
@@ -188,11 +188,11 @@
 				
 				<div class="box white-box">
 					<ul>
-						<li>· 고객사 교환기 연동이 없는 경우</li>
-						<li>· 팀즈 사용자 이동 및 추가, 삭제 관리</li>
-						<li>· 전화, SBC 트러블슈팅</li>
-						<li>· 3년 매니지드 서비스 약정</li>
-						<li>· 24*7 매니지드 서비스, MS팀즈 테넌트관리</li>
+						<li>고객사 교환기 연동이 없는 경우</li>
+						<li>팀즈 사용자 이동 및 추가, 삭제 관리</li>
+						<li>전화, SBC 트러블슈팅</li>
+						<li>3년 매니지드 서비스 약정</li>
+						<li>24*7 매니지드 서비스, MS팀즈 테넌트관리</li>
 					</ul>
 				</div>
 				<p>테넌트 : 조직의 데이터를 저장하고 관리하는 Office 365의 클라우드 인스턴스</p>
@@ -207,6 +207,86 @@
 				</div>
 			</div>
 		
+		</section>
+		
+		<section class="section" id="solution-section">
+			
+			<div class="title-wrap">
+				<h1 class="title-h1">팀즈 조직도 솔루션</h1>
+				<p>
+					팀즈로 인사정보와 연동된 조직도를 생성하여 사용해보세요!
+				</p>
+			</div>
+			
+			<div class="container">
+				<h2 class="section-tlt1">
+					조직도 솔루션
+				</h2>
+				
+				<div class="device-box box1">
+					<div class="item">
+						<figure>
+							<img src="../assets/image/product/teams-solution1.png" alt="">
+						</figure>
+					</div>
+					
+					<div class="item">
+						<ul>
+							<li>Teams 좌측에 조직도 메뉴 추가 가능(관리자를 통해 앱 일괄 배포)</li>
+							<li>인사정보(그룹웨어) 시스템과 연동하여 조직도 트리구성 제공</li>
+							<li>조직도 앱을 채널내 탭 또는 Teams App 형태로 배포 가능</li>
+							<li>사용자 메시지 전송, 일정 예약, 팀채널 생성 등 Graph API를 이용한 다양한 연동 기능 구현</li>
+						</ul>
+					</div>
+				</div>
+			
+			</div>
+			
+			<div class="container">
+				<h2 class="section-tlt1">
+					쪽지 솔루션
+				</h2>
+				
+				<div class="device-box box2">
+					<div class="item">
+						<figure>
+							<img src="../assets/image/product/teams-solution2.png" alt="">
+						</figure>
+					</div>
+					
+					<div class="item">
+						<ul>
+							<li>비동기화 메세징 방식의 쪽지 솔루션 결합</li>
+							<li>단방향으로 메시지를 전달하고 확인하는 개인 메세징 / 시스템(전자결재) 알림 확인</li>
+							<li>첨부파일을 추가하여 메세지 전달 가능(내부 저장소 이용)</li>
+						</ul>
+					</div>
+				</div>
+			
+			</div>
+			
+			<div class="container">
+				<h2 class="section-tlt1">
+					알림 봇 솔루션
+				</h2>
+				
+				<div class="device-box box3">
+					<div class="item">
+						<figure>
+							<img src="../assets/image/product/teams-solution3.png" alt="">
+						</figure>
+					</div>
+					
+					<div class="item">
+						<ul>
+							<li>운영 중인 레거시 시스템에서 알림 메시지 전달</li>
+							<li>단방향으로 메시지를 전달하고 확인하는 개인 메세징 방식</li>
+							<li>개인이 Teams에 알림 봇 등록 후 사용 가능</li>
+							<li>Teams Bot Framework를 통해 레거시 시스템과 연계한 업무 시스템 추가 개발 가능</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</section>
 	
 	</article>
