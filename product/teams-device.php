@@ -206,7 +206,10 @@
 			<div class="container">
 				<div class="banner-box device">
 					<h2 class="banner-title">팀즈 디바이스 라인업 소개서</h2>
-					<p>팀즈 디바이스에 대한 자세한 내용을 확인해보세요.</p>
+					<p>
+						<span>팀즈 디바이스에 대한 </span>
+						<span>자세한 내용을 확인해보세요.</span>
+					</p>
 					<button type="button" class="btn btn--black">다운로드 <i class="xi-download"></i></button>
 				</div>
 			</div>
