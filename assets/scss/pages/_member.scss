@@ -155,13 +155,34 @@
           }
         }
         
-         .input-wrap {
-           width: 100px;
-           height: 56px;
-           float: left;
-           position: relative;
-           //border: 1px solid #f00;
-         }
+        &.gender {
+          //border: 1px solid #f00;
+          height: 36px;
+  
+          .input-wrap {
+            width: 100px;
+            height: 100%;
+            float: left;
+            position: relative;
+            //border: 1px solid #f00;
+            label {
+              width: 100% !important;
+            }
+            /***** radio button *****/
+            .tv-radio[type="radio"] {
+              & + label{
+      
+                &:before{
+                  top: 3px;
+                }
+      
+                &:after{
+                  top: 10px;
+                }
+              }
+            }
+          }
+        }
         
         .tv-input + p {
           margin: 10px 0 0 26px;
@@ -396,8 +417,26 @@
           
           label {width: 105px;}
           
-          .input-wrap {
-            width: 80px; height: 37px;
+          &.gender {
+            //border: 1px solid #f00;
+            height: 23px;
+    
+            .input-wrap {
+              width: 70px;
+              //border: 1px solid #f00;
+              
+              /***** radio button *****/
+              .tv-radio[type="radio"] {
+                & + label{
+                  &:before{
+                    top: 2px;
+                  }
+                  &:after{
+                    top: 7px;
+                  }
+                }
+              }
+            }
           }
           
           .tv-input + p {
