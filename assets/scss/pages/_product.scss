@@ -747,6 +747,41 @@
           &:nth-child(2) {
             ul {
               margin-top: 60px;
+              li {
+                
+                &.logo-box-wrap {
+                  //border: 1px solid #f00;
+                  text-indent: 0;
+                  padding-left: 0;
+                  padding-top: 13px;
+                  &:before {
+                    display: none;
+                  }
+  
+                  .logo-box {
+                    display: inline-block;
+                    background: rgba(85,88,175,0.1);
+                    @include border-radius(100px);
+    
+                    figure {
+                      display: inline-block;
+                      text-align: center;
+                      background: #fff;
+                      border: 6px solid rgba(85,88,175,0.8);
+                      padding: 8px 22px;
+                      @include border-radius(100px);
+                      @include box-sizing();
+                    }
+                    span {
+                      display: inline-block;
+                      color: $color-primary;
+                      padding: 0 23px 0 10px;
+      
+                    }
+                  }
+                }
+
+              }
             }
           }
         }
@@ -784,6 +819,7 @@
 /***** Product 모바일 대응 *****/
 
 .product-article {
+  
   @include mq($until: xx-large) {
     //border: 1px solid #f00;
     
@@ -1139,12 +1175,10 @@
       }
     }
     
-    
   }
   
   @include mq($until: medium) {
     //border: 1px solid #0ff;
-    
     
   }
   
@@ -1370,7 +1404,6 @@
       
     }
     
-    
     &.product2 {
       .subtop-visual {
         & + .section {
@@ -1578,8 +1611,29 @@
           &.box3 .item:nth-child(2),{
             ul {
               margin-top: 20px;
+              
+              li {
+                &.logo-box-wrap {
+                  padding-top: 13px;
+                  .logo-box {
+                    figure {
+                      border-width: 3px;
+                      padding: 4px 11px 3px;
+                      img {
+                        width: 82px;
+                      }
+                    }
+                    span {
+                      padding: 0 15px 0 8px;
+                      font-size: 12px;
+                    }
+                  }
+                }
+              }
             }
           }
+  
+
         }
       }
       
