@@ -243,7 +243,7 @@
         //border: 1px solid #f00;
         position: relative;
         flex: 1 1 270px;
-        max-width: 270px;
+        max-width: 25%;
         padding: 10px 10px 0;
         @include box-sizing();
         text-align: center;
@@ -278,15 +278,21 @@
             font-size: 20px;
           }
         }
-      
-        i {
+        
+        &:after {
+          content: "\e93f";
+          display: block;
+          width: 58px; height: 58px;
           //border: 1px solid #f00;
+          font-family: $icon;
           font-size: 58px;
+          line-height: 58px;
           color: #E1E2E6;
           position: absolute;
-          right: -30%; top: 100px;
+          right: -8%; top: 100px;
         }
-      
+  
+        
         &:nth-child(1) {
           h2 {
             background: url(../image/main/service1-1@2x.png) no-repeat center 33% #4DA4F2;
@@ -518,7 +524,7 @@
     li {
       //border: 1px solid #f00;
       position: relative;
-      flex: 1 1 250px;
+      flex: 1 1 200px;
       max-width: 25%;
       p {
         font-size: 20px;
@@ -611,6 +617,7 @@
         z-index: 10;
         display: block;
         max-height: 270px;
+        margin: 0 auto;
         
         .circle-bg {
           fill: none;
@@ -851,7 +858,7 @@
               background-position: center 45px !important;
             }
     
-            i {display: none;}
+            &:after {display: none;}
           }
         }
     
@@ -1096,6 +1103,7 @@
           
           .circular-chart {
             max-height: 270px; width: 270px;
+            margin: 0;
           }
         }
       }
