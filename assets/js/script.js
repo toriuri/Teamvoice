@@ -7,17 +7,13 @@ $(document).ready(function(){
     $fullMenuLinks=$fullMenu_d1.find('a'),
     $gnbDepth1=$('.gnb-list >li'),
     $gnbDepth1_on,
-    $gnbSubMenus=$('.gnb-list >li > a').next('ul'),
     $gnbDepth2=$gnbDepth1.find('li>a'),
     $gnbDepth2_on,
     $btnFamily=$('.btn-family-site'),
     $iconFamily=$btnFamily.find('i'),
     $listFamily=$('.family-site-box').find('.list-box'),
     flagFamily=false,
-    gnbTimer,
-    scrollTimer,
     d1_name=['product','guide','customer'],
-    winW=$win.width();
     winH=$win.height();
 
   //d1,d2 현재 메뉴 표시
@@ -30,7 +26,8 @@ $(document).ready(function(){
    page_file= page_path.substring(page_path.lastIndexOf("/"));
 
    d1_name.forEach(function(el,index) {
-      if(page_path.includes(el)) {
+      // if(page_path.includes(el)) {
+        if(page_path.indexOf(el)>-1){
         gnb_index=index;
       }
    });
@@ -40,7 +37,8 @@ $(document).ready(function(){
    $gnbDepth1_on.addClass('on');
    
    $gnbDepth2.each(function(index,el){
-    if($(el).prop('href').includes(page_file)) {
+    // if($(el).prop('href').includes(page_file)) {
+      if($(el).prop('href').indexOf(page_file)>-1) {
       menu_index=index;
     }
    });
@@ -116,21 +114,6 @@ $btnFamily.on({
   /*********************
    * 함수선언
    *********************/
-    function  scrollTriggerBatch(el){
-  gsap.set(el, {y:50});
-  ScrollTrigger.batch(el, {
-    interval: 0.1, // time window (in seconds) for batching to occur. 
-    batchMax: 3,   // maximum batch size (targets). Can be function-based for dynamic values
-    onEnter: batch => gsap.to(batch, {visibility: 'visible', y: 0, autoAlpha: 1, stagger: {each: 0.15, grid: [1, 3]}, overwrite: true}),
-    onLeave: batch => gsap.set(batch, { y: 0, overwrite: true}),
-    onEnterBack: batch => gsap.to(batch, {visibility: 'visible', y: 0, autoAlpha: 1, stagger: 0.15, overwrite: true}),
-    onLeaveBack: batch => gsap.set(batch, {visibility: 'hidden', y: 50, overwrite: true}),
-    start: "100px bottom",
-    end: "top top"
-    //  markers:true
-  });
-  ScrollTrigger.addEventListener("refreshInit", () => gsap.set(el, {y: 0}));
-}
 
 addSticky(".header-bar");
 stickyHeader.init();
