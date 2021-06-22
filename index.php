@@ -510,10 +510,7 @@
 												</a>
 											</div>
 										</div>
-										<!--
-										<div class="swiper-pagination"></div>
-										-->
-									
+
 									</div>
 								
 								</div>
@@ -627,7 +624,9 @@
 				//sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
 				navigation: true,
 				navigationPosition: 'left',
-				//responsiveWidth: 900,
+				responsiveWidth: 560,
+				responsiveHeight: 420,
+				responsiveSlides: false,
 				afterResponsive: function(isResponsive){
 				}
 			});
