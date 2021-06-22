@@ -28,9 +28,7 @@
 				
 				<form name="joinForm" action="" method="post" class="join-form" id="joinForm" >
 					<fieldset>
-						<legend class="blind">개인정보입력</legend>
-						
-						<h2 class="section-title">개인정보입력</h2>
+						<legend>개인정보입력</legend>
 						
 						<ul class="input-list">
 							<li>
@@ -53,7 +51,7 @@
 								<label for="birth">생년월일 <span>*</span></label>
 								<input type="text" id="birth" class="tv-input" placeholder="예) 19990101">
 							</li>
-							<li>
+							<li class="gender">
 								<label>성별 <span>*</span></label>
 								<div class="input-wrap">
 									<input type="radio" name="gender" id="man" class="tv-radio">
@@ -68,12 +66,12 @@
 								<label for="phone-number">휴대전화 <span>*</span></label>
 								<input type="text" id="phone-number" class="tv-input" placeholder="- 없이 숫자만 입력해주세요.">
 							</li>
-							<li class="email-box">
+							<li class="block email-box">
 								<label for="email">이메일 <span>*</span></label>
 								<input type="email" id="email" class="tv-input" placeholder="인증받으실 이메일 주소를 입력하세요.">
-								<button type="button" class="btn btn--mid btn--lgray">인증 코드 발송</button>
+								<button type="button" class="btn btn--mid btn--lgray">인증 코드</button>
 							</li>
-							<li class="email-box">
+							<li class="block email-box">
 								<input type="text" class="tv-input" placeholder="인증 코드를 입력하세요.">
 								<div class="entry-time">4:59</div>
 								<button type="button" class="btn btn--mid btn--lgray">확인</button>
@@ -83,13 +81,14 @@
 					</fieldset>
 					
 					<fieldset>
-						<h2 class="section-title">청약정보입력</h2>
+						<legend>청약정보입력</legend>
+						
 						<ul class="input-list">
-							<li>
+							<li class="block">
 								<label for="company-name">회사명 <span>*</span></label>
 								<input type="text" id="company-name" class="tv-input" placeholder="회사명을 입력하세요.">
 							</li>
-							<li>
+							<li class="block">
 								<label for="subscription-info">가입 청약 정보 <span>*</span></label>
 								<input type="text" id="subscription-info" class="tv-input" placeholder="가입 청약 정보를 입력하세요.">
 								<p><i class="xi-error"></i> 청약 가입 고객만 회원 가입이 가능합니다. 회원가입을 신청하시면 관리자가 확인 후 승인해드립니다.</p>

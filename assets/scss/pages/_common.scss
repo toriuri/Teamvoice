@@ -6,6 +6,21 @@
 .text-align-center {text-align: center;}
 .text-align-left {text-align: left;}
 
+.product-article,
+.guide-article {
+	.section {
+		&:nth-child(odd) {
+			background: #F3F4F9;
+			//border: 1px solid #00f;
+		}
+		
+		&:nth-child(even) {
+			background: #fff;
+		}
+	}
+}
+
+
 .container {
 	position: relative;
 	width: 100%; max-width: 1400px;
@@ -84,20 +99,24 @@
 
 .title-wrap {
 	//border: 1px solid #f00;
-	margin: 130px 0 80px;
+	padding: 120px 0 80px;
 	text-align: center;
 	
 	.title-h1 {
 		font-size: 60px;
 		font-weight: 700;
-		line-height: 1.0;
+		line-height: 1.3em;
 		color: #111;
 		& + p {
+			//border: 1px solid #f00;
+			max-width: 1024px;
 			font-size: 20px;
-			margin-top: 30px;
+			margin: 30px auto 0;
 		}
 	}
 }
+
+
 
 .section-title {
 	//border: 1px solid #f00;
@@ -105,6 +124,34 @@
 	font-weight: 700;
 	color: #111;
 	margin-bottom: 10px;
+}
+
+
+
+form {
+	legend {
+		display: block;
+		width: 100%;
+		font-size: 32px;
+		font-weight: 700;
+		color: #111;
+		border-bottom: 2px solid #111;
+		padding-bottom: 5px;
+		//margin-bottom: 20px;
+	}
+}
+
+section {
+	h2 {
+		font-size: 28px;
+		font-weight: 500;
+		color: #111;
+		& + p {
+			span {
+				display: block;
+			}
+		}
+	}
 }
 
 //iframe 비디오 콘텐츠
@@ -138,10 +185,13 @@
 @include mq($until: x-large) {
 	.main {
 		//border: 1px solid #f0f;
-		
+		.subtop-visual {
+			margin: 60px auto 0;
+			
+		}
 		.title-wrap {
 			//border: 1px solid #f00;
-			margin: 90px 40px 60px;
+			//margin: 90px 40px 60px;
 			
 			.title-h1 {
 				font-size: 48px;
@@ -180,19 +230,38 @@
 }
 
 @include mq($until: small) {
+	
+	#fp-nav ul, .fp-slideNav ul {
+		display: none !important;
+	}
+	
 	.main {
 		//border: 1px solid #0f0;
 		
+		article {
+			margin-top: 60px;
+			min-height: calc(100vh - 230px);
+			
+			&.main-article {
+				//border: 1px solid #f00;
+				margin-top: 0;
+				.container {
+					padding: 60px 15px;
+				}
+			}
+		}
+		
 		.section {
 			.container {
-				padding: 0 15px;
+				padding: 0 15px 50px;
+				margin: 0 auto;
 			}
 		}
 		
 		.subtop-visual {
 			//border: 1px solid #f00;
 			height: 110px;
-			margin-top: 60px;
+			margin-top: 0;
 			background: no-repeat center top / cover;
 			
 			&.product {
@@ -218,12 +287,10 @@
 		
 		.title-wrap {
 			//border: 1px solid #f00;
-			margin: 50px 0 60px;
-			padding: 0 15px;
+			padding: 36px 0 25px;
 			
 			.title-h1 {
 				font-size: 25px;
-				color: #111;
 				& + p {
 					font-size: 14px;
 					margin-top: 10px;
@@ -233,12 +300,23 @@
 				}
 			}
 		}
+		
+		form {
+			legend {
+				font-size: 16px;
+				border-bottom: 2px solid #111;
+			}
+		}
+		
+
+		
 	}
 }
 
 @include mq($until: x-small) {
 	.main {
 		//border: 1px solid #959;
+		
 		
 	}
 }

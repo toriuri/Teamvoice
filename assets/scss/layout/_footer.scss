@@ -167,7 +167,7 @@
   .footer {
     //border: 1px solid #f00;
     .footer-wrap {
-      padding: 0 40px;
+      padding: 0 60px;
     }
     
   }
@@ -176,7 +176,7 @@
 @include mq($until: x-large) {
   .footer {
     //border: 1px solid #ff0;
-    
+    padding: 30px 0;
   }
 }
 

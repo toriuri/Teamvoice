@@ -26,6 +26,9 @@
 		<link rel="stylesheet" href="../assets/css/style.css">
 		<link rel="stylesheet" type="text/css" href="../assets/css/XEIcon-2.2.0/xeicon.min.css">
 		
+		<!-- Swiper's CSS -->
+		<link rel="stylesheet" type="text/css" href="../assets/css/swiper-5.3.0/swiper.css">
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="../assets/js/lib/hc-sticky.js"></script>
 		<script src="../assets/js/lib/modernizr.min.js"></script>

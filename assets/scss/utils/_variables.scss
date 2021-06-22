@@ -9,7 +9,7 @@ $mq-breakpoints: (
       medium:  720px,
        large:  960px,
      x-large: 1200px,
-    xx-large: 1400px
+    xx-large: 1600px
 );
 
 //z-index
@@ -114,10 +114,10 @@ $color-sub-red : #FF0068;
 $color-sub-gold: #ba8548;
 
 // 리스트 공통
-$list-bg-color: $gray0;
-$list-border-color: $gray2;
+$list-bg-color: #F3F4F9;
+$list-border-color: #E1E2E6;
 $list-border-dark-color: $gray7;
-$list-padding-tb: 0.8em;
+$list-padding-tb: 20px;
 $list-padding-lr: 1.2em;
 
 $element-margin-lr: 0.5rem;

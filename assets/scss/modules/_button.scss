@@ -109,14 +109,15 @@
   }
   
   &--invert {
-    background-color: $white;
-    border-color: $white;
+    background-color: #F3F4F9;
+    border-color: #bbb;
+    color: #111;
 
     &:hover,
     &:focus {
-      border-color: $color-primary-light;
-      background-color: $color-primary-light;
-      color: $ink;
+      border-color: $color-primary;
+      background-color: $color-primary;
+      color: #fff;
     }
 
     &[disabled] {
@@ -127,6 +128,26 @@
       span {
         color: rgba($ink, 0.38) !important;
       }
+    }
+  }
+  
+  &--black {
+    border-color: #111;
+    background-color: #111;
+    color: $white;
+    
+    &:hover,
+    &:focus {
+      border-color: #000;
+      background-color: #000;
+      color: $white;
+    }
+    
+    &[disabled] {
+      border-color: transparent !important;
+      background-color: $silver-light !important;
+      color: $silver !important;
+      cursor: not-allowed;
     }
   }
   
@@ -277,4 +298,34 @@
 .func {
   text-align: center;
   margin-top: 5rem;
+}
+
+
+/***** btn 반응형 대응 *****/
+@include mq($until: small) {
+  .btn-area {
+    padding: 40px 0 0;
+    &.multi {
+      margin: 0 -3px;
+      //border: 1px solid #f00;
+    }
+  }
+  
+  .btn {
+    height: 41px;
+    font-size: 14px;
+    
+    // size variation
+    &--lg {
+      width: 100%;
+      min-width: 100%;
+      //border: 1px solid #f00;
+    }
+    
+    &.w50 {
+      width: 47% !important;
+      min-width: 138px;
+      margin: 0 3px;
+    }
+  }
 }
