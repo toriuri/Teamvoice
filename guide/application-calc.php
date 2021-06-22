@@ -134,7 +134,7 @@
 							
 							<tr>
 								<th scope="row">
-									<label>팀즈 전화기</label>
+									<label>팀즈 헤드셋</label>
 								</th>
 								<td>
 									<ul class="input-list ver type2">
