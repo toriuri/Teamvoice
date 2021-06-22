@@ -142,7 +142,6 @@ function getBtnTab_gap() {
       }else {
         btnTab_gap=80;
       }
-      console.log(btnTab_gap);
 }
 
 });// $(document).ready(function()
@@ -160,7 +159,6 @@ let  stickyHeader= (function(){
          
           if( headerbarHeight < currentScrollTop){
               $body.addClass('scroll-down');
-              // console.log('down');
           }else {
               $body.removeClass('scroll-down gnb-active') ;      
           }
