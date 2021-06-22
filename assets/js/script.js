@@ -14,7 +14,13 @@ $(document).ready(function(){
     $listFamily=$('.family-site-box').find('.list-box'),
     flagFamily=false,
     d1_name=['product','guide','customer'],
-    winH=$win.height();
+    winW=$win.width(),
+    btnTab_gap;
+
+    getBtnTab_gap();
+    $(window).resize(function(){
+      getBtnTab_gap() 
+    });
 
   //d1,d2 현재 메뉴 표시
   //$gnbDepth1 .on 추가
@@ -47,9 +53,6 @@ $(document).ready(function(){
    $gnbDepth2_on.addClass('is-current');
    $($fullMenuLinks[menu_index]).addClass('is-current');
 
- 
-  
-
   
   /* 햄버거 메뉴 클릭 */
   $mBtn.click(function(){
@@ -76,14 +79,9 @@ $(document).ready(function(){
       }
     }
 
-    });
+  });
 
   $(".gnb-list").on({
-    // 'mouseover' : function(){
-    //   if(!$body.hasClass(scroll-down)){
-    //     $body.addClass('gnb-active');
-    //   }
-    // },
     'mouseout' : function(){
     $gnbDepth1.removeClass('is-active');
     $body.removeClass('gnb-active');
@@ -109,15 +107,43 @@ $btnFamily.on({
      return false;
   }
 })
+
+
+// btn-tab
+let $tabBtn=$('.btn-tab'),
+$tabBtn_on=$('.btn-tab.on');
+
+$tabBtn_on.css('cursor','default');
+
+$tabBtn.on('click',function (e) {
+  let targetURL=$(this).attr('href');
+  $(this).blur();
+  if(!$(this).hasClass('on')){
+    $('html,body').stop().animate(
+     {scrollTop: $(targetURL.substring(targetURL.lastIndexOf('#'))).offset().top-btnTab_gap}, 
+     900, 'swing');
+    }
+   e.preventDefault();
+});
  
   
-  /*********************
-   * 함수선언
-   *********************/
 
 addSticky(".header-bar");
 stickyHeader.init();
 
+  /*********************
+   * 함수선언
+   *********************/
+
+function getBtnTab_gap() {
+  winW=$win.width();
+      if (winW >=560){
+        btnTab_gap=120;
+      }else {
+        btnTab_gap=80;
+      }
+      console.log(btnTab_gap);
+}
 
 });// $(document).ready(function()
 
