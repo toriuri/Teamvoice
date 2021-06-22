@@ -26,14 +26,8 @@ $(document).ready(function(){
   //$fullMenuLinks  .is-current 추가
    let gnb_index,
    menu_index,
-   page_id,
-   page_url = window.location.href,
    page_path = window.location.pathname,
-   page_hash = window.location.hash,
    page_file= page_path.substring(page_path.lastIndexOf("/"));
-   if (page_url.includes('#') && page_hash.length>1){
-   page_id = page_url.substring(page_url.lastIndexOf("#"));
-   }
 
    d1_name.forEach(function(el,index) {
       if(page_path.includes(el)) {
