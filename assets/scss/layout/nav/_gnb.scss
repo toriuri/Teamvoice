@@ -94,24 +94,24 @@
       
       &:nth-child(1) {
         ul {
-          width: 290px;
+          min-width: 290px;
           //display: block;
         }
       }
       &:nth-child(2) {
         ul {
-          width: 220px;
+          min-width: 220px;
         }
       }
       &:nth-child(3) {
         ul {
-          width: 184px;
+          min-width: 184px;
         }
       }
 
       &.is-active,
       &.on {
-        >a{
+        > a {
           color: $color-primary;
           &:after {
             content: '';

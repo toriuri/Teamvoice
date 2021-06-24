@@ -510,10 +510,7 @@
 												</a>
 											</div>
 										</div>
-										<!--
-										<div class="swiper-pagination"></div>
-										-->
-									
+
 									</div>
 								
 								</div>
@@ -523,14 +520,16 @@
 						<section class="section" id="section7">
 							<div class="container">
 								<div class="content">
-									<h1>
-										<strong class="category">CS</strong>
-										고객센터
-									</h1>
 									
-									<div class="box-wrap">
-										
-										<div class="box b1">
+									<div class="tlt">
+										<h1>
+											<strong class="category">CS</strong>
+											고객센터
+										</h1>
+									</div>
+									
+									<ul class="box-wrap">
+										<li>
 											<div class="box-inner">
 												<h2>
 													<a href="tel:031-786-9990">031-786-9990</a>
@@ -541,22 +540,25 @@
 												</dl>
 												<a href="mailto:teamsvoice@kti.co.kr" class="">teamsvoice@kti.co.kr</a>
 											</div>
-										</div>
+										</li>
 										
-										<a href="./customer/inquiry.php" class="box b2">
+										<li>
 											<div class="box-inner">
-												<h2>
-													<span>1 : 1</span> 문의
-													<i class="xi-angle-right-min"></i>
-												</h2>
-												<p>
-													<span>궁금하신 내용을 남겨주시면</span>
-													<span>빠른 답변 드리겠습니다.</span>
-												</p>
+												<a href="./customer/inquiry.php">
+													<h2>
+														<span>1 : 1</span> 문의
+														<i class="xi-angle-right-min"></i>
+													</h2>
+													<p>
+														<span>궁금하신 내용을 남겨주시면</span>
+														<span>빠른 답변 드리겠습니다.</span>
+													</p>
+												</a>
+											
 											</div>
-										</a>
+										</li>
+									</ul>
 									
-									</div>
 								</div>
 							</div>
 							
@@ -625,9 +627,14 @@
 			var myFullpage = new fullpage('#fullpage', {
 				//anchors: ['firstPage', 'secondPage', '3rdPage'],
 				//sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+				autoScrolling: true,
 				navigation: true,
 				navigationPosition: 'left',
-				//responsiveWidth: 900,
+				responsiveWidth: 560,
+				responsiveHeight: 420,
+				//responsiveSlides: false,
+				//verticalCentered: true,
+				afterResize: function(width, height){},
 				afterResponsive: function(isResponsive){
 				}
 			});
