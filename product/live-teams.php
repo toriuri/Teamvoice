@@ -182,47 +182,17 @@
 			
 			</div>
 			
-			<div class="container managed-product" id="live-teams-premium">
+			<div class="container managed-product live-teams-pro" id="live-teams-pro">
 				<h1 class="section-tlt1">
 					라이브팀즈 매니지드 상품
 				</h1>
 				
 				<ul class="btn-tab-box">
 					<li>
-						<a href="#live-teams-premium" class="btn-tab on">라이브팀즈 프리미엄</a>
+						<a href="#live-teams-pro" class="btn-tab on">라이브팀즈 프로</a>
 					</li>
-					<li>
-						<a href="#live-teams-pro" class="btn-tab">라이브팀즈 프로</a>
-					</li>
-				</ul>
-				
-				<figure class="pc-img">
-					<img src="../assets/image/product/live-teams-premium.png" alt="">
-				</figure>
-				
-				<figure class="mobile-img">
-					<img src="../assets/image/product/m-live-teams-premium.png" alt="">
-				</figure>
-				
-				<div class="box white-box">
-					<ul>
-						<li>고객사 교환기 연동이 필요한 경우</li>
-						<li>고객사 교환기와 내선통화 및 연동 지원</li>
-						<li>전화, SBC, 고객 네트워크 트러블슈팅</li>
-						<li>라이브팀즈의 프로 서비스 기본제공</li>
-					</ul>
-				</div>
-			
-			</div>
-			
-			<div class="container managed-product live-teams-pro" id="live-teams-pro">
-				
-				<ul class="btn-tab-box">
 					<li>
 						<a href="#live-teams-premium" class="btn-tab">라이브팀즈 프리미엄</a>
-					</li>
-					<li>
-						<a href="#live-teams-pro" class="btn-tab on">라이브팀즈 프로</a>
 					</li>
 				</ul>
 				
@@ -247,11 +217,41 @@
 			
 			</div>
 			
+			<div class="container managed-product live-teams-premium" id="live-teams-premium">
+				
+				<ul class="btn-tab-box">
+					<li>
+						<a href="#live-teams-pro" class="btn-tab">라이브팀즈 프로</a>
+					</li>
+					<li>
+						<a href="#live-teams-premium" class="btn-tab on">라이브팀즈 프리미엄</a>
+					</li>
+				</ul>
+				
+				<figure class="pc-img">
+					<img src="../assets/image/product/live-teams-premium.png" alt="">
+				</figure>
+				
+				<figure class="mobile-img">
+					<img src="../assets/image/product/m-live-teams-premium.png" alt="">
+				</figure>
+				
+				<div class="box white-box">
+					<ul>
+						<li>라이브팀즈의 프로 서비스 기본제공</li>
+						<li>고객사 교환기와 내선통화 및 연동 지원</li>
+						<li>전화, SBC, 고객 네트워크 트러블슈팅</li>
+						<li>고객사 교환기 연동이 필요한 경우</li>
+					</ul>
+				</div>
+			
+			</div>
+			
 			<div class="container">
 				<div class="banner-box live-teams">
-					<h2 class="banner-title">팀즈 클라우드 보이스 커넥트 소개서</h2>
+					<h2 class="banner-title">라이브 팀즈 소개서</h2>
 					<p>
-						<span>팀즈 클라우드 보이스 커넥트에 대한 </span>
+						<span>라이브 팀즈에 대한</span>
 						<span>자세한 내용을 확인해보세요.</span>
 					</p>
 					<button type="button" class="btn btn--black">다운로드 <i class="xi-download"></i></button>

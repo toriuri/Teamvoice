@@ -486,7 +486,8 @@
     .product-container {
       //border: 1px solid #f00;
       width: 100%; max-width: 1400px;
-      margin: 0 auto 120px;
+      margin: 0 auto 60px;
+      padding-bottom: 60px;
       overflow: visible;
       @include box-sizing();
     }
@@ -676,8 +677,8 @@
   }
   
   .managed-product {
-    &.live-teams-pro {
-      padding-top: 120px;
+    &.live-teams-pro, &.live-teams-premium {
+      //padding-top: 120px;
       padding-bottom: 120px;
     }
   

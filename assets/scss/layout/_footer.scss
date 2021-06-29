@@ -65,10 +65,15 @@
           display: inline-block;
           color: #999;
           strong {
-            color: $color-primary;
+           //color: $color-primary;
+            font-weight: 700;
+            color: #fff;
           }
           &:hover, &:focus, &:active {
             color: $color-primary;
+            strong {
+              color: $color-primary;
+            }
           }
         }
       }

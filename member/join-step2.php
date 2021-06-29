@@ -90,7 +90,7 @@
 							</li>
 							<li class="block">
 								<label for="subscription-info">가입 청약 정보 <span>*</span></label>
-								<input type="text" id="subscription-info" class="tv-input" placeholder="가입 청약 정보를 입력하세요.">
+								<input type="text" id="subscription-info" class="tv-input" placeholder="가입 청약 정보를 입력하세요. &nbsp;&nbsp; 예시) 넷케이티아이 라이브 클라우드 200명">
 								<p><i class="xi-error"></i> 청약 가입 고객만 회원 가입이 가능합니다. 회원가입을 신청하시면 관리자가 확인 후 승인해드립니다.</p>
 							</li>
 						</ul>

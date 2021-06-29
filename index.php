@@ -510,7 +510,9 @@
 												</a>
 											</div>
 										</div>
-
+										
+										<div class="swiper-pagination"></div>
+									
 									</div>
 								
 								</div>
@@ -569,7 +571,7 @@
 										<ul class="terms-list">
 											<li><a href="./policy/privacy.php"><strong>개인정보처리방침</strong></a></li>
 											<li><a href="./policy/service.php">이용약관</a></li>
-											<li><a href="http://www.kti.co.kr/" target="_blank">넷케이티아이 <i class="xi-external-link"></i></a></li>
+											<li><a href="http://www.kti.co.kr/" target="_blank">넷케이티아이 홈페이지 <i class="xi-external-link"></i></a></li>
 										</ul>
 										
 										<dl class="contact-list">
@@ -586,13 +588,10 @@
 											<div class="list-box">
 												<ul>
 													<li>
-														<a href="https://www.naver.com/">네이버</a>
+														<a href="https://www.microsoft.com/ko-kr/" target="_blank">마이크로소프트</a>
 													</li>
 													<li>
-														<a href="https://www.daum.net/">다음</a>
-													</li>
-													<li>
-														<a href="https://www.google.com/">구글</a>
+														<a href="https://www.audiocodes.com/" target="_blank">오디오코즈</a>
 													</li>
 												</ul>
 											</div>
@@ -643,7 +642,7 @@
 			var swiper = new Swiper(".faq-container", {
 				slidesPerView: "auto",
 				//spaceBetween: 40,
-				//loop: true,
+				loop: true,
 				pagination: {
 					el: ".swiper-pagination",
 					clickable: true,

@@ -198,6 +198,8 @@
 							<h2>VOYAGER 6200 UC</h2>
 						</li>
 					</ul>
+					
+					<div class="swiper-pagination"></div>
 				
 				</div>
 			
