@@ -87,14 +87,14 @@
       }
     }
     
-    .notice {
+    .notice_rolling {
       position: absolute;
       left: 0; bottom: 0;
       width: 100%; height: 100px;
       background: #fff;
       @include box-s(0, -4px, 8px, rgba(0,0,0,0.05));
       
-      .notice-wrap {
+      .notice_ro_wrap {
         //border: 1px solid #f00;
         position: relative;
         width: 100%; max-width: 1400px;
@@ -114,39 +114,47 @@
         @include translate(0, -50%);
       }
       
-      .main-notice {
+      .notice_rolling_box {
         //border: 1px solid #f00;
-        display: block;
-        font-size: 18px;
-        color: #111;
-        margin-top: 3px;
-        width: 60%;
-        @include ellipsis(1);
-  
-        &:hover, &:focus, &:active {
-          color: $color-primary;
-        }
-        
+        overflow: hidden;
+        width: 60%; height: 32px;
         position: absolute;
-        left: 150px; top: 50%;
+        left: 150px; top: calc(50% + 3px);
         @include translate(0, -50%);
-        
-        .date {
-          font-family: $en;
-          font-weight: 400;
-          color: #888;
-          
-          &:after {
-            content: '';
-            display: inline-block;
-            width: 1px; height: 16px;
-            background: #E1E2E6;
-            margin: 0 20px;
-            
+  
+        .notice-list {
+          li {
+            .rolling_date {
+              font-family: $en;
+              font-weight: 400;
+              color: #888;
+              width: 130px;
+              
+              &:after {
+                content: '';
+                display: inline-block;
+                width: 1px; height: 16px;
+                background: #E1E2E6;
+                margin: 0 20px;
+                position: relative;
+                top: 2px;
+              }
+            }
+  
+            a {
+              display: block;
+              font-size: 18px;
+              color: #111;
+              @include ellipsis(1);
+    
+              &:hover, &:focus, &:active {
+                color: $color-primary;
+              }
+            }
           }
         }
       }
-  
+      
       .btn-more {
         display: block;
         width: 58px; height: 58px;
@@ -607,13 +615,14 @@
     //border: 1px solid #f00;
     
     #section1 {
-      .notice {
+      .notice_rolling {
         h2 {
           left: 40px;
-          & + .main-notice {
-            left: 190px;
-          }
         }
+        .notice_rolling_box {
+          left: 190px;
+        }
+
         .btn-more {
           right: 40px;
         }
@@ -964,12 +973,11 @@
         }
       }
   
-      .notice {
+      .notice_rolling {
         width: 100%; height: auto;
     
-        .notice-wrap {
-          //border: 1px solid #f00;
-          padding: 15px 15px 15px;
+        .notice_ro_wrap {
+          padding: 15px;
         }
     
         h2 {
@@ -978,22 +986,26 @@
           left: 0; top: 0;
           @include translate(0, 0);
         }
-    
-        .main-notice {
-          overflow: hidden;
-          display: block;
-          font-size: 14px;
-          margin-top: 0;
-          width: 100%; max-width: 100%;
-          @include ellipsis(1);
   
+        .notice_rolling_box {
+          width: 100%; max-width: 100%;
+          height: 22px;
           position: static;
           left: inherit; top: inherit;
           @include translate(0, 0);
-      
-          .date {display: none;}
-        }
     
+          .notice-list {
+            li {
+              .rolling_date {
+                display: none;
+              }
+              a {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+        
         .btn-more {
           width: 29px; height: 29px;
           font-size: 12px;
@@ -1254,11 +1266,11 @@
           font-size: 14px;
         }
       }
-      
-      .notice {
+
+      .notice_rolling {
         width: 100%; height: auto;
     
-        .notice-wrap {
+        .notice_ro_wrap {
           padding: 15px 15px 10px;
         }
     
@@ -1270,18 +1282,23 @@
           @include translate(0, 0);
         }
     
-        .main-notice {
-          display: block;
-          font-size: 14px;
-          margin-top: 0;
+        .notice_rolling_box {
           width: 100%; max-width: 100%;
-          @include ellipsis(1);
-      
+          height: 22px;
           position: static;
           left: inherit; top: inherit;
           @include translate(0, 0);
       
-          .date {display: none;}
+          .notice-list {
+            li {
+              .rolling_date {
+                display: none;
+              }
+              a {
+                font-size: 14px;
+              }
+            }
+          }
         }
     
         .btn-more {
@@ -1295,6 +1312,8 @@
       
         }
       }
+  
+  
     }
   
     #section2 {
