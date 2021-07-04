@@ -109,7 +109,7 @@
 						<colgroup>
 							<col width="13%">
 							<col width="13%">
-							<col width="34%">
+							<col width="35%">
 							<col width="*">
 						</colgroup>
 						
@@ -268,7 +268,7 @@
 									</li>
 									<li>
 										<input type="checkbox" name="s2" id="s2-4" class="tv-chk" disabled>
-										<label for="s2-4">기타(<div class="empty-box"></div>)</label>
+										<label for="s2-4">기타 (<div class="empty-box"></div>)</label>
 									</li>
 								</ul>
 							</td>
@@ -300,7 +300,7 @@
 									</li>
 									<li>
 										<input type="checkbox" name="s3" id="s3-5" class="tv-chk" disabled>
-										<label for="s3-5">기타(<div class="empty-box"></div>)</label>
+										<label for="s3-5">기타 (<div class="empty-box"></div>)</label>
 									</li>
 								</ul>
 							</td>
@@ -312,7 +312,7 @@
 								<ul class="chk-list">
 									<li>
 										<input type="checkbox" name="s4" id="s4-1" class="tv-chk" disabled>
-										<label for="s4-1"><span>인터넷전화 개통</span> <span>(<div class="empty-box"></div>회선)</span></label>
+										<label for="s4-1"><span>인터넷전화 개통</span> <span> (<div class="empty-box"></div>회선)</span></label>
 									</li>
 								</ul>
 							</td>
@@ -332,7 +332,7 @@
 									</li>
 									<li>
 										<input type="checkbox" name="s5" id="s5-3" class="tv-chk" disabled>
-										<label for="s5-3">기타(<div class="empty-box"></div>)</label>
+										<label for="s5-3">기타 (<div class="empty-box"></div>)</label>
 									</li>
 								</ul>
 							</td>
