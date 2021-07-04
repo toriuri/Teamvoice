@@ -649,11 +649,13 @@
   
       .application-box {
         //width: 1010px;
-        padding: 30px 20px 50px;
+        padding: 30px 15px 50px;
+        margin: 0 -15px;
         font-size: 14px;
+        @include border-radius(0);
         
         .section-title {
-          font-size: 28px;
+          font-size: 25px;
           margin-bottom: 18px;
         }
     
@@ -712,7 +714,7 @@
                   font-size: 16px;
                 }
                 .empty-box {
-                  width: 68px !important;
+                  width: 88px !important;
                 }
               }
               
@@ -979,7 +981,7 @@
     .application-guide {
       //border: 1px solid #f00;
       padding-top: 40px;
-      padding-bottom: 0;
+      padding-bottom: 50px;
     
       p {
         font-size: 14px;
@@ -993,7 +995,7 @@
     
       .application-box {
         //width: 1010px;
-        padding: 30px 20px 50px;
+        padding: 40px 30px 50px;
         font-size: 14px;
       
         .section-title {
@@ -1056,7 +1058,7 @@
                   font-size: 16px;
                 }
                 .empty-box {
-                  width: 68px !important;
+                  //width: 68px !important;
                 }
               }
             
