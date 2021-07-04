@@ -466,3 +466,72 @@ iframe[name='google_conversion_frame'] {
     }
   }
 }
+
+@media (max-height: 420px) and (orientation: landscape) {
+  body {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .entry-time {
+    font-size: 14px;
+  }
+  
+  .tv-input[type=text],
+  .tv-input[type=password],
+  .tv-input[type=tel],
+  .tv-input[type=email],
+  .tv-input[type=date],
+  .tv-input[type=datetime-local] {
+    height: 37px;
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+  
+  /***** radio button *****/
+  .tv-radio[type="radio"] {
+    & + label{
+      padding: 0 0 0 25px;
+      
+      &:before{
+        width: 18px; height: 18px;
+        top: 2px;
+      }
+      
+      &:after{
+        width: 8px; height: 8px;
+        left: 5px; top: 7px;
+      }
+    }
+    /* radio button on */
+    &:checked + label{
+      //color: #20beef;
+      &:before{border-color: #bbb;}
+      &:after{background: $color-primary;}
+    }
+  }
+  
+  /***** checkbox *****/
+  .tv-chk[type="checkbox"] {
+    & + label {
+      padding: 0 0 0 25px;
+      
+      &:before {
+        font-size: 16px;
+        line-height: 15px;
+        width: 17px; height: 17px;
+        top: 2px;
+        @include border-radius(2px);
+      }
+    }
+    /* checkbox on */
+    &:checked + label {
+      &:before {
+        content: "\e929";
+        color: $white;
+        border-color: $color-primary;
+        background: $color-primary;
+      }
+    }
+  }
+}
