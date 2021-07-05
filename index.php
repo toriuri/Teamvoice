@@ -229,14 +229,45 @@
 								</div>
 							</div>
 							
-							<div class="notice">
-								<div class="notice-wrap">
+							<div class="main-notice-wrap" id="notice5">
+								<div class="main-notice">
 									<h2>Notice!</h2>
-									<a href="./customer/notice.html" class="main-notice">
-										<span class="date">2021.05.26</span>
-										팀즈 클라우드 보이스 커넥트 홈페이지가 오픈되었습니다.팀즈 클라우드 보이스 커넥트 홈페이지가 오픈되었습니다.
-									</a>
-									<a href="./customer/notice.html" class="btn-more"><i class="xi-plus"></i></a>
+									<div class="notice-rolling-box">
+										<ul class="notice-list rolling">
+											<li>
+												<a href="./customer/notice.php">
+													<span class="date">2021.04.26</span>
+													팀즈 클라우드 보이스 커넥트 홈페이지가 오픈되었습니다.팀즈 클라우드 보이스 커넥트 홈페이지가 오픈되었습니다.
+												</a>
+											</li>
+											<li>
+												<a href="./customer/notice.php">
+													<span class="date">2021.05.20</span>
+													공지글 테스트 1
+												</a>
+											</li>
+											<li>
+												<a href="./customer/notice.php">
+													<span class="date">2021.06.20</span>
+													공지글 테스트 2
+												</a>
+											</li>
+											<li>
+												<a href="./customer/notice.php">
+													<span class="date">2021.06.26</span>
+													공지글 테스트 3
+												</a>
+											</li>
+											<li>
+												<a href="./customer/notice.php">
+													<span class="date">2021.07.01</span>
+													공지글 테스트 4
+												</a>
+											</li>
+										</ul>
+									</div>
+									
+									<a href="./customer/notice.php" class="btn-more"><i class="xi-plus"></i></a>
 								</div>
 							</div>
 						</section>
@@ -614,6 +645,7 @@
 		</div>
 		
 		<script src="./assets/js/script.js"></script>
+		<script src="./assets/js/page/main.js"></script>
 		
 		<!-- fullpage JS -->
 		<script src="./assets/js/fullpage/dist/fullpage.js"></script>

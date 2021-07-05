@@ -243,24 +243,24 @@
 									
 									<ul class="chk-list table-top">
 										<li>
-											<input type="checkbox" name="mode" id="new" class="tv-chk">
+											<input type="checkbox" name="mode" id="new" class="tv-chk" disabled>
 											<label for="new">신규</label>
 										</li>
 										<li>
-											<input type="checkbox" name="mode" id="modify" class="tv-chk">
+											<input type="checkbox" name="mode" id="modify" class="tv-chk" disabled>
 											<label for="modify">변경</label>
 										</li>
 									</ul>
 									
-									<table border="1" cellspacing="0" cellpadding="0" class="table">
+									<table border="1" cellspacing="0" cellpadding="0" class="table x-large">
 										<caption>팀즈 클라우드 보이스 커넥트 서비스 청약서 가이드</caption>
 										<colgroup>
-											<col width="12%">
-											<col width="12%">
-											<col width="15%">
-											<col width="23%">
-											<col width="15%">
-											<col width="23%">
+											<col width="13%">
+											<col width="13%">
+											<col width="21%">
+											<col width="*">
+											<col width="21%">
+											<col width="*">
 										</colgroup>
 										
 										<tbody>
@@ -269,7 +269,7 @@
 												<td rowspan="4"><em>계약자</em></td>
 												<th>
 													<a data-tooltip-text="계약자의 법인명을 입력하세요. &#10; 입력 예시 : (주)에이프리카">
-														법인명
+														법인명 <i class="xi-angle-right-min pc"></i><i class="xi-angle-right-min mobile"></i>
 													</a>
 												</th>
 												<td>&nbsp;</td>
@@ -308,12 +308,76 @@
 										</tbody>
 									</table>
 									
+									<table border="1" cellspacing="0" cellpadding="0" class="table large">
+										<caption>팀즈 클라우드 보이스 커넥트 서비스 청약서 가이드</caption>
+										<colgroup>
+											<col width="13%">
+											<col width="13%">
+											<col width="35%">
+											<col width="*">
+										</colgroup>
+										
+										<tbody>
+										<tr class="border-right">
+											<td rowspan="11"><strong>고객사</strong></td>
+											<td rowspan="7"><em>계약자</em></td>
+											<th class="first">
+												<a data-tooltip-text="계약자의 법인명을 입력하세요. &#10; 입력 예시 : (주)에이프리카">
+													법인명 <i class="xi-angle-right-min pc"></i><i class="xi-angle-down-min mobile"></i>
+												</a>
+											</th>
+											<td>&nbsp;</td>
+										</tr>
+										<tr>
+											<th>사업자등록번호</th>
+											<td>&nbsp;</td>
+										</tr>
+										<tr>
+											<th>대표자</th>
+											<td>&nbsp;</td>
+										</tr>
+										<tr>
+											<th>E-mail</th>
+											<td>&nbsp;</td>
+										</tr>
+										<tr>
+											<th>주소</th>
+											<td>&nbsp;</td>
+										</tr>
+										<tr>
+											<th>핸드폰</th>
+											<td>&nbsp;</td>
+										</tr>
+										<tr>
+											<th>전화번호(유선)</th>
+											<td>&nbsp;</td>
+										</tr>
+										<tr>
+											<td rowspan="4"><em>성명</em></td>
+											<th>법인명</th>
+											<td>&nbsp;</td>
+										</tr>
+										<tr>
+											<th>E-mail</th>
+											<td>&nbsp;</td>
+										</tr>
+										<tr>
+											<th>핸드폰</th>
+											<td>&nbsp;</td>
+										</tr>
+										<tr>
+											<th>전화번호(유선)</th>
+											<td>&nbsp;</td>
+										</tr>
+										</tbody>
+									</table>
+									
 									<table border="1" cellspacing="0" cellpadding="0" class="table">
 										<caption>팀즈 클라우드 보이스 커넥트 서비스 청약서 가이드</caption>
 										<colgroup>
-											<col width="12%">
-											<col width="27%">
-											<col width="61%">
+											<col width="13%">
+											<col width="34%">
+											<col width="*">
 										</colgroup>
 										
 										<tbody>
@@ -321,7 +385,7 @@
 												<td rowspan="2"><strong>기본 <br>서비스</strong></td>
 												<th>
 													<a data-tooltip-text="팀즈 보이스를 사용할 인원 &#10; (E3+Phone System 라이선스 또는 E5 라이선스 보유자)">
-														서비스 인원
+														서비스 인원 <i class="xi-angle-right-min pc"></i><i class="xi-angle-down-min mobile"></i>
 													</a>
 												</th>
 												<td>(<div class="empty-box"></div>명)</td>
@@ -330,25 +394,25 @@
 											<tr>
 												<th>
 													<a data-tooltip-text="댁내에서 사용하고 있는 통신사 기입 &#10; (기타 선택 시 담당자와 상담 필요)">
-														이용중인 전화 통신사
+														이용중인 전화 통신사 <i class="xi-angle-right-min pc"></i><i class="xi-angle-down-min mobile"></i>
 													</a>
 												</th>
 												<td>
 													<ul class="chk-list">
 														<li>
-															<input type="checkbox" name="u-telecom" id="KT" class="tv-chk">
+															<input type="checkbox" name="u-telecom" id="KT" class="tv-chk" disabled>
 															<label for="KT">KT</label>
 														</li>
 														<li>
-															<input type="checkbox" name="u-telecom" id="SKBB" class="tv-chk">
+															<input type="checkbox" name="u-telecom" id="SKBB" class="tv-chk" disabled>
 															<label for="SKBB">SKBB</label>
 														</li>
 														<li>
-															<input type="checkbox" name="u-telecom" id="LGU+" class="tv-chk">
+															<input type="checkbox" name="u-telecom" id="LGU+" class="tv-chk" disabled>
 															<label for="LGU+">LGU+</label>
 														</li>
 														<li>
-															<input type="checkbox" name="u-telecom" id="etc" class="tv-chk">
+															<input type="checkbox" name="u-telecom" id="etc" class="tv-chk" disabled>
 															<label for="etc">기타</label>
 														</li>
 													</ul>
@@ -361,25 +425,25 @@
 												<td rowspan="5"><strong>부가 <br>서비스</strong></td>
 												<th>
 													<a data-tooltip-text="고객사 댁내 보유하고 계신 PBX 또는 Gateway를 통해 PRI(PSTN) 연동 기능을 제공 &#10; 전화기 연동이 필요한 경우 체크 후 담당자와 상담 필요">
-														댁내 장비 연동
+														댁내 장비 연동 <i class="xi-angle-right-min pc"></i><i class="xi-angle-down-min mobile"></i>
 													</a>
 												</th>
 												<td>
 													<ul class="chk-list">
 														<li>
-															<input type="checkbox" name="s1" id="s1-1" class="tv-chk">
+															<input type="checkbox" name="s1" id="s1-1" class="tv-chk" disabled>
 															<label for="s1-1">PBX 연동</label>
 														</li>
 														<li>
-															<input type="checkbox" name="s1" id="s1-2" class="tv-chk">
+															<input type="checkbox" name="s1" id="s1-2" class="tv-chk" disabled>
 															<label for="s1-2">PSTN 연동</label>
 														</li>
 														<li>
-															<input type="checkbox" name="s1" id="s1-3" class="tv-chk">
+															<input type="checkbox" name="s1" id="s1-3" class="tv-chk" disabled>
 															<label for="s1-3">SIP 폰 전화기 연동</label>
 														</li>
 														<li>
-															<input type="checkbox" name="s1" id="s1-4" class="tv-chk">
+															<input type="checkbox" name="s1" id="s1-4" class="tv-chk" disabled>
 															<label for="s1-4">아날로그 전화기 연동</label>
 														</li>
 													</ul>
@@ -389,25 +453,25 @@
 											<tr>
 												<th>
 													<a data-tooltip-text="MS 팀즈 인증을 받은 전화기로 Audiocodes의 C448HD, C470HD와 폴리컴의 CCX600 제공 &#10; 팀즈 전화기에 대한 상세 내용은 홈페이지 상품소개 팀즈 단말기에서 제공">
-														팀즈 전화기
+														팀즈 전화기 <i class="xi-angle-right-min pc"></i><i class="xi-angle-down-min mobile"></i>
 													</a>
 												</th>
 												<td>
 													<ul class="chk-list type1">
 														<li>
-															<input type="checkbox" name="s2" id="s2-1" class="tv-chk">
+															<input type="checkbox" name="s2" id="s2-1" class="tv-chk" disabled>
 															<label for="s2-1">C450HD</label>
 														</li>
 														<li>
-															<input type="checkbox" name="s2" id="s2-2" class="tv-chk">
+															<input type="checkbox" name="s2" id="s2-2" class="tv-chk" disabled>
 															<label for="s2-2">C470HD</label>
 														</li>
 														<li>
-															<input type="checkbox" name="s2" id="s2-3" class="tv-chk">
+															<input type="checkbox" name="s2" id="s2-3" class="tv-chk" disabled>
 															<label for="s2-3">[Poly] CCX600</label>
 														</li>
 														<li>
-															<input type="checkbox" name="s2" id="s2-4" class="tv-chk">
+															<input type="checkbox" name="s2" id="s2-4" class="tv-chk" disabled>
 															<label for="s2-4">기타 (<div class="empty-box"></div>)</label>
 														</li>
 													</ul>
@@ -417,29 +481,29 @@
 											<tr>
 												<th>
 													<a data-tooltip-text="MS 팀즈 인증을 받은 헤드셋으로 자브라의 EVOLVE 시리즈, 폴리의 Voyager 시리즈 제공 &#10; 팀즈 헤드셋에 대한 상세 내용은 홈페이지 상품소개 팀즈 단말기에서 제공">
-														팀즈 헤드셋
+														팀즈 헤드셋 <i class="xi-angle-right-min pc"></i><i class="xi-angle-down-min mobile"></i>
 													</a>
 												</th>
 												<td>
 													<ul class="chk-list type2">
 														<li>
-															<input type="checkbox" name="s3" id="s3-1" class="tv-chk">
+															<input type="checkbox" name="s3" id="s3-1" class="tv-chk" disabled>
 															<label for="s3-1">Voyager focus UC</label>
 														</li>
 														<li>
-															<input type="checkbox" name="s3" id="s3-2" class="tv-chk">
+															<input type="checkbox" name="s3" id="s3-2" class="tv-chk" disabled>
 															<label for="s3-2">Voyager 6200 UC</label>
 														</li>
 														<li>
-															<input type="checkbox" name="s3" id="s3-3" class="tv-chk">
+															<input type="checkbox" name="s3" id="s3-3" class="tv-chk" disabled>
 															<label for="s3-3">Evolve 20 Stereo</label>
 														</li>
 														<li>
-															<input type="checkbox" name="s3" id="s3-4" class="tv-chk">
+															<input type="checkbox" name="s3" id="s3-4" class="tv-chk" disabled>
 															<label for="s3-4">Evolve 30 Mono</label>
 														</li>
 														<li>
-															<input type="checkbox" name="s3" id="s3-5" class="tv-chk">
+															<input type="checkbox" name="s3" id="s3-5" class="tv-chk" disabled>
 															<label for="s3-5">기타 (<div class="empty-box"></div>)</label>
 														</li>
 													</ul>
@@ -451,8 +515,8 @@
 												<td>
 													<ul class="chk-list">
 														<li>
-															<input type="checkbox" name="s4" id="s4-1" class="tv-chk">
-															<label for="s4-1">인터넷전화 개통 (<div class="empty-box"></div>회선)</label>
+															<input type="checkbox" name="s4" id="s4-1" class="tv-chk" disabled>
+															<label for="s4-1"><span>인터넷전화 개통</span> <span> (<div class="empty-box"></div>회선)</span></label>
 														</li>
 													</ul>
 												</td>
@@ -463,16 +527,16 @@
 												<td>
 													<ul class="chk-list type1">
 														<li>
-															<input type="checkbox" name="s5" id="s5-1" class="tv-chk">
+															<input type="checkbox" name="s5" id="s5-1" class="tv-chk" disabled>
 															<label for="s5-1">AA-CQ (MR서비스)</label>
 														</li>
 														<li>
-															<input type="checkbox" name="s5" id="s5-2" class="tv-chk">
+															<input type="checkbox" name="s5" id="s5-2" class="tv-chk" disabled>
 															<label for="s5-2">무선 AP 점검</label>
 														</li>
 														<li>
-															<input type="checkbox" name="s5" id="s5-3" class="tv-chk">
-															<label for="s5-3">기타(<div class="empty-box"></div>)</label>
+															<input type="checkbox" name="s5" id="s5-3" class="tv-chk" disabled>
+															<label for="s5-3">기타 (<div class="empty-box"></div>)</label>
 														</li>
 													</ul>
 												</td>
@@ -541,7 +605,7 @@
 						<ul class="terms-list">
 							<li><a href="#"><strong>개인정보처리방침</strong></a></li>
 							<li><a href="#">이용약관</a></li>
-							<li><a href="http://www.kti.co.kr/" target="_blank">넷케이티아이 <i class="xi-external-link"></i></a></li>
+							<li><a href="http://www.kti.co.kr/" target="_blank">넷케이티아이 홈페이지 <i class="xi-external-link"></i></a></li>
 						</ul>
 						
 						<dl class="contact-list">
@@ -558,13 +622,10 @@
 							<div class="list-box">
 								<ul>
 									<li>
-										<a href="https://www.naver.com/">네이버</a>
+										<a href="https://www.microsoft.com/ko-kr/" target="_blank">마이크로소프트</a>
 									</li>
 									<li>
-										<a href="https://www.daum.net/">다음</a>
-									</li>
-									<li>
-										<a href="https://www.google.com/">구글</a>
+										<a href="https://www.audiocodes.com/" target="_blank">오디오코즈</a>
 									</li>
 								</ul>
 							</div>
