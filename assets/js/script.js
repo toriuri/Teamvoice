@@ -6,6 +6,7 @@ $(document).ready(function(){
     $fullMenu_d1=$('.gnb-list-box'),
     $fullMenuLinks=$fullMenu_d1.find('a'),
     $gnbDepth1=$('.gnb-list >li'),
+    $gnbDepth1Link=$('.gnb-list >li >a'),
     $gnbDepth1_on,
     $gnbDepth2=$gnbDepth1.find('li>a'),
     $gnbDepth2_on,
@@ -30,11 +31,11 @@ $(document).ready(function(){
    menu_index,
    page_path = window.location.pathname,
    page_file= page_path.substring(page_path.lastIndexOf("/"));
-
    d1_name.forEach(function(el,index) {
       // if(page_path.includes(el)) {
         if(page_path.indexOf(el)>-1){
         gnb_index=index;
+        
       }
    });
 
@@ -44,7 +45,7 @@ $(document).ready(function(){
    
    $gnbDepth2.each(function(index,el){
     // if($(el).prop('href').includes(page_file)) {
-      if($(el).prop('href').indexOf(page_file)>-1) {
+      if(page_file.length>2 && $(el).prop('href').indexOf(page_file)>-1 ) {
       menu_index=index;
     }
    });
@@ -52,7 +53,6 @@ $(document).ready(function(){
    $gnbDepth2_on=$($gnbDepth2[menu_index]);
    $gnbDepth2_on.addClass('is-current');
    $($fullMenuLinks[menu_index]).addClass('is-current');
-
   
   /* 햄버거 메뉴 클릭 */
   $mBtn.click(function(){
@@ -88,6 +88,13 @@ $(document).ready(function(){
     $(".gnb-list>li>a").blur();
    
   }
+});
+
+$gnbDepth1Link.on({
+   'click' : function(e){
+     return false;
+     
+   }
 });
 
 //패밀리사이트
