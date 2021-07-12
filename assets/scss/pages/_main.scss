@@ -377,37 +377,37 @@
       display: flex;
       flex-wrap: wrap;
       margin: 0 -20px;
-      justify-content: center;
       li {
+        //border: 1px solid #f00;
         position: relative;
-        flex: 1 1 280px;
-        max-width: 320px;
-        margin: 0 20px;
-        padding: 260px 20px 50px;
-        text-align: center;
+        flex: 1 1 500px;
+        max-width: 50%;
+        padding: 35px 35px 35px 170px;
+        margin: 0 20px 40px;
         @include box-sizing();
         @include border-radius(20px);
       
         h2 {
           color: #111;
+          //font-size: 23px;
           & + p {
             opacity: 0.6;
           }
         }
   
-        background: no-repeat center 50px / 190px #fff;
+        background: no-repeat 35px 35px / 110px #fff;
   
         &:nth-child(1) {
-          background-image: url(../image/main/about-us-1@2x.png);
+          background-image: url(../image/main/about-us-4@2x.png);
         }
         &:nth-child(2) {
-          background-image: url(../image/main/about-us-2@2x.png);
+          background-image: url(../image/main/about-us-1@2x.png);
         }
         &:nth-child(3) {
           background-image: url(../image/main/about-us-3@2x.png);
         }
         &:nth-child(4) {
-          background-image: url(../image/main/about-us-4@2x.png);
+          background-image: url(../image/main/about-us-2@2x.png);
         }
       
       }
@@ -631,6 +631,32 @@
         }
       }
     }
+    
+    #section5 {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+        justify-content: center;
+        li {
+          position: relative;
+          flex: 1 1 500px;
+          max-width: 50%;
+          margin: 0 10px 20px;
+          padding: 30px 30px 20px 140px;
+          text-align: left;
+        
+          background: no-repeat 20px 20px / 100px #fff;
+          p {
+            span {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    
+    }
+    
   }
   
   @include mq($until: x-large) {
@@ -705,24 +731,12 @@
     
     #section5 {
       ul {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 -10px;
-        justify-content: center;
+        margin: 0;
         li {
           position: relative;
-          flex: 1 1 400px;
-          max-width: 50%;
-          margin: 0 10px 20px;
-          padding: 20px 20px 20px 140px;
-          text-align: left;
-      
-          background: no-repeat 20px center / 100px #fff;
-          p {
-            span {
-              display: inline-block;
-            }
-          }
+          flex: 1 1 600px;
+          width: 100%; max-width: 100%;
+          margin: 0 0 20px;
         }
       }
       
@@ -1095,7 +1109,7 @@
           padding: 15px 15px 15px 90px;
           @include border-radius(10px);
           
-          background: no-repeat 15px center / 60px #fff;
+          background: no-repeat 15px 15px / 60px #fff;
         }
       }
     }
@@ -1400,7 +1414,7 @@
     }
   
     #section5 {
-      background: url(../image/main/bg-main-about-us.jpg) no-repeat center bottom / 100% #283767;
+      background: url(../image/main/bg-main-about-us.jpg) no-repeat center bottom / cover #283767;
   
       ul {
         display: flex;
